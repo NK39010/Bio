@@ -1,13 +1,13 @@
 import os
 import pandas as pd
 
-root_dir = "/Users/lemon/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_ont20j4kijbz22_4927/msg/file/2026-04/Origin"
+root_dir = "D:/dataprocess/OriVresult"
 
-output_A = "Bio/RIPs.csv"
-output_B = "Bio/selected_ori_regions.csv"
+output_A = "data/RIPs.csv"
+output_B = "data/selected_ori_regions.csv"
 
 # 确保输出目录存在
-os.makedirs("Bio", exist_ok=True)
+os.makedirs("data", exist_ok=True)
 
 written_A = False
 written_B = False

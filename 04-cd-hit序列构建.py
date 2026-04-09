@@ -1,7 +1,7 @@
 import pandas as pd
 
 # === 配置参数 ===
-INPUT_FILE = "merged_final_optimized.csv"
+INPUT_FILE = "merged_final_optimized_replication_annotated.csv"
 OUTPUT_FILE = "ori.fasta"
 MIN_LEN = 0
 MAX_LEN = 20000

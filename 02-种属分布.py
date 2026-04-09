@@ -5,9 +5,9 @@ import os
 from collections import Counter
 
 # ================= 配置区域 =================
-csv_file = "final_data.csv"
-output_excel = "csv_species_statistics-90.xlsx"
-output_image = "csv_species_analysis-90.png"
+csv_file = "merged_final_optimized.csv"
+output_excel = "csv_species_statistics.xlsx"
+output_image = "csv_species_analysis.png"
 
 # 绘图展示的数量限制
 TOP_N_GENUS_PLOT = 30

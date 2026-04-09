@@ -2,7 +2,7 @@ import pandas as pd
 
 # --- 配置 ---
 fasta_file = "cd_hit_process.fasta"      # CD-HIT 输出的 fasta 文件
-csv_file = "merged_final_optimized.csv"  # 你的原始大表格
+csv_file = "merged_final_optimized_replication_annotated.csv"  # 你的原始大表格
 output_file = "final_data.csv"   # 最终结果
 
 # --- 第一步：读取 FASTA 文件，提取 ID ---
@@ -23,7 +23,7 @@ with open(fasta_file, 'r') as f:
             target_ids.add(clean_id)
 
 print(f"✅ 从 FASTA 中提取到 {len(target_ids)} 个有效 ID")
-# 打印前5个看看样子对不对
+# 打印前 5 个看看样子对不对
 print(f"   样本 ID: {list(target_ids)[:5]}")
 
 # --- 第二步：读取 CSV 并筛选 ---
@@ -42,6 +42,6 @@ matched_df = df[df[id_column].isin(target_ids)]
 # --- 第三步：保存 ---
 matched_df.to_csv(output_file, index=False)
 print(f"🎉 完成！")
-print(f"   原始 CSV 行数: {len(df)}")
-print(f"   匹配到的行数: {len(matched_df)}")
-print(f"   结果已保存至: {output_file}")
+print(f"   原始 CSV 行数：{len(df)}")
+print(f"   匹配到的行数：{len(matched_df)}")
+print(f"   结果已保存至：{output_file}")
