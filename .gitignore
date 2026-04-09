@@ -1,13 +1,13 @@
-data/
 .vscode/
 *.csv
 *.pkl
 *.fasta
 *.clstr
-！.gitignore
-！data\pfam_replication_mechanism_notes.md
-！data\pfam_replication_mechanism_table.tsv
-！data\rep_plasmid_core_db_README.md
-！data\rep_plasmid_core_db.hmm
-! data\rep_plasmid_core_models.list
-！data\rep_plasmid_removed_models.list
+
+data/*
+!data/pfam_replication_mechanism_notes.md
+!data/pfam_replication_mechanism_table.tsv
+!data/rep_plasmid_core_db_README.md
+!data/rep_plasmid_core_db.hmm
+!data/rep_plasmid_core_models.list
+!data/rep_plasmid_removed_models.list

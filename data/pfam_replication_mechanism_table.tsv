@@ -1,0 +1,42 @@
+pfam_name	pfam_acc	mechanism_call	role	confidence	use_for_call	note
+Rep_1	PF01446.24	RCR	core_marker	high	yes	典型滚环复制起始蛋白家族，常见于小型革兰阳性质粒
+RepL	PF05732.17	RCR	core_marker	high	yes	Firmicutes 质粒经典滚环复制蛋白
+Rol_Rep_N	PF18106.8	RCR	core_marker	high	yes	名称已直接指向 rolling-circle replication initiator
+RepD-like_N	PF22477.3	RCR	core_marker	high	yes	pT181/RepD 类滚环复制起始蛋白 N 端标志
+Rep_trans	PF02486.26	RCR	core_marker	medium	yes	常与 RepD-like_N 同时出现；单独命中时建议降级解释
+RepB-RCR_reg	PF10723.16	RCR	support_marker	high	yes	滚环复制调控蛋白 RepB，支持 RCR 但通常不是唯一证据
+Replitron_HUH	PF21859.4	RCR_like	core_marker	high	yes	HUH 内切酶样复制蛋白，强烈支持滚环或类似单链启动复制
+Replitron_C	PF21860.2	RCR_like	support_marker	medium	yes	常与 Replitron_HUH 配对，支持 RCR-like 判定
+Rep3_N	PF01051.28	theta	core_marker	high	yes	WH1 型 plasmid initiator，常见于 theta 型复制子
+Rep3_C	PF21205.4	theta	core_marker	high	yes	WH2 型 C 端，和 Rep3_N 联合时强支持 theta
+RepA_N	PF06970.19	theta	core_marker	high	yes	细菌质粒 RepA N 端家族，常见于 iteron/theta 型复制子
+Bac_RepA_C	PF18008.7	theta	core_marker	high	yes	与 RepA_N/WHD_RepA_N 联合时可稳健判为 theta
+WHD_RepA_N	PF27612.1	theta	core_marker	high	yes	RepA N 端 winged-helix DNA 结合域，支持 theta/iteron 型复制
+RepA_C	PF04796.19	theta	core_marker	high	yes	质粒编码 RepA 蛋白家族，通常归入 theta 型复制系统
+Rep_OBD	PF01719.24	theta	core_marker	high	yes	origin-binding domain，典型 iteron/theta 复制起始蛋白特征
+RepB_C	PF21861.3	theta	core_marker	medium	yes	常与 Rep_OBD 配对出现，支持 theta；单独命中时需谨慎
+RepC	PF06504.17	theta	core_marker	high	yes	RepC 型复制起始蛋白，多见于 theta 型复制子
+TrfA	PF07042.18	theta	core_marker	high	yes	IncP 等广宿主质粒经典 theta 复制起始蛋白
+Rep_assoc_RepA4	PF27691.1	theta_like	core_marker	medium	yes	复制相关 RepA4 家族，偏向 theta，但证据弱于经典 RepA/Rep3/TrfA
+L_lactis_RepB_C	PF06430.19	theta_like	support_marker	medium	yes	乳球菌质粒 RepB C 端，常见于 theta 型革兰阳性质粒，但建议结合全长结构域
+RepB_primase	PF16793.11	theta_like	support_marker	medium	yes	primase-Rep 复合起始蛋白，提示双链 DNA 质粒复制，但机制不宜单独硬判
+RepB_primase_C	PF22448.2	theta_like	support_marker	medium	yes	与 RepB_primase 联合时更有意义
+RepA1_leader	PF08048.18	theta_support	regulatory_marker	medium	yes	Tap RepA1 leader peptide，支持 antisense RNA 调控的 RepA 系统，偏向 theta
+Rep_N	PF08724.17	uncertain	core_marker	low	conditional	仅能说明存在 Rep-like 催化域，机制不够专一
+PaRep2a	PF07903.18	uncertain	core_marker	low	conditional	名称提示 plasmid-associated replication protein，但缺少足够机制特异性
+PaRep2b	PF07775.17	uncertain	core_marker	low	conditional	同上，建议仅作 replication-associated 标记
+RepB	PF07506.18	not_mechanism	partition_marker	low	no	更偏分配/稳定维持蛋白，不应用于复制方式判定
+Replic_Relax	PF13814.13	not_mechanism	ambiguous_marker	low	no	复制/接合松弛双功能相关，不能稳定映射到特定复制方式
+RepSA	PF20199.5	not_mechanism	ice_marker	low	no	pSAM2 相关复制起始蛋白，更像整合接合元件标记，不建议用于普通质粒复制方式判定
+Phage_P1_RepL	PF26868.1	not_mechanism	phage_marker	low	no	噬菌体 P1 复制蛋白，不应直接用于质粒复制方式判定
+Phage_RepB	PF26815.1	not_mechanism	phage_marker	low	no	噬菌体复制蛋白，不应直接用于质粒复制方式判定
+Viral_Rep	PF02407.23	viral_RCR	viral_marker	medium	no	提示 CRESS-DNA 病毒样滚环复制蛋白；除非你明确分析病毒样质粒，否则不纳入常规质粒判定
+Replicase	PF03090.24	not_mechanism	viral_marker	low	no	更像病毒 RNA replicase 家族，不适合细菌质粒复制方式判定
+CNV-Replicase_N	PF16688.11	not_mechanism	viral_marker	low	no	冠状病毒 replicase 相关，属于误收入
+Rep_1B	PF17873.8	not_mechanism	viral_marker	low	no	病毒 replicase 1ab 调控域，属于误收入
+Rep_4	PF05797.18	not_mechanism	euk_marker	low	no	酵母 2-micron REP 蛋白家族，不适用于细菌质粒
+Rep-A_N	PF04057.19	not_mechanism	euk_marker	low	no	真核 replication factor A 蛋白 N 端，不是细菌质粒 Rep
+Rep_fac-A_3	PF08661.18	not_mechanism	euk_marker	low	no	真核 RPA3 相关
+Rep_fac-A_C	PF08646.17	not_mechanism	euk_marker	low	no	真核 RPA C 端相关
+Rep_fac_C	PF08542.17	not_mechanism	euk_marker	low	no	真核 RFC C 端相关
+Rep_Org_C	PF06926.16	not_mechanism	nonspecific_marker	low	no	replisome organiser 样蛋白，机制不特异
