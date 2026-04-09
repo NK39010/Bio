@@ -14,8 +14,8 @@ print("🚀 开始处理数据...")
 Entrez.email = "nk3901@foxmail.com"
 
 # --- 1. 读取数据 ---
-df_rip = pd.read_csv('all_RIP.csv')
-df_ori = pd.read_csv('all_selected_ori_regions.csv', usecols=range(5))
+df_rip = pd.read_csv('data/RIPs.csv')
+df_ori = pd.read_csv('data/selected_ori_regions.csv', usecols=range(5))
 
 print(f"RIP: {len(df_rip)}")
 print(f"OriC: {len(df_ori)}")
@@ -57,7 +57,7 @@ def fetch_taxonomy(accessions, batch_size=200, max_retries=3):
                 break  # 成功就跳出 retry
             
             except Exception as e:
-                print(f"⚠️ batch {i} 第 {attempt+1} 次失败: {e}")
+                print(f"⚠️ batch {i} 第 {attempt+1} 次失败：{e}")
                 time.sleep(2 + attempt * 2)  # 递增等待
         
         # 👉 每个 batch 之间休息（关键！）
@@ -171,7 +171,7 @@ df_merged = pd.merge(
     how='left'
 )
 
-print(f"配对后行数: {len(df_merged)}")
+print(f"配对后行数：{len(df_merged)}")
 
 # =========================
 # 📏 6. 距离
@@ -217,12 +217,12 @@ output_file = 'merged_final_optimized.csv'
 df_final.to_csv(output_file, index=False)
 
 print("✅ 完成！")
-print(f"最终数据量: {len(df_final)}")
-print(f"输出文件: {output_file}")
+print(f"最终数据量：{len(df_final)}")
+print(f"输出文件：{output_file}")
 
 # =========================
 # 📊 检查
 # =========================
 print("\n📊 检查：")
-print("taxid 缺失:", df_final['taxid'].isna().mean())
-print("unknown 物种比例:", (df_final['species'] == 'unknown').mean())
+print("taxid 缺失：", df_final['taxid'].isna().mean())
+print("unknown 物种比例：", (df_final['species'] == 'unknown').mean())
