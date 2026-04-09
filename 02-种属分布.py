@@ -20,34 +20,34 @@ plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial Unicode MS', 'DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 # ================= 1. 数据读取与去重 =================
-print(f"正在读取 CSV 文件: {csv_file} ...")
+print(f"正在读取 CSV 文件：{csv_file} ...")
 
 try:
     # 读取 CSV
     df_raw = pd.read_csv(csv_file)
-    print(f"原始数据行数 (包含重复Ori): {len(df_raw)}")
+    print(f"原始数据行数 (包含重复 Ori): {len(df_raw)}")
 
     # 检查是否有 'ori_id' 列
     if 'ori_id' not in df_raw.columns:
-        print("错误: 找不到 'ori_id' 列，无法进行去重。请检查输入文件。")
+        print("错误：找不到 'ori_id' 列，无法进行去重。请检查输入文件。")
         exit()
 
     # 按照 'ori_id' 去重，保留第一条出现的记录
     df = df_raw.drop_duplicates(subset=['ori_id'], keep='first')
     
-    print(f"去重后数据行数 (唯一Ori): {len(df)}")
+    print(f"去重后数据行数 (唯一 Ori): {len(df)}")
     print(f"去除了 {len(df_raw) - len(df)} 行重复数据。")
 
     # 检查是否有 'species' 列
     if 'species' not in df.columns:
-        print(f"错误: 未找到 'species' 列。现有列: {df.columns.tolist()}")
+        print(f"错误：未找到 'species' 列。现有列：{df.columns.tolist()}")
         exit()
         
     # 直接获取物种列表，不做清洗
     raw_species_list = df['species'].dropna().tolist() 
 
 except FileNotFoundError:
-    print(f"错误: 找不到文件 '{csv_file}'")
+    print(f"错误：找不到文件 '{csv_file}'")
     exit()
 
 # ================= 2. 数据统计 (无清洗) =================
