@@ -1,49 +1,63 @@
 import os
+import argparse
 import pandas as pd
 
-root_dir = "D:/dataprocess/OriVresult"
+def parse_args():
+    parser = argparse.ArgumentParser(description="Merge RIP and Ori-region CSV files.")
+    parser.add_argument("--root-dir", default="D:/dataprocess/OriVresult", help="Input root directory.")
+    parser.add_argument("--output-rip", default="data/RIPs.csv", help="Output RIP CSV path.")
+    parser.add_argument(
+        "--output-ori",
+        default="data/selected_ori_regions.csv",
+        help="Output selected_ori_regions CSV path.",
+    )
+    parser.add_argument("--chunksize", type=int, default=20000, help="CSV chunk size.")
+    return parser.parse_args()
 
-output_A = "data/RIPs.csv"
-output_B = "data/selected_ori_regions.csv"
 
-# 确保输出目录存在
-os.makedirs("data", exist_ok=True)
+def main():
+    args = parse_args()
+    root_dir = args.root_dir
+    output_A = args.output_rip
+    output_B = args.output_ori
 
-written_A = False
-written_B = False
+    os.makedirs(os.path.dirname(output_A) or ".", exist_ok=True)
+    os.makedirs(os.path.dirname(output_B) or ".", exist_ok=True)
 
-for subdir, _, files in os.walk(root_dir):
-    for file in files:
-        if file.endswith(".csv"):
-            file_path = os.path.join(subdir, file)
-            print("处理：", file_path)
+    written_A = False
+    written_B = False
 
-            try:
-                # 👇 分块读取（核心优化）
-                for chunk in pd.read_csv(file_path, chunksize=20000):
+    for subdir, _, files in os.walk(root_dir):
+        for file in files:
+            if file.endswith(".csv"):
+                file_path = os.path.join(subdir, file)
+                print("处理：", file_path)
 
-                    # 可选：记录来源文件（做数据追踪很有用）
-                    # chunk["source_file"] = file
+                try:
+                    for chunk in pd.read_csv(file_path, chunksize=args.chunksize):
+                        if "RIP" in file:
+                            chunk.to_csv(
+                                output_A,
+                                mode="a",
+                                index=False,
+                                header=not written_A
+                            )
+                            written_A = True
 
-                    if "RIP" in file:
-                        chunk.to_csv(
-                            output_A,
-                            mode="a",
-                            index=False,
-                            header=not written_A
-                        )
-                        written_A = True
+                        elif "selected_ori_regions" in file:
+                            chunk.to_csv(
+                                output_B,
+                                mode="a",
+                                index=False,
+                                header=not written_B
+                            )
+                            written_B = True
 
-                    elif "selected_ori_regions" in file:
-                        chunk.to_csv(
-                            output_B,
-                            mode="a",
-                            index=False,
-                            header=not written_B
-                        )
-                        written_B = True
+                except Exception as e:
+                    print(f"❌ 读取失败：{file_path} -> {e}")
 
-            except Exception as e:
-                print(f"❌ 读取失败：{file_path} -> {e}")
+    print("✅ 完成！")
 
-print("✅ 完成！")
+
+if __name__ == "__main__":
+    main()

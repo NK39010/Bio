@@ -1,38 +1,54 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import argparse
 
-# 设置中文字体
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial Unicode MS', 'DejaVu Sans']
-plt.rcParams['axes.unicode_minus'] = False
+def parse_args():
+    parser = argparse.ArgumentParser(description="OriC length distribution visualization.")
+    parser.add_argument("--input", default="merged_final_optimized.csv", help="Input CSV file.")
+    parser.add_argument("--output-image", default="length_distribution.png", help="Output image path.")
+    parser.add_argument("--max-box-y", type=int, default=10000, help="Y max for boxplot zoom.")
+    return parser.parse_args()
 
-# 1. 读取数据
-df = pd.read_csv("merged_final_optimized.csv")
-df = df.dropna(subset=['OriC sequence'])
-df['length'] = df['OriC sequence'].astype(str).str.len()
+def main():
+    args = parse_args()
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Arial Unicode MS', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
 
-# 2. 绘图设置
-fig, axes = plt.subplots(1, 2, figsize=(20, 7))
+    df = pd.read_csv(args.input)
+    df = df.dropna(subset=['OriC sequence'])
+    df['length'] = df['OriC sequence'].astype(str).str.len()
 
-# --- 图 1：对数坐标直方图 (推荐) ---
-# 使用对数坐标，能看清 100-10000bp 之间的细节
-sns.histplot(data=df, x='length', bins=100, log_scale=(True, False), ax=axes[0], color='skyblue', edgecolor='black')
-axes[0].set_title('Distribution of OriC Length (Log Scale X-axis)', fontsize=14)
-axes[0].set_xlabel('Length (bp) - Log Scale', fontsize=12)
-axes[0].set_ylabel('Count', fontsize=12)
-axes[0].axvline(df['length'].median(), color='red', linestyle='--', label=f'Median: {df["length"].median()}')
-axes[0].legend()
+    fig, axes = plt.subplots(1, 2, figsize=(20, 7))
 
-# --- 图 2：截断坐标箱线图 ---
-# 强制把 Y 轴限制在 0-5000bp，把那些几百万的异常值切掉，只看主体
-sns.boxplot(data=df, y='length', ax=axes[1], color='lightgreen')
-axes[1].set_title('Boxplot (Zoomed in: 0-5000bp)', fontsize=14)
-axes[1].set_ylabel('Length (bp)', fontsize=12)
-axes[1].set_ylim(0, 10000) # ⭐ 关键：限制坐标轴范围，强制放大主体区域
+    sns.histplot(
+        data=df,
+        x='length',
+        bins=100,
+        log_scale=(True, False),
+        ax=axes[0],
+        color='skyblue',
+        edgecolor='black',
+    )
+    axes[0].set_title('Distribution of OriC Length (Log Scale X-axis)', fontsize=14)
+    axes[0].set_xlabel('Length (bp) - Log Scale', fontsize=12)
+    axes[0].set_ylabel('Count', fontsize=12)
+    axes[0].axvline(df['length'].median(), color='red', linestyle='--', label=f'Median: {df["length"].median()}')
+    axes[0].legend()
 
-plt.tight_layout()
-plt.show()
+    sns.boxplot(data=df, y='length', ax=axes[1], color='lightgreen')
+    axes[1].set_title(f'Boxplot (Zoomed in: 0-{args.max_box_y}bp)', fontsize=14)
+    axes[1].set_ylabel('Length (bp)', fontsize=12)
+    axes[1].set_ylim(0, args.max_box_y)
 
-# 3. 打印详细统计信息，辅助决策
-print("📊 详细长度统计：")
-print(df['length'].describe())
+    plt.tight_layout()
+    plt.savefig(args.output_image, dpi=300, bbox_inches='tight')
+    plt.show()
+
+    print(f"图已保存到: {args.output_image}")
+    print("📊 详细长度统计：")
+    print(df['length'].describe())
+
+
+if __name__ == "__main__":
+    main()

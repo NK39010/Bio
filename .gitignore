@@ -10,4 +10,8 @@ data/*
 !data\rep_plasmid_core_db_README.md
 !data\rep_plasmid_core_db.hmm
 !data\rep_plasmid_core_models.list
-！data\rep_plasmid_removed_models.list
+!data\rep_plasmid_removed_models.list
+*.png
+*.parquet
+*.log
+test_output/
