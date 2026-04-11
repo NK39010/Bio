@@ -226,7 +226,7 @@ def main():
     plt.tight_layout()
     plt.savefig(output_image, dpi=300, bbox_inches='tight')
     print(f"图表已保存：{output_image}")
-    plt.show()
+    plt.close('all')
 
     print("\n=== 任务完成 ===")
     print(f"注意：所有统计均基于去重后的唯一 OriC 序列，且保留了原始物种名称。")

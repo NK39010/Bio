@@ -14,6 +14,20 @@ def clean_seq(seq, is_aa=False):
     return seq.upper() if is_aa else seq.lower()
 
 
+def normalize_mechanism_call(value):
+    if pd.isna(value):
+        text = ""
+    else:
+        text = str(value).strip()
+    if text == "" or text.lower() == "unknown":
+        return "unresolved"
+    if text == "RCR_like":
+        return "RCR"
+    if text == "theta_like":
+        return "theta"
+    return text
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Build training parquet file.")
     parser.add_argument("--input", default="final_data.csv", help="Input CSV file.")
@@ -54,12 +68,12 @@ def main():
         df_out["full_replicon_seq"] = df_out["full_replicon_seq"].apply(lambda x: clean_seq(x, is_aa=False))
 
     if "replication_mechanism_call" in df_out.columns:
-        df_out["replication_mechanism_term"] = (
-            "replication_mechanism:"
-            + df_out["replication_mechanism_call"].fillna("unknown").astype(str).str.strip().replace("", "unknown")
+        df_out["replication_mechanism_call"] = (
+            df_out["replication_mechanism_call"].apply(normalize_mechanism_call)
         )
+        df_out["replication_mechanism_term"] = df_out["replication_mechanism_call"].fillna("unresolved").astype(str).str.strip().replace("", "unresolved")
     else:
-        df_out["replication_mechanism_term"] = "replication_mechanism:unknown"
+        df_out["replication_mechanism_term"] = "unresolved"
 
     table = pa.Table.from_pandas(df_out, preserve_index=False)
     pq.write_table(table, args.parquet, compression="snappy")

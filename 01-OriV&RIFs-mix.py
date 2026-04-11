@@ -3,6 +3,7 @@ import pickle
 import re
 import time
 from collections.abc import Iterable, Mapping
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -375,6 +376,11 @@ df_rip_small = df_rip[
     ]
 ]
 
+print("Deduplicating Ori and Rep records by ori_id/rep_id before Cartesian merge...")
+df_ori_small = df_ori_small.drop_duplicates(subset=["ori_id"])
+df_rip_small = df_rip_small.drop_duplicates(subset=["rep_id"])
+print(f"Unique OriC rows: {len(df_ori_small)}, Unique Rep rows: {len(df_rip_small)}")
+
 print("Merging Ori and Rep records...")
 
 df_merged = pd.merge(df_ori_small, df_rip_small, on="Accession_Number", how="left")
@@ -384,6 +390,9 @@ print(f"Merged rows: {len(df_merged)}")
 ori_mid = (df_merged["ori_start"] + df_merged["ori_end"]) / 2
 rep_mid = (df_merged["rep_start"] + df_merged["rep_end"]) / 2
 df_merged["distance"] = abs(ori_mid - rep_mid)
+
+# 保留每个 OriC 和每个 Rep 的所有组合，不再按最近距离去重
+print("Keeping all OriC-Rep pairings without rep_id deduplication.")
 
 df_final = pd.DataFrame(
     {
@@ -409,8 +418,18 @@ df_final = pd.DataFrame(
     }
 )
 
-output_file = "merged_final_optimized.csv"
-df_final.to_csv(output_file, index=False)
+output_file = Path("merged_final_optimized.csv")
+temp_file = output_file.with_suffix(output_file.suffix + ".tmp")
+try:
+    df_final.to_csv(temp_file, index=False)
+    temp_file.replace(output_file)
+except PermissionError:
+    print(f"Permission denied writing {output_file}. It may already exist and be open or locked by another process.")
+    print("Please close the file if it is open, delete it if needed, and rerun the script.")
+    raise
+except Exception as exc:
+    print(f"Failed to write output file {output_file}: {exc}")
+    raise
 
 print("Done.")
 print(f"Final row count: {len(df_final)}")

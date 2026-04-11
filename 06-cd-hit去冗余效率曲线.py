@@ -77,8 +77,8 @@ plt.grid(True, linestyle='--', alpha=0.6)
 # 添加说明文字
 plt.text(0.05, 0.05, f"Total Sequences: {total_sequences_all}", transform=plt.gca().transAxes, fontsize=10, color='gray')
 
-# 保存并显示
+# 保存并关闭图形
 plt.tight_layout()
 plt.savefig(output_image, dpi=300)
 print(f"✅ 图表已生成: {output_image}")
-plt.show()
+plt.close('all')

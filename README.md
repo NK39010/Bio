@@ -76,7 +76,7 @@ python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode m
 ```bash
 python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode wsl
 ```
-
+python3 run_pipeline.py --root-dir "C:/Users/MoSo/Desktop/ori" --cdhit-mode wsl
 ---
 
 ## 关键参数
@@ -91,7 +91,6 @@ python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode w
 - `--final-csv`：去冗余返还后的 CSV（默认 `final_data.csv`）
 - `--final-parquet`：08 的 parquet 输出（默认 `final_data.parquet`）
 - `--token-json`：09 词元基名（默认 `final_data_tokens.json`，最终会拆成 with/without 两个文件）
-- `--kmer`：词元 k-mer 长度（默认 `6`）
 
 跳步参数：
 
@@ -141,7 +140,7 @@ python3 08-构建训练用的parquet.py --input final_data.csv --parquet final_d
 只跑词元：
 
 ```bash
-python3 09-构建词元.py --input final_data.csv --kmer 6
+python3 09-构建词元.py --input final_data.csv
 ```
 
 ---

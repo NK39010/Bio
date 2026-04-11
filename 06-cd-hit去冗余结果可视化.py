@@ -86,7 +86,7 @@ def main():
     plt.tight_layout()
     plt.savefig(output_file, dpi=300)
     print(f"✅ 图表已保存为：{output_file}")
-    plt.show()
+    plt.close('all')
 
 
 if __name__ == "__main__":

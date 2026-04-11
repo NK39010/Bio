@@ -43,7 +43,7 @@ def main():
 
     plt.tight_layout()
     plt.savefig(args.output_image, dpi=300, bbox_inches='tight')
-    plt.show()
+    plt.close('all')
 
     print(f"图已保存到: {args.output_image}")
     print("📊 详细长度统计：")

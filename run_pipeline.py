@@ -42,7 +42,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-07", action="store_true")
     parser.add_argument("--skip-08", action="store_true")
     parser.add_argument("--skip-09", action="store_true")
-    parser.add_argument("--kmer", type=int, default=6, help="K-mer size for token output.")
     parser.add_argument("--final-csv", default="final_data.csv", help="Final filtered CSV output path.")
     parser.add_argument("--final-parquet", default="final_data.parquet", help="Final parquet path.")
     parser.add_argument("--token-json", default="final_data_tokens.json", help="Token JSON output path.")
@@ -140,8 +139,6 @@ def main() -> None:
                 str(token_base_path),
                 "--token-with-mechanism-json",
                 str(token_with_mech_path),
-                "--kmer",
-                str(args.kmer),
             ],
         )
 
