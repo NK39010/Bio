@@ -13,5 +13,4 @@ data/*
 !data\rep_plasmid_removed_models.list
 *.png
 *.parquet
-*.log
 test_output/
