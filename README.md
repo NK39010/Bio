@@ -57,9 +57,14 @@
     - `final_data.parquet`
 
 13. `09-构建词元.py`  
-    生成两版词元 JSON：
-    - `final_data_tokens_without_mechanism.json`
-    - `final_data_tokens_with_mechanism.json`
+    生成 HF 风格 tokenizer 文件到 `tokenizer/` 目录：
+    - `tokenizer/tokenizer.json`
+    - `tokenizer/tokenizer_config.json`
+    - `tokenizer/special_tokens_map.json`
+    - 20 种氨基酸
+    - 4 种碱基
+    - 3 种复制方式
+    - 出现次数大于 5 次的物种名
 
 ---
 
@@ -76,7 +81,7 @@ python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode m
 ```bash
 python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode wsl
 ```
-python3 run_pipeline.py --root-dir "C:/Users/MoSo/Desktop/ori" --cdhit-mode wsl
+python run_pipeline.py --root-dir "C:/Users/MoSo/Desktop/ori" --cdhit-mode wsl
 ---
 
 ## 关键参数
@@ -90,7 +95,7 @@ python3 run_pipeline.py --root-dir "C:/Users/MoSo/Desktop/ori" --cdhit-mode wsl
 - `--cdhit-t`：线程数（默认 `8`）
 - `--final-csv`：去冗余返还后的 CSV（默认 `final_data.csv`）
 - `--final-parquet`：08 的 parquet 输出（默认 `final_data.parquet`）
-- `--token-json`：09 词元基名（默认 `final_data_tokens.json`，最终会拆成 with/without 两个文件）
+- `--token-json`：09 输出的 `tokenizer.json` 路径（默认 `tokenizer/tokenizer.json`，其余两个文件会自动同目录生成）
 
 跳步参数：
 
@@ -116,16 +121,16 @@ python3 run_pipeline.py \
   - `replication_mechanism_term`
 - 该列来源：
   - 优先读取 `replication_mechanism_call`（来自 `02-annotate` 结果）
-  - 生成格式：`replication_mechanism:<call>`
-  - 若缺失则为 `replication_mechanism:unknown`
+  - 生成格式：`RCR` / `theta` / `unresolved`
 
 ### `09-构建词元.py`
 
-- 输入：`final_data.csv`
-- 输出两版词元：
-  - `*_without_mechanism.json`
-  - `*_with_mechanism.json`
-- 第二版会在 tokens 前添加复制方式词条（如 `replication_mechanism:theta`）
+- 输入：`final_data.csv` 或 `final_data.parquet`
+- 输出：
+  - `tokenizer/tokenizer.json`
+  - `tokenizer/tokenizer_config.json`
+  - `tokenizer/special_tokens_map.json`
+- 只保留 20 种氨基酸、4 种碱基、3 种复制方式，以及出现次数大于 5 次的物种名
 
 ---
 
@@ -140,7 +145,7 @@ python3 08-构建训练用的parquet.py --input final_data.csv --parquet final_d
 只跑词元：
 
 ```bash
-python3 09-构建词元.py --input final_data.csv
+python3 09-构建词元.py --input final_data.parquet --tokenizer-json tokenizer/tokenizer.json
 ```
 
 ---

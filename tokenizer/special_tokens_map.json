@@ -1,0 +1,37 @@
+{
+  "bos_token": {
+    "content": "[START]",
+    "single_word": false,
+    "lstrip": false,
+    "rstrip": false,
+    "normalized": false
+  },
+  "eos_token": {
+    "content": "[END]",
+    "single_word": false,
+    "lstrip": false,
+    "rstrip": false,
+    "normalized": false
+  },
+  "pad_token": {
+    "content": "[PAD]",
+    "single_word": false,
+    "lstrip": false,
+    "rstrip": false,
+    "normalized": false
+  },
+  "sep_token": {
+    "content": "[SEP]",
+    "single_word": false,
+    "lstrip": false,
+    "rstrip": false,
+    "normalized": false
+  },
+  "unk_token": {
+    "content": "[UNK]",
+    "single_word": false,
+    "lstrip": false,
+    "rstrip": false,
+    "normalized": false
+  }
+}

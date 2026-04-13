@@ -2,182 +2,221 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 import pandas as pd
 
 
-AA_SET = set("ACDEFGHIKLMNPQRSTVWY")
-NT_SET = set("ATCGN")
+SPECIAL_TOKENS = ["[START]", "[END]", "[PAD]", "[UNK]", "[SEP]"]
+AMINO_ACIDS = list("ACDEFGHIKLMNPQRSTVWY")
+NUCLEOTIDES = list("atcg")
+MECHANISM_TOKENS = [
+    "RCR",
+    "theta",
+    "unresolved",
+]
+DEFAULT_MODEL_MAX_LENGTH = 10**30
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Build semantic token JSON files from final CSV.")
-    parser.add_argument("--input", default="final_data.csv", help="Input CSV file.")
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build tokenizer files from the final dataset.")
     parser.add_argument(
-        "--token-base-json",
-        default="final_data_tokens_without_mechanism.json",
-        help="Output token json without mechanism term.",
-    )
-    parser.add_argument(
-        "--token-with-mechanism-json",
-        default="final_data_tokens_with_mechanism.json",
-        help="Output token json with mechanism term.",
+        "--input",
+        default="final_data.csv",
+        help="Input CSV or Parquet file.",
     )
     parser.add_argument(
         "--tokenizer-json",
-        default=None,
-        help="Optional tokenizer JSON output path.",
+        default="tokenizer/tokenizer.json",
+        help="Output tokenizer JSON path.",
     )
     parser.add_argument(
-        "--tokenizer-vocab-txt",
-        default=None,
-        help="Optional tokenizer vocab text output path.",
+        "--species-min-count",
+        type=int,
+        default=6,
+        help="Keep only species names appearing more than 5 times by default.",
     )
+    parser.add_argument("--tokenizer-config-json", default=None, help="Optional tokenizer_config.json path.")
+    parser.add_argument("--special-tokens-map-json", default=None, help="Optional special_tokens_map.json path.")
     return parser.parse_args()
 
 
-def normalize_mechanism(value: object) -> str:
-    if pd.isna(value):
-        text = ""
-    else:
-        text = str(value).strip()
-    if text == "" or text.lower() == "unknown":
-        return "unresolved"
-    if text.startswith("replication_mechanism:"):
-        value = text.split(":", 1)[1]
-    else:
-        value = text
-    if value == "RCR_like":
-        value = "RCR"
-    elif value == "theta_like":
-        value = "theta"
-    if value == "" or value.lower() == "unknown":
-        value = "unresolved"
-    return value
+def load_table(path: str) -> pd.DataFrame:
+    file_path = Path(path)
+    if file_path.suffix.lower() == ".parquet":
+        return pd.read_parquet(file_path)
+    return pd.read_csv(file_path, low_memory=False)
 
 
-def main():
+def normalize_species_name(value: object) -> str:
+    text = "" if pd.isna(value) else str(value).strip()
+    if not text:
+        return ""
+    text = re.sub(r"\s+", "_", text)
+    text = re.sub(r"[^0-9A-Za-z_.:-]+", "_", text)
+    text = re.sub(r"_+", "_", text).strip("_")
+    return text
+
+
+def make_token_entry(token: str, token_id: int, special: bool) -> dict[str, object]:
+    return {
+        "id": token_id,
+        "content": token,
+        "single_word": False,
+        "lstrip": False,
+        "rstrip": False,
+        "normalized": False if special else True,
+        "special": special,
+    }
+
+
+def make_token_meta(token: str, special: bool) -> dict[str, object]:
+    return {
+        "content": token,
+        "single_word": False,
+        "lstrip": False,
+        "rstrip": False,
+        "normalized": False if special else True,
+        "special": special,
+    }
+
+
+def make_special_map_entry(token: str) -> dict[str, object]:
+    return {
+        "content": token,
+        "single_word": False,
+        "lstrip": False,
+        "rstrip": False,
+        "normalized": False,
+    }
+
+
+def build_tokenizer_json(base_vocab: list[str], added_tokens: list[str]) -> dict[str, object]:
+    vocab = {token: idx for idx, token in enumerate(base_vocab)}
+    next_id = len(vocab)
+    tokenizer_added_tokens = [make_token_entry(token, idx, True) for idx, token in enumerate(SPECIAL_TOKENS)]
+    tokenizer_added_tokens.extend(
+        make_token_entry(token, next_id + offset, False) for offset, token in enumerate(added_tokens)
+    )
+
+    return {
+        "version": "1.0",
+        "truncation": None,
+        "padding": None,
+        "added_tokens": tokenizer_added_tokens,
+        "normalizer": None,
+        "pre_tokenizer": {"type": "Whitespace"},
+        "post_processor": None,
+        "decoder": None,
+        "model": {
+            "type": "BPE",
+            "dropout": None,
+            "unk_token": "[UNK]",
+            "continuing_subword_prefix": None,
+            "end_of_word_suffix": None,
+            "fuse_unk": False,
+            "byte_fallback": False,
+            "ignore_merges": False,
+            "vocab": vocab,
+            "merges": [],
+        },
+    }
+
+
+def build_tokenizer_config_json(added_tokens: list[str]) -> dict[str, object]:
+    added_tokens_decoder = {}
+    for idx, token in enumerate(SPECIAL_TOKENS):
+        added_tokens_decoder[str(idx)] = make_token_meta(token, True)
+    base_offset = len(SPECIAL_TOKENS)
+    for offset, token in enumerate(added_tokens):
+        token_id = base_offset + offset
+        added_tokens_decoder[str(token_id)] = make_token_meta(token, False)
+
+    return {
+        "added_tokens_decoder": added_tokens_decoder,
+        "bos_token": "[START]",
+        "clean_up_tokenization_spaces": True,
+        "eos_token": "[END]",
+        "extra_special_tokens": {},
+        "model_max_length": DEFAULT_MODEL_MAX_LENGTH,
+        "pad_token": "[PAD]",
+        "sep_token": "[SEP]",
+        "tokenizer_class": "PreTrainedTokenizerFast",
+        "unk_token": "[UNK]",
+    }
+
+
+def build_special_tokens_map_json() -> dict[str, object]:
+    return {
+        "bos_token": make_special_map_entry("[START]"),
+        "eos_token": make_special_map_entry("[END]"),
+        "pad_token": make_special_map_entry("[PAD]"),
+        "sep_token": make_special_map_entry("[SEP]"),
+        "unk_token": make_special_map_entry("[UNK]"),
+    }
+
+
+def main() -> None:
     args = parse_args()
-    df = pd.read_csv(args.input, low_memory=False)
+    df = load_table(args.input)
 
-    if "ori_id" not in df.columns or "OriC sequence" not in df.columns:
-        raise KeyError("CSV must contain 'ori_id' and 'OriC sequence' to generate token files.")
+    if "species" not in df.columns:
+        raise KeyError("Input file must contain a 'species' column.")
 
-    if "replication_mechanism_term" in df.columns:
-        df["replication_mechanism_term"] = df["replication_mechanism_term"].apply(normalize_mechanism)
-    else:
-        mechanism_col = "replication_mechanism_call"
-        if mechanism_col in df.columns:
-            df["replication_mechanism_term"] = df[mechanism_col].apply(normalize_mechanism)
-        else:
-            df["replication_mechanism_term"] = "unresolved"
+    species_series = df["species"].fillna("").astype(str).str.strip()
+    species_series = species_series[species_series != ""]
+    species_series = species_series[species_series.str.lower() != "unknown"]
+    species_counts = species_series.value_counts()
+    species_vocab = [
+        normalize_species_name(species)
+        for species in species_counts[species_counts >= args.species_min_count].index
+        if normalize_species_name(species)
+    ]
+    species_vocab = sorted(dict.fromkeys(species_vocab))
 
-    species_col = "species"
-    if species_col in df.columns:
-        df["species_term"] = "species:" + df[species_col].fillna("unknown").astype(str).str.strip().replace("", "unknown")
-    else:
-        df["species_term"] = "species:unknown"
+    base_vocab = SPECIAL_TOKENS + AMINO_ACIDS + NUCLEOTIDES
+    added_tokens = MECHANISM_TOKENS + species_vocab
 
-    aa_col = "rep_seq"
-    if aa_col not in df.columns:
-        df[aa_col] = ""
+    tokenizer_json = build_tokenizer_json(base_vocab, added_tokens)
+    tokenizer_config_json = build_tokenizer_config_json(added_tokens)
+    special_tokens_map_json = build_special_tokens_map_json()
 
-    token_df = df[
-        ["ori_id", "OriC sequence", "replication_mechanism_term", "species_term", "rep_seq"]
-    ].dropna(subset=["ori_id", "OriC sequence"]).copy()
-
-    def nt_tokens(seq: str) -> list[str]:
-        seq = str(seq).upper()
-        return [ch.lower() for ch in seq if ch in NT_SET]
-
-    def aa_tokens(seq: str) -> list[str]:
-        seq = str(seq).upper()
-        return [ch for ch in seq if ch in AA_SET]
-
-    token_df["nt_tokens"] = token_df["OriC sequence"].apply(nt_tokens)
-    token_df["aa_tokens"] = token_df["rep_seq"].apply(aa_tokens)
-
-    token_df["tokens_base"] = token_df.apply(
-        lambda row: [row["species_term"]] + row["aa_tokens"] + row["nt_tokens"],
-        axis=1,
-    )
-    token_df["tokens_with_mechanism"] = token_df.apply(
-        lambda row: [f"replication_mechanism:{row['replication_mechanism_term']}"] + row["tokens_base"],
-        axis=1,
+    tokenizer_json_path = Path(args.tokenizer_json)
+    tokenizer_json_path.parent.mkdir(parents=True, exist_ok=True)
+    tokenizer_json_path.write_text(
+        json.dumps(tokenizer_json, ensure_ascii=False, indent=2),
+        encoding="utf-8",
     )
 
-    token_base_records = token_df[["ori_id", "tokens_base"]].rename(
-        columns={"tokens_base": "tokens"}
-    ).to_dict(orient="records")
-    token_with_mech_records = token_df[
-        ["ori_id", "species_term", "replication_mechanism_term", "tokens_with_mechanism"]
-    ].rename(columns={"tokens_with_mechanism": "tokens"}).to_dict(orient="records")
-
-    def build_tokenizer_json(tokens: list[str]) -> dict[str, object]:
-        special_tokens = ["[START]", "[END]", "[PAD]", "[UNK]", "[SEP]"]
-        vocab = {token: idx for idx, token in enumerate(special_tokens)}
-        for token in tokens:
-            if token not in vocab:
-                vocab[token] = len(vocab)
-
-        return {
-            "version": "1.0",
-            "truncation": None,
-            "padding": None,
-            "added_tokens": [
-                {
-                    "id": idx,
-                    "content": token,
-                    "single_word": False,
-                    "lstrip": False,
-                    "rstrip": False,
-                    "normalized": False,
-                    "special": True,
-                }
-                for idx, token in enumerate(special_tokens)
-            ],
-            "normalizer": None,
-            "pre_tokenizer": {"type": "Whitespace"},
-            "post_processor": None,
-            "decoder": None,
-            "model": {
-                "type": "WordLevel",
-                "unk_token": "[UNK]",
-                "vocab": vocab,
-            },
-        }
-    
-    Path(args.token_base_json).write_text(
-        json.dumps(token_base_records, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    Path(args.token_with_mechanism_json).write_text(
-        json.dumps(token_with_mech_records, ensure_ascii=False, indent=2), encoding="utf-8"
+    tokenizer_config_path = Path(args.tokenizer_config_json) if args.tokenizer_config_json else tokenizer_json_path.parent / "tokenizer_config.json"
+    tokenizer_config_path.parent.mkdir(parents=True, exist_ok=True)
+    tokenizer_config_path.write_text(
+        json.dumps(tokenizer_config_json, ensure_ascii=False, indent=2),
+        encoding="utf-8",
     )
 
-    if args.tokenizer_json or args.tokenizer_vocab_txt:
-        tokenizer_tokens = set()
-        for records in (token_base_records, token_with_mech_records):
-            for record in records:
-                tokenizer_tokens.update(record["tokens"])
-        tokenizer_tokens = sorted(tokenizer_tokens)
+    special_tokens_map_path = (
+        Path(args.special_tokens_map_json)
+        if args.special_tokens_map_json
+        else tokenizer_json_path.parent / "special_tokens_map.json"
+    )
+    special_tokens_map_path.parent.mkdir(parents=True, exist_ok=True)
+    special_tokens_map_path.write_text(
+        json.dumps(special_tokens_map_json, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
-        if args.tokenizer_json:
-            tokenizer_data = build_tokenizer_json(tokenizer_tokens)
-            Path(args.tokenizer_json).write_text(
-                json.dumps(tokenizer_data, ensure_ascii=False, indent=2), encoding="utf-8"
-            )
-            print(f"✅ tokenizer JSON: {args.tokenizer_json}")
-
-        if args.tokenizer_vocab_txt:
-            Path(args.tokenizer_vocab_txt).write_text(
-                "\n".join(tokenizer_tokens), encoding="utf-8"
-            )
-            print(f"✅ tokenizer vocab: {args.tokenizer_vocab_txt}")
-
-    print(f"✅ tokens(no mechanism): {args.token_base_json}")
-    print(f"✅ tokens(with mechanism): {args.token_with_mechanism_json}")
-    print(f"📊 共 {len(token_df)} 条词元数据")
+    print(f"tokenizer JSON: {tokenizer_json_path}")
+    print(f"tokenizer config: {tokenizer_config_path}")
+    print(f"special tokens map: {special_tokens_map_path}")
+    print(f"special tokens: {len(SPECIAL_TOKENS)}")
+    print(f"amino acids: {len(AMINO_ACIDS)}")
+    print(f"nucleotides: {len(NUCLEOTIDES)}")
+    print(f"mechanism tokens: {len(MECHANISM_TOKENS)}")
+    print(f"species tokens (>={args.species_min_count}): {len(species_vocab)}")
+    print(f"base vocab: {len(base_vocab)}")
+    print(f"added tokens: {len(added_tokens)}")
 
 
 if __name__ == "__main__":

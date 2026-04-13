@@ -4,7 +4,6 @@ import argparse
 import shlex
 import subprocess
 import sys
-from pathlib import Path
 
 def run_cmd(cmd: list[str]) -> None:
     print(f"\n>>> Running: {' '.join(shlex.quote(x) for x in cmd)}")
@@ -44,7 +43,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-09", action="store_true")
     parser.add_argument("--final-csv", default="final_data.csv", help="Final filtered CSV output path.")
     parser.add_argument("--final-parquet", default="final_data.parquet", help="Final parquet path.")
-    parser.add_argument("--token-json", default="final_data_tokens.json", help="Token JSON output path.")
+    parser.add_argument("--token-json", default="tokenizer/tokenizer.json", help="Tokenizer JSON output path.")
     return parser.parse_args()
 
 
@@ -119,13 +118,6 @@ def main() -> None:
     if not args.skip_03:
         run_python("03-长度分布.py", ["--input", args.final_csv, "--output-image", "length_after.png"])
 
-    token_base_path = Path(args.token_json).with_name(
-        f"{Path(args.token_json).stem}_without_mechanism{Path(args.token_json).suffix}"
-    )
-    token_with_mech_path = Path(args.token_json).with_name(
-        f"{Path(args.token_json).stem}_with_mechanism{Path(args.token_json).suffix}"
-    )
-
     if not args.skip_08:
         run_python("08-构建训练用的parquet.py", ["--input", args.final_csv, "--parquet", args.final_parquet])
 
@@ -135,18 +127,15 @@ def main() -> None:
             [
                 "--input",
                 args.final_csv,
-                "--token-base-json",
-                str(token_base_path),
-                "--token-with-mechanism-json",
-                str(token_with_mech_path),
+                "--tokenizer-json",
+                args.token_json,
             ],
         )
 
-    print("\n✅ Pipeline finished.")
+    print("\nPipeline finished.")
     print(f"Final CSV: {args.final_csv}")
     print(f"Final Parquet: {args.final_parquet}")
-    print(f"Token JSON (without mechanism): {token_base_path}")
-    print(f"Token JSON (with mechanism): {token_with_mech_path}")
+    print(f"Tokenizer JSON: {args.token_json}")
 
 
 if __name__ == "__main__":
