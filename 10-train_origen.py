@@ -13,20 +13,20 @@ Input format expected by the training parquet:
     - optional replication mechanism column, e.g. `replication_mechanism_term`
 
 Examples:
-    python 10-train_origen.py \
-      --tokenizer-path tokenizer \
-      --dataset-path training_data \
-      --species-col species \
-      --rep-col rep_seq \
-      --seq-col "OriC sequence" \
-      --include-mechanism-token \
+    python 10-train_origen.py `
+      --tokenizer-path tokenizer `
+      --dataset-path training_data `
+      --species-col species `
+      --rep-col rep_seq `
+      --seq-col "OriC sequence" `
+      --include-mechanism-token `
       --mechanism-col replication_mechanism_term
 
-    python 10-train_origen.py \
-      --tokenizer-path tokenizer \
-      --dataset-path training_data \
-      --species-col species \
-      --rep-col rep_seq \
+    python 10-train_origen.py `
+      --tokenizer-path tokenizer `
+      --dataset-path training_data `
+      --species-col species `
+      --rep-col rep_seq `
       --seq-col "rep_dna_seq"
 """
 
@@ -41,6 +41,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List
 
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+
+import torch
 from datasets import DatasetDict, load_dataset
 from transformers import (
     AutoModelForCausalLM,
@@ -87,10 +90,10 @@ class ModelDataArguments:
         metadata={"help": "Replication-mechanism column name"},
     )
 
-    model_size: int = field(default=768, metadata={"help": "Hidden size"})
-    num_hidden_layers: int = field(default=12, metadata={"help": "Number of transformer layers"})
-    num_attention_heads: int = field(default=12, metadata={"help": "Number of attention heads"})
-    max_seq_len: int = field(default=1500, metadata={"help": "Maximum sequence length"})
+    model_size: int = field(default=512, metadata={"help": "Hidden size"})
+    num_hidden_layers: int = field(default=8, metadata={"help": "Number of transformer layers"})
+    num_attention_heads: int = field(default=8, metadata={"help": "Number of attention heads"})
+    max_seq_len: int = field(default=1024, metadata={"help": "Maximum sequence length"})
 
     do_lower_dna: bool = field(default=True, metadata={"help": "Lower-case DNA sequence before tokenization"})
     validation_split_ratio: float = field(
@@ -103,6 +106,7 @@ class ModelDataArguments:
     )
 
 
+@dataclass
 class CustomTrainingArguments(TrainingArguments):
     """Standard Hugging Face training arguments."""
 
@@ -139,6 +143,124 @@ def resolve_column_name(column_names: List[str], preferred: str, aliases: List[s
         if alias in column_names:
             return alias
     return preferred
+
+
+def apply_lightweight_training_defaults(training_args: TrainingArguments) -> None:
+    """Use a smaller first-run profile unless the user explicitly overrode it."""
+
+    argv = set(sys.argv)
+
+    def not_overridden(*names: str) -> bool:
+        return all(name not in argv for name in names)
+
+    if not_overridden("--per_device_train_batch_size", "--per-device-train-batch-size"):
+        training_args.per_device_train_batch_size = 2
+    if not_overridden("--per_device_eval_batch_size", "--per-device-eval-batch-size"):
+        training_args.per_device_eval_batch_size = 2
+    if not_overridden("--num_train_epochs", "--num-train-epochs"):
+        training_args.num_train_epochs = 1.0
+    if not_overridden("--gradient_accumulation_steps", "--gradient-accumulation-steps"):
+        training_args.gradient_accumulation_steps = 1
+
+
+def apply_gpu_defaults(model_args: ModelDataArguments, training_args: TrainingArguments) -> None:
+    """Tune the run for a small CUDA GPU if the user did not override key knobs."""
+
+    if not torch.cuda.is_available():
+        logger.info("CUDA is not available; keeping CPU-safe defaults.")
+        return
+
+    props = torch.cuda.get_device_properties(0)
+    vram_gb = props.total_memory / (1024**3)
+    logger.info("CUDA device detected: %s (%.2f GiB)", props.name, vram_gb)
+
+    if vram_gb < 6:
+        model_size = 384
+        hidden_layers = 6
+        attention_heads = 6
+        max_seq_len = 768
+        train_batch_size = 1
+        eval_batch_size = 1
+        grad_accum = 16
+        epochs = 3.0
+    elif vram_gb < 10:
+        model_size = 512
+        hidden_layers = 8
+        attention_heads = 8
+        max_seq_len = 1024
+        train_batch_size = 1
+        eval_batch_size = 1
+        grad_accum = 8
+        epochs = 3.0
+    elif vram_gb < 18:
+        model_size = 768
+        hidden_layers = 12
+        attention_heads = 12
+        max_seq_len = 1536
+        train_batch_size = 2
+        eval_batch_size = 2
+        grad_accum = 4
+        epochs = 4.0
+    else:
+        model_size = 1024
+        hidden_layers = 16
+        attention_heads = 16
+        max_seq_len = 2048
+        train_batch_size = 4
+        eval_batch_size = 4
+        grad_accum = 2
+        epochs = 5.0
+
+    argv = set(sys.argv)
+
+    def not_overridden(*names: str) -> bool:
+        return all(name not in argv for name in names)
+
+    if not_overridden("--model_size", "--model-size"):
+        model_args.model_size = model_size
+    if not_overridden("--num_hidden_layers", "--num-hidden-layers"):
+        model_args.num_hidden_layers = hidden_layers
+    if not_overridden("--num_attention_heads", "--num-attention-heads"):
+        model_args.num_attention_heads = attention_heads
+    if not_overridden("--max_seq_len", "--max-seq-len"):
+        model_args.max_seq_len = max_seq_len
+
+    if not_overridden("--per_device_train_batch_size", "--per-device-train-batch-size"):
+        training_args.per_device_train_batch_size = train_batch_size
+    if not_overridden("--per_device_eval_batch_size", "--per-device-eval-batch-size"):
+        training_args.per_device_eval_batch_size = eval_batch_size
+    if not_overridden("--gradient_accumulation_steps", "--gradient-accumulation-steps"):
+        training_args.gradient_accumulation_steps = grad_accum
+    if not_overridden("--num_train_epochs", "--num-train-epochs", "--max_steps", "--max-steps"):
+        training_args.num_train_epochs = epochs
+    if not_overridden("--fp16", "--no_fp16", "--bf16", "--no_bf16"):
+        training_args.fp16 = True
+        training_args.bf16 = False
+    if not_overridden("--gradient_checkpointing", "--no_gradient_checkpointing"):
+        training_args.gradient_checkpointing = True
+    if not_overridden("--dataloader_num_workers", "--dataloader-num-workers"):
+        training_args.dataloader_num_workers = 0
+    if not_overridden("--save_strategy", "--save-strategy"):
+        training_args.save_strategy = "epoch"
+    if not_overridden("--eval_strategy", "--evaluation_strategy", "--eval-strategy", "--evaluation-strategy"):
+        training_args.eval_strategy = "epoch"
+    if not_overridden("--logging_steps", "--logging-steps"):
+        training_args.logging_steps = 50
+    if not_overridden("--save_total_limit", "--save-total-limit"):
+        training_args.save_total_limit = 2
+    if not_overridden("--report_to", "--report-to"):
+        training_args.report_to = "none"
+
+
+def enable_train_and_eval_by_default(training_args: TrainingArguments) -> None:
+    """Turn on training/eval unless the user explicitly opted out."""
+
+    argv = set(sys.argv)
+
+    if "--no_do_train" not in argv and "--do_train" not in argv:
+        training_args.do_train = True
+    if "--no_do_eval" not in argv and "--do_eval" not in argv:
+        training_args.do_eval = True
 
 
 def format_example(example: Dict[str, Any], args: ModelDataArguments) -> str:
@@ -340,28 +462,30 @@ def tokenize_datasets(
     return tokenized
 
 
-def build_model(tokenizer, model_args: ModelDataArguments):
-    config = RoFormerConfig(
-        vocab_size=len(tokenizer),
-        hidden_size=model_args.model_size,
-        num_hidden_layers=model_args.num_hidden_layers,
-        num_attention_heads=model_args.num_attention_heads,
-        intermediate_size=model_args.model_size * 4,
-        hidden_act="gelu",
-        attention_probs_dropout_prob=0.1,
-        hidden_dropout_prob=0.1,
-        max_position_embeddings=model_args.max_seq_len + 512,
-        type_vocab_size=0,
-        is_decoder=True,
-        pad_token_id=tokenizer.pad_token_id,
-        eos_token_id=tokenizer.eos_token_id,
-        bos_token_id=tokenizer.bos_token_id,
-        rotary_value=True,
-    )
+def build_model(tokenizer, model_args: ModelDataArguments, training_args: TrainingArguments):
+    config = RoFormerConfig()
+    config.vocab_size = len(tokenizer)
+    config.hidden_size = model_args.model_size
+    config.num_hidden_layers = model_args.num_hidden_layers
+    config.num_attention_heads = model_args.num_attention_heads
+    config.intermediate_size = model_args.model_size * 4
+    config.hidden_act = "gelu"
+    config.attention_probs_dropout_prob = 0.1
+    config.hidden_dropout_prob = 0.1
+    config.max_position_embeddings = model_args.max_seq_len + 512
+    config.type_vocab_size = 2
+    config.is_decoder = True
+    config.pad_token_id = tokenizer.pad_token_id
+    config.eos_token_id = tokenizer.eos_token_id
+    config.bos_token_id = tokenizer.bos_token_id
+    config.rotary_value = True
+    config.use_cache = not training_args.gradient_checkpointing
 
     model = AutoModelForCausalLM.from_config(config)
     if hasattr(model, "resize_token_embeddings"):
         model.resize_token_embeddings(len(tokenizer))
+    if training_args.gradient_checkpointing and hasattr(model, "gradient_checkpointing_enable"):
+        model.gradient_checkpointing_enable()
     return model
 
 
@@ -375,7 +499,14 @@ def main() -> None:
     if not os.path.exists(model_args.tokenizer_path):
         raise FileNotFoundError(f"Tokenizer path does not exist: {model_args.tokenizer_path}")
 
+    apply_gpu_defaults(model_args, training_args)
+    enable_train_and_eval_by_default(training_args)
     set_seed(training_args.seed)
+    if not torch.cuda.is_available():
+        apply_lightweight_training_defaults(training_args)
+
+    if torch.cuda.is_available():
+        torch.backends.cuda.matmul.allow_tf32 = True
 
     logger.info("Loading tokenizer from %s", model_args.tokenizer_path)
     tokenizer = ensure_tokenizer(model_args.tokenizer_path)
@@ -433,7 +564,7 @@ def main() -> None:
     tokenized_datasets = tokenize_datasets(with_text, tokenizer, model_args)
 
     logger.info("Initializing RoFormer causal LM")
-    model = build_model(tokenizer, model_args)
+    model = build_model(tokenizer, model_args, training_args)
     param_count = sum(p.numel() for p in model.parameters()) / 1_000_000
     logger.info("Model parameters: %.2fM", param_count)
 
@@ -448,7 +579,7 @@ def main() -> None:
         args=training_args,
         train_dataset=tokenized_datasets["train"],
         eval_dataset=tokenized_datasets["validation"],
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         data_collator=data_collator,
     )
 

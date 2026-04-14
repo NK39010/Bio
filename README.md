@@ -148,6 +148,16 @@ The replication mechanism is optional:
 - add it with `--include_mechanism_token --mechanism_col replication_mechanism_term`
 - omit those flags to train on the three base fields only
 
+On CUDA, the script auto-tunes by VRAM tier unless you override it:
+
+- under 6 GB: `model_size=384`, `max_seq_len=768`
+- 6 to 10 GB: `model_size=512`, `max_seq_len=1024`
+- 10 to 18 GB: `model_size=768`, `max_seq_len=1536`
+- 18 GB and up: `model_size=1024`, `max_seq_len=2048`
+
+It also scales batch size, gradient accumulation, and epochs upward with more VRAM.
+`fp16=True` and `gradient_checkpointing=True` stay on by default unless you change them.
+
 For backward compatibility, it will also fall back to:
 
 - `host_species` for species
