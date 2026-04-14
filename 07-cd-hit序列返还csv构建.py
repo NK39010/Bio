@@ -26,7 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--validation-ratio",
         type=float,
-        default=0.05,
+        default=0.1,
         help="Validation ratio assigned by cluster, not by row.",
     )
     parser.add_argument("--seed", type=int, default=42, help="Random seed for cluster split.")
@@ -98,20 +98,28 @@ def parse_cluster_file(clstr_path: Path) -> pd.DataFrame:
     return pd.DataFrame(records)
 
 
-def assign_cluster_split(cluster_df: pd.DataFrame, validation_ratio: float, seed: int) -> pd.DataFrame:
+def assign_cluster_split(
+    cluster_df: pd.DataFrame,
+    validation_ratio: float,
+    seed: int,
+    weight_col: str = "cdhit_cluster_size",
+) -> pd.DataFrame:
     if cluster_df.empty:
         cluster_df = cluster_df.copy()
         cluster_df["split"] = pd.Series(dtype=str)
         return cluster_df
 
+    if weight_col not in cluster_df.columns:
+        weight_col = "cdhit_cluster_size"
+
     cluster_sizes = (
-        cluster_df[["cdhit_cluster", "cdhit_cluster_size"]]
-        .drop_duplicates(subset=["cdhit_cluster"])
-        .copy()
+        cluster_df.groupby("cdhit_cluster", as_index=False)[weight_col]
+        .sum()
+        .rename(columns={weight_col: "cluster_weight"})
     )
     cluster_sizes = cluster_sizes.sort_values("cdhit_cluster").reset_index(drop=True)
 
-    total_rows = int(cluster_sizes["cdhit_cluster_size"].sum())
+    total_rows = int(cluster_sizes["cluster_weight"].sum())
     if validation_ratio <= 0 or total_rows == 0:
         cluster_df = cluster_df.copy()
         cluster_df["split"] = "train"
@@ -125,7 +133,7 @@ def assign_cluster_split(cluster_df: pd.DataFrame, validation_ratio: float, seed
     for _, row in shuffled.iterrows():
         cluster_id = str(row["cdhit_cluster"])
         val_clusters.add(cluster_id)
-        collected += int(row["cdhit_cluster_size"])
+        collected += int(row["cluster_weight"])
         if collected >= target_val_rows:
             break
 
@@ -149,12 +157,37 @@ def main() -> None:
     if cluster_df.empty:
         raise ValueError(f"No cluster records were parsed from: {clstr_path}")
 
-    cluster_df = assign_cluster_split(cluster_df, args.validation_ratio, args.seed)
+    print("Loading annotated CSV...")
+    df = pd.read_csv(csv_path, low_memory=False)
+    if args.id_column not in df.columns:
+        raise KeyError(f"Column '{args.id_column}' not found in CSV: {csv_path}")
+
+    df[args.id_column] = df[args.id_column].fillna("").astype(str).str.strip()
+    row_weights = (
+        df[df[args.id_column] != ""]
+        .groupby(args.id_column, as_index=False)
+        .size()
+        .rename(columns={"size": "source_row_count"})
+        .rename(columns={args.id_column: "_cluster_ori_id"})
+    )
+
+    cluster_merge_df = cluster_df.rename(
+        columns={"ori_id": "_cluster_ori_id", "split": "_source_cluster_split"}
+    )
+    cluster_merge_df = cluster_merge_df.merge(
+        row_weights,
+        how="left",
+        left_on="_cluster_ori_id",
+        right_on="_cluster_ori_id",
+    )
+    cluster_merge_df["source_row_count"] = cluster_merge_df["source_row_count"].fillna(1).astype(int)
+    cluster_df = assign_cluster_split(cluster_merge_df, args.validation_ratio, args.seed, weight_col="source_row_count")
     cluster_df["cdhit_split"] = cluster_df["split"]
     cluster_summary = (
         cluster_df.groupby("cdhit_cluster", as_index=False)
         .agg(
-            cdhit_cluster_size=("ori_id", "size"),
+            cdhit_cluster_size=("_cluster_ori_id", "size"),
+            cdhit_cluster_row_count=("source_row_count", "sum"),
             cdhit_cluster_representative_ori_id=("cdhit_cluster_representative_ori_id", "first"),
             cdhit_is_representative=("cdhit_is_representative", "sum"),
             split=("cdhit_split", "first"),
@@ -163,18 +196,8 @@ def main() -> None:
         .reset_index(drop=True)
     )
 
-    print("Loading annotated CSV...")
-    df = pd.read_csv(csv_path, low_memory=False)
-    if args.id_column not in df.columns:
-        raise KeyError(f"Column '{args.id_column}' not found in CSV: {csv_path}")
-
-    df[args.id_column] = df[args.id_column].fillna("").astype(str).str.strip()
-
-    cluster_merge_df = cluster_df.rename(
-        columns={"ori_id": "_cluster_ori_id", "split": "_source_cluster_split"}
-    )
-    df = df.merge(cluster_merge_df, how="left", left_on=args.id_column, right_on="_cluster_ori_id")
-    df = df.drop(columns=["_cluster_ori_id", "_source_cluster_split"])
+    df = df.merge(cluster_df, how="left", left_on=args.id_column, right_on="_cluster_ori_id")
+    df = df.drop(columns=["_cluster_ori_id", "source_row_count"])
 
     if "cdhit_split" in df.columns:
         df["split"] = df["cdhit_split"]
@@ -183,14 +206,16 @@ def main() -> None:
     if missing_cluster:
         print(f"Warning: {missing_cluster} rows had no CD-HIT cluster label.")
 
+    cluster_output_df = cluster_df.rename(columns={"_cluster_ori_id": "ori_id"})
+
     df.to_csv(output_path, index=False, encoding="utf-8-sig")
-    cluster_df.to_csv(output_path.with_name("cdhit_cluster_map.csv"), index=False, encoding="utf-8-sig")
+    cluster_output_df.to_csv(output_path.with_name("cdhit_cluster_map.csv"), index=False, encoding="utf-8-sig")
     cluster_summary.to_csv(output_path.with_name("cdhit_cluster_summary.csv"), index=False, encoding="utf-8-sig")
 
     print("Done.")
     print(f"Annotated rows: {len(df)}")
-    print(f"Unique ori IDs with cluster labels: {cluster_df['ori_id'].nunique()}")
-    print(f"Clusters: {cluster_df['cdhit_cluster'].nunique()}")
+    print(f"Unique ori IDs with cluster labels: {cluster_output_df['ori_id'].nunique()}")
+    print(f"Clusters: {cluster_output_df['cdhit_cluster'].nunique()}")
     print(f"Validation rows: {(df['cdhit_split'] == 'validation').sum() if 'cdhit_split' in df.columns else 0}")
     print(f"Output file: {output_path}")
 

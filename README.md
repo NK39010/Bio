@@ -1,159 +1,164 @@
 # Bio Pipeline (00-09)
 
-这个仓库用于构建一条从原始 CSV 到去冗余、注释、可视化、训练数据导出的全流程管线。
+This repository builds a full OriC/Rep analysis and training-data pipeline from raw CSV inputs.
 
-## 流程总览
+## Pipeline Overview
 
-主流程按以下步骤执行（可跳步）：
+Recommended end-to-end order:
 
-1. `00-合并.py`  
-   从初始数据目录递归读取 CSV，合并为：
-   - `data/RIPs.csv`
-   - `data/selected_ori_regions.csv`
+1. `00-合并.py`
+   - Reads the raw directory recursively
+   - Outputs:
+     - `data/RIPs.csv`
+     - `data/selected_ori_regions.csv`
 
-2. `01-OriV&RIFs-mix.py`  
-   合并 Ori 与 RIP，产出：
-   - `merged_final_optimized.csv`
+2. `01-OriV&RIFs-mix.py`
+   - Ori-centric pairing:
+     - each OriC keeps the nearest Rep(s) on the same plasmid
+     - OriCs without any matching Rep are kept as no-rep rows
+   - Output:
+     - `merged_final_optimized.csv`
 
-3. `02-种属分布.py`（CD-HIT 前）  
-   产出种属分布统计：
-   - `species_before.xlsx`
-   - `species_before.png`
+3. `02-种属分布.py` and `03-长度分布.py` before CD-HIT
+   - Outputs:
+     - `species_before.xlsx`
+     - `species_before.png`
+     - `length_before.png`
+   - `02` now uses raw rows directly and no longer deduplicates by `ori_id`
 
-4. `03-长度分布.py`（CD-HIT 前）  
-   产出长度分布图：
-   - `length_before.png`
+4. `02-annotate_replication_mechanism.py`
+   - Adds replication-mechanism annotations
+   - Output:
+     - `merged_final_optimized_replication_annotated.csv`
 
-5. `02-annotate_replication_mechanism.py`  
-   注释复制方式，产出：
-   - `merged_final_optimized_replication_annotated.csv`
+5. `04-cd-hit序列构建.py`
+   - Builds the CD-HIT FASTA input
+   - Output:
+     - `ori.fasta`
 
-6. `04-cd-hit序列构建.py`  
-   生成 CD-HIT 输入 FASTA：
-   - `ori.fasta`
+6. `05` via `run_pipeline.py`
+   - Runs `cd-hit-est`
+   - Outputs:
+     - `cd_hit_process.fasta`
+     - `cd_hit_process.fasta.clstr`
 
-7. `05`（通过 `run_pipeline.py` 内置命令执行）  
-   执行 `cd-hit-est` 去冗余，产出：
-   - `cd_hit_process.fasta`
-   - `cd_hit_process.fasta.clstr`
+7. `06-cd-hit去冗余结果可视化.py`
+   - Output:
+     - `cdhit_redundancy.png`
 
-8. `06-cd-hit去冗余结果可视化.py`  
-   产出去冗余可视化：
-   - `cdhit_redundancy.png`
+8. `07-cd-hit序列返还csv构建.py`
+   - Maps CD-HIT clusters back to the annotated CSV
+   - Default validation split is cluster-aware and close to `9:1`
+   - Output:
+     - `final_data.csv`
 
-9. `07-cd-hit序列返还csv构建.py`  
-   将去冗余 FASTA 映射回注释表，产出：
-   - `final_data.csv`
+9. `02-种属分布.py` after CD-HIT
+   - Outputs:
+     - `species_after.xlsx`
+     - `species_after.png`
 
-10. `02-种属分布.py`（CD-HIT 后）  
-    - `species_after.xlsx`
-    - `species_after.png`
+10. `03-长度分布.py` after CD-HIT
+    - Output:
+      - `length_after.png`
 
-11. `03-长度分布.py`（CD-HIT 后）  
-    - `length_after.png`
+11. `08-构建训练用的parquet.py`
+    - Splits the final dataset into train / validation files
+    - Outputs:
+      - `training_data/train.csv`
+      - `training_data/validation.csv`
+      - `training_data/train.parquet`
+      - `training_data/validation.parquet`
 
-12. `08-构建训练用的parquet.py`  
-    构建训练用 parquet（包含复制方式词条列 `replication_mechanism_term`）：
-    - `final_data.parquet`
+12. `09-构建词元.py`
+    - Builds tokenizer files from the training CSV
+    - Default input:
+      - `training_data/train.csv`
+    - Outputs:
+      - `tokenizer/tokenizer.json`
+      - `tokenizer/tokenizer_config.json`
+      - `tokenizer/special_tokens_map.json`
 
-13. `09-构建词元.py`  
-    生成 HF 风格 tokenizer 文件到 `tokenizer/` 目录：
-    - `tokenizer/tokenizer.json`
-    - `tokenizer/tokenizer_config.json`
-    - `tokenizer/special_tokens_map.json`
-    - 20 种氨基酸
-    - 4 种碱基
-    - 3 种复制方式
-    - 出现次数大于 5 次的物种名
+## One-Command Run
 
----
-
-## 一键运行（推荐）
-
-### mac 直接运行 CD-HIT
-
-```bash
-python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode mac
-```
-
-### 通过 WSL 运行 CD-HIT
-
-```bash
-python3 run_pipeline.py --root-dir "/你的初始数据文件夹" --cdhit-mode wsl
-```
-python run_pipeline.py --root-dir "C:/Users/MoSo/Desktop/ori" --cdhit-mode wsl
----
-
-## 关键参数
-
-`run_pipeline.py` 常用参数：
-
-- `--root-dir`：原始数据目录（必填）
-- `--cdhit-mode {mac|wsl}`：CD-HIT 执行方式
-- `--cdhit-c`：相似性阈值（默认 `0.9`）
-- `--cdhit-n`：word size（默认 `5`）
-- `--cdhit-t`：线程数（默认 `8`）
-- `--final-csv`：去冗余返还后的 CSV（默认 `final_data.csv`）
-- `--final-parquet`：08 的 parquet 输出（默认 `final_data.parquet`）
-- `--token-json`：09 输出的 `tokenizer.json` 路径（默认 `tokenizer/tokenizer.json`，其余两个文件会自动同目录生成）
-
-跳步参数：
-
-- `--skip-00` ~ `--skip-09`：跳过对应步骤
-
-示例（只重跑 08 和 09）：
+Windows / WSL example:
 
 ```bash
-python3 run_pipeline.py \
-  --root-dir "/你的初始数据文件夹" \
-  --skip-00 --skip-01 --skip-02 --skip-03 --skip-annotate --skip-04 --skip-05 --skip-06 --skip-07
+python run_pipeline.py --root-dir "D:\dataprocess\OriVresult" --cdhit-mode wsl
 ```
 
----
-
-## 08 / 09 职责说明
-
-### `08-构建训练用的parquet.py`
-
-- 输入：`final_data.csv`（或你指定的 CSV）
-- 输出：`final_data.parquet`
-- 会新增列：
-  - `replication_mechanism_term`
-- 该列来源：
-  - 优先读取 `replication_mechanism_call`（来自 `02-annotate` 结果）
-  - 生成格式：`RCR` / `theta` / `unresolved`
-
-### `09-构建词元.py`
-
-- 输入：`final_data.csv` 或 `final_data.parquet`
-- 输出：
-  - `tokenizer/tokenizer.json`
-  - `tokenizer/tokenizer_config.json`
-  - `tokenizer/special_tokens_map.json`
-- 只保留 20 种氨基酸、4 种碱基、3 种复制方式，以及出现次数大于 5 次的物种名
-
----
-
-## 单步运行示例
-
-只跑 parquet：
+If you want to rerun only the later steps with an existing `final_data.csv`:
 
 ```bash
-python3 08-构建训练用的parquet.py --input final_data.csv --parquet final_data.parquet
+python run_pipeline.py --root-dir "D:\dataprocess\OriVresult" --cdhit-mode wsl --skip-00 --skip-01 --skip-02 --skip-03 --skip-annotate --skip-04 --skip-05 --skip-06 --skip-07
 ```
 
-只跑词元：
+## Key Arguments
 
-```bash
-python3 09-构建词元.py --input final_data.parquet --tokenizer-json tokenizer/tokenizer.json
-```
+`run_pipeline.py` common arguments:
 
----
+- `--root-dir`: root folder for step 00 input CSVs
+- `--cdhit-mode {mac|wsl}`: how to run `cd-hit-est`
+- `--cdhit-c`: CD-HIT identity threshold, default `0.9`
+- `--cdhit-n`: word size, default `5`
+- `--cdhit-t`: threads, default `8`
+- `--final-csv`: merged post-CD-HIT CSV, default `final_data.csv`
+- `--training-dir`: split train/validation output directory, default `training_data`
+- `--token-json`: tokenizer JSON path, default `tokenizer/tokenizer.json`
 
-## 依赖建议
+Skipping steps:
 
-建议 Python 3.10+，并安装（按脚本实际用到的包）：
+- `--skip-00` to `--skip-09`
 
+## Training Outputs
+
+`08-构建训练用的parquet.py` now writes both CSV and Parquet files for each split.
+
+Current split is approximately `9:1`:
+
+- train: about 90%
+- validation: about 10%
+
+The split is cluster-aware to reduce leakage across train and validation.
+
+## Tokenizer
+
+`09-构建词元.py` supports CSV or Parquet input, but the pipeline now points it to `training_data/train.csv`.
+
+It keeps:
+
+- 20 amino-acid tokens
+- 4 nucleotide tokens
+- 3 replication-mechanism tokens
+- species names that appear more than 5 times
+
+## Training Defaults
+
+`10-train_origen.py` now defaults to the columns produced by `training_data`:
+
+- `species_col=species`
+- `rep_col=rep_seq`
+- `seq_col="OriC sequence"`
+
+If you want to train on the Rep DNA sequence instead, pass:
+
+- `--seq_col "rep_dna_seq"`
+
+The replication mechanism is optional:
+
+- add it with `--include_mechanism_token --mechanism_col replication_mechanism_term`
+- omit those flags to train on the three base fields only
+
+For backward compatibility, it will also fall back to:
+
+- `host_species` for species
+- `rep_protein` for Rep
+- `oriv_sequence` or `rep_dna_seq` for the DNA sequence
+
+## Dependencies
+
+Suggested environment:
+
+- Python 3.10+
 - `pandas`
 - `numpy`
 - `biopython`
@@ -164,7 +169,13 @@ python3 09-构建词元.py --input final_data.parquet --tokenizer-json tokenizer
 - `pyhmmer`
 - `tqdm`
 
-以及系统命令：
+System dependency:
 
-- `cd-hit-est`（`--cdhit-mode mac` 时本机可执行）
-- 或 WSL 中可执行 `cd-hit-est`（`--cdhit-mode wsl`）
+- `cd-hit-est`
+
+## Notes
+
+- `01` is Ori-centric by design now.
+- `02` reports species distribution from raw rows, not deduplicated OriC records.
+- `07` keeps a validation split close to `9:1` while preserving cluster integrity.
+- `08` is responsible for splitting the final CSV into train / validation CSV and Parquet files.

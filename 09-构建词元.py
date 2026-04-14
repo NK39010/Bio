@@ -12,9 +12,9 @@ SPECIAL_TOKENS = ["[START]", "[END]", "[PAD]", "[UNK]", "[SEP]"]
 AMINO_ACIDS = list("ACDEFGHIKLMNPQRSTVWY")
 NUCLEOTIDES = list("atcg")
 MECHANISM_TOKENS = [
-    "RCR",
-    "theta",
-    "unresolved",
+    "[RCR]",
+    "[theta]",
+    "[unresolved]",
 ]
 DEFAULT_MODEL_MAX_LENGTH = 10**30
 
@@ -53,10 +53,18 @@ def normalize_species_name(value: object) -> str:
     text = "" if pd.isna(value) else str(value).strip()
     if not text:
         return ""
-    text = re.sub(r"\s+", "_", text)
-    text = re.sub(r"[^0-9A-Za-z_.:-]+", "_", text)
-    text = re.sub(r"_+", "_", text).strip("_")
+    text = text.replace("[", "").replace("]", "")
+    text = text.replace("_", " ")
+    text = re.sub(r"\s+", " ", text)
+    text = text.strip()
     return text
+
+
+def bracket_token(value: object) -> str:
+    text = normalize_species_name(value)
+    if not text:
+        return ""
+    return f"[{text}]"
 
 
 def make_token_entry(token: str, token_id: int, special: bool) -> dict[str, object]:
@@ -168,11 +176,11 @@ def main() -> None:
     species_series = species_series[species_series != ""]
     species_series = species_series[species_series.str.lower() != "unknown"]
     species_counts = species_series.value_counts()
-    species_vocab = [
-        normalize_species_name(species)
-        for species in species_counts[species_counts >= args.species_min_count].index
-        if normalize_species_name(species)
-    ]
+    species_vocab = []
+    for species in species_counts[species_counts >= args.species_min_count].index:
+        token = bracket_token(species)
+        if token:
+            species_vocab.append(token)
     species_vocab = sorted(dict.fromkeys(species_vocab))
 
     base_vocab = SPECIAL_TOKENS + AMINO_ACIDS + NUCLEOTIDES

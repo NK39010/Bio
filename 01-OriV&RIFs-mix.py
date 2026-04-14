@@ -299,13 +299,17 @@ def circular_distance(position_a, position_b, replicon_length=np.nan):
     return min(wrapped_distance, length - wrapped_distance)
 
 
-def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
+def pair_oris_to_nearest_reps(df_ori_small, df_rip_small):
     """
-    Pair each rep with the nearest OriC within the same plasmid.
+    Pair each OriC with one or more nearest Rep records within the same plasmid.
+
+    The assignment is Ori-centric:
+    - each Rep is assigned to the closest OriC in the same plasmid;
+    - an OriC with multiple assigned Reps keeps all of them as multiple rows;
+    - an OriC with no assigned Rep is retained as a no-rep row.
 
     If Sequence_length is available, distances are measured on circular plasmid
     coordinates so features spanning the coordinate origin are handled correctly.
-    This avoids Cartesian expansion and keeps one paired row per rep.
     """
     paired_rows = []
 
@@ -318,17 +322,52 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
         for acc, group in df_rip_small.groupby("Accession_Number", sort=False)
     }
 
-    for acc, rep_group in rep_groups.items():
+    all_accessions = list(dict.fromkeys(list(ori_groups.keys()) + list(rep_groups.keys())))
+
+    def build_row(ori_row, acc, replicon_length, ori_mid_value, rep_row=None, rep_mid_value=np.nan, distance=np.nan, pairing_method="orphan_ori_no_rep"):
+        return {
+            "OriC sequence": ori_row["Intergenic_Sequence"],
+            "ori_id": ori_row["ori_id"],
+            "plasmid_id": acc,
+            "species": ori_row["species_clean"],
+            "taxid": ori_row["taxid"],
+            "source": "PLSDB",
+            "pfamid_fast": np.nan,
+            "rep_id": rep_row["rep_id"] if rep_row is not None else np.nan,
+            "Rep_type_fast": rep_row["product"] if rep_row is not None else np.nan,
+            "rep_seq": rep_row["translation"] if rep_row is not None else np.nan,
+            "rep_dna_seq": np.nan,
+            "full_replicon_seq": np.nan,
+            "split": np.nan,
+            "__index_level_0__": np.nan,
+            "ori_start": ori_row["ori_start"],
+            "ori_end": ori_row["ori_end"],
+            "rep_start": rep_row["rep_start"] if rep_row is not None else np.nan,
+            "rep_end": rep_row["rep_end"] if rep_row is not None else np.nan,
+            "distance": distance,
+            "pairing_method": pairing_method,
+            "ori_midpoint": float(ori_mid_value),
+            "rep_midpoint": float(rep_mid_value) if pd.notna(rep_mid_value) else np.nan,
+            "replicon_length": replicon_length,
+        }
+
+    for acc in all_accessions:
         ori_group = ori_groups.get(acc)
-        if ori_group is None or ori_group.empty or rep_group.empty:
+        if ori_group is None or ori_group.empty:
             continue
 
         ori_group = ori_group.dropna(subset=["ori_start", "ori_end"]).reset_index(drop=True)
-        rep_group = rep_group.dropna(subset=["rep_start", "rep_end"]).reset_index(drop=True)
-        if ori_group.empty or rep_group.empty:
+        if ori_group.empty:
             continue
 
+        rep_group = rep_groups.get(acc)
+        if rep_group is None:
+            rep_group = pd.DataFrame(columns=df_rip_small.columns)
+        rep_group = rep_group.dropna(subset=["rep_start", "rep_end"]).reset_index(drop=True)
+
         length_values = rep_group["Sequence_length"].dropna().map(valid_replicon_length).dropna()
+        if length_values.empty:
+            length_values = ori_group.get("Sequence_length", pd.Series(dtype=float)).dropna().map(valid_replicon_length).dropna()
         replicon_length = length_values.iloc[0] if not length_values.empty else np.nan
 
         ori_mid = np.array(
@@ -339,6 +378,22 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
             dtype=float,
         )
 
+        if rep_group.empty:
+            for ori_idx, ori_row in ori_group.iterrows():
+                paired_rows.append(
+                    build_row(
+                        ori_row=ori_row,
+                        acc=acc,
+                        replicon_length=replicon_length,
+                        ori_mid_value=ori_mid[ori_idx],
+                        rep_row=None,
+                        rep_mid_value=np.nan,
+                        distance=np.nan,
+                        pairing_method="orphan_ori_no_rep",
+                    )
+                )
+            continue
+
         rep_mid = np.array(
             [
                 feature_midpoint(row["rep_start"], row["rep_end"], replicon_length)
@@ -347,52 +402,63 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
             dtype=float,
         )
 
-        for rep_idx, rep_row in rep_group.iterrows():
-            rep_mid_value = float(rep_mid[rep_idx])
-            distances = np.array(
+        distance_matrix = np.array(
+            [
                 [
                     circular_distance(ori_mid_value, rep_mid_value, replicon_length)
-                    for ori_mid_value in ori_mid
-                ],
-                dtype=float,
-            )
-            best_pos = int(np.argmin(distances))
+                    for rep_mid_value in rep_mid
+                ]
+                for ori_mid_value in ori_mid
+            ],
+            dtype=float,
+        )
 
-            ori_row = ori_group.iloc[best_pos]
-            distance = float(distances[best_pos])
-            pairing_method = (
-                "nearest_ori_by_rep_circular"
-                if pd.notna(replicon_length)
-                else "nearest_ori_by_rep_linear"
-            )
+        rep_best_ori_idx = np.argmin(distance_matrix, axis=0)
+        ori_to_rep_indices: dict[int, list[int]] = {idx: [] for idx in range(len(ori_group))}
+        for rep_idx, ori_idx in enumerate(rep_best_ori_idx):
+            ori_to_rep_indices[int(ori_idx)].append(rep_idx)
 
-            paired_rows.append(
-                {
-                    "OriC sequence": ori_row["Intergenic_Sequence"],
-                    "ori_id": ori_row["ori_id"],
-                    "plasmid_id": acc,
-                    "species": ori_row["species_clean"],
-                    "taxid": ori_row["taxid"],
-                    "source": "PLSDB",
-                    "pfamid_fast": np.nan,
-                    "rep_id": rep_row["rep_id"],
-                    "Rep_type_fast": rep_row["product"],
-                    "rep_seq": rep_row["translation"],
-                    "rep_dna_seq": np.nan,
-                    "full_replicon_seq": np.nan,
-                    "split": np.nan,
-                    "__index_level_0__": np.nan,
-                    "ori_start": ori_row["ori_start"],
-                    "ori_end": ori_row["ori_end"],
-                    "rep_start": rep_row["rep_start"],
-                    "rep_end": rep_row["rep_end"],
-                    "distance": distance,
-                    "pairing_method": pairing_method,
-                    "ori_midpoint": float(ori_mid[best_pos]),
-                    "rep_midpoint": rep_mid_value,
-                    "replicon_length": replicon_length,
-                }
+        pairing_method = (
+            "ori_nearest_rep_circular"
+            if pd.notna(replicon_length)
+            else "ori_nearest_rep_linear"
+        )
+
+        for ori_idx, ori_row in ori_group.iterrows():
+            assigned_rep_indices = ori_to_rep_indices.get(ori_idx, [])
+            if not assigned_rep_indices:
+                paired_rows.append(
+                    build_row(
+                        ori_row=ori_row,
+                        acc=acc,
+                        replicon_length=replicon_length,
+                        ori_mid_value=ori_mid[ori_idx],
+                        rep_row=None,
+                        rep_mid_value=np.nan,
+                        distance=np.nan,
+                        pairing_method="orphan_ori_no_rep",
+                    )
+                )
+                continue
+
+            assigned_rep_indices = sorted(
+                assigned_rep_indices,
+                key=lambda idx: float(distance_matrix[ori_idx, idx]),
             )
+            for rep_idx in assigned_rep_indices:
+                rep_row = rep_group.iloc[rep_idx]
+                paired_rows.append(
+                    build_row(
+                        ori_row=ori_row,
+                        acc=acc,
+                        replicon_length=replicon_length,
+                        ori_mid_value=ori_mid[ori_idx],
+                        rep_row=rep_row,
+                        rep_mid_value=rep_mid[rep_idx],
+                        distance=float(distance_matrix[ori_idx, rep_idx]),
+                        pairing_method=pairing_method,
+                    )
+                )
 
     if not paired_rows:
         return pd.DataFrame(
@@ -543,13 +609,13 @@ df_rip_small = df_rip[
     ]
 ]
 
-print("Deduplicating Ori and Rep records by ori_id/rep_id before nearest-position pairing...")
+print("Deduplicating Ori and Rep records by ori_id/rep_id before Ori-centric pairing...")
 df_ori_small = df_ori_small.drop_duplicates(subset=["ori_id"])
 df_rip_small = df_rip_small.drop_duplicates(subset=["rep_id"])
 print(f"Unique OriC rows: {len(df_ori_small)}, Unique Rep rows: {len(df_rip_small)}")
 
-print("Pairing each rep with its nearest OriC within the same plasmid...")
-df_final = pair_reps_to_nearest_oris(df_ori_small, df_rip_small)
+print("Pairing each OriC with its nearest Rep(s) within the same plasmid...")
+df_final = pair_oris_to_nearest_reps(df_ori_small, df_rip_small)
 
 print(f"Paired rows: {len(df_final)}")
 output_file = Path("merged_final_optimized.csv")

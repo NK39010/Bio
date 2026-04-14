@@ -41,7 +41,7 @@
       "special": true
     },
     "5": {
-      "content": "RCR",
+      "content": "[RCR]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -49,7 +49,7 @@
       "special": false
     },
     "6": {
-      "content": "theta",
+      "content": "[theta]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -57,7 +57,7 @@
       "special": false
     },
     "7": {
-      "content": "unresolved",
+      "content": "[unresolved]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -65,7 +65,7 @@
       "special": false
     },
     "8": {
-      "content": "Acaryochloris",
+      "content": "[Acaryochloris marina]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -73,7 +73,7 @@
       "special": false
     },
     "9": {
-      "content": "Acaryochloris_marina",
+      "content": "[Acaryochloris]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -81,7 +81,7 @@
       "special": false
     },
     "10": {
-      "content": "Acetobacter",
+      "content": "[Acetobacter ascendens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -89,7 +89,7 @@
       "special": false
     },
     "11": {
-      "content": "Acetobacter_ascendens",
+      "content": "[Acetobacter orientalis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -97,7 +97,7 @@
       "special": false
     },
     "12": {
-      "content": "Acetobacter_ghanensis",
+      "content": "[Acetobacter oryzoeni]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -105,7 +105,7 @@
       "special": false
     },
     "13": {
-      "content": "Acetobacter_orientalis",
+      "content": "[Acetobacter pasteurianus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -113,7 +113,7 @@
       "special": false
     },
     "14": {
-      "content": "Acetobacter_pasteurianus",
+      "content": "[Acetobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -121,7 +121,7 @@
       "special": false
     },
     "15": {
-      "content": "Acidiphilium_multivorum",
+      "content": "[Acidiphilium multivorum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -129,7 +129,7 @@
       "special": false
     },
     "16": {
-      "content": "Acidithiobacillus_ferrivorans",
+      "content": "[Acinetobacter baumannii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -137,7 +137,7 @@
       "special": false
     },
     "17": {
-      "content": "Acinetobacter",
+      "content": "[Acinetobacter chinensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -145,7 +145,7 @@
       "special": false
     },
     "18": {
-      "content": "Acinetobacter_baumannii",
+      "content": "[Acinetobacter colistiniresistens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -153,7 +153,7 @@
       "special": false
     },
     "19": {
-      "content": "Acinetobacter_haemolyticus",
+      "content": "[Acinetobacter haemolyticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -161,7 +161,7 @@
       "special": false
     },
     "20": {
-      "content": "Acinetobacter_indicus",
+      "content": "[Acinetobacter indicus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -169,7 +169,7 @@
       "special": false
     },
     "21": {
-      "content": "Acinetobacter_johnsonii",
+      "content": "[Acinetobacter johnsonii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -177,7 +177,7 @@
       "special": false
     },
     "22": {
-      "content": "Acinetobacter_lwoffii",
+      "content": "[Acinetobacter junii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -185,7 +185,7 @@
       "special": false
     },
     "23": {
-      "content": "Acinetobacter_piscicola",
+      "content": "[Acinetobacter lwoffii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -193,7 +193,7 @@
       "special": false
     },
     "24": {
-      "content": "Acinetobacter_pittii",
+      "content": "[Acinetobacter nosocomialis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -201,7 +201,7 @@
       "special": false
     },
     "25": {
-      "content": "Acinetobacter_pseudolwoffii",
+      "content": "[Acinetobacter piscicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -209,7 +209,7 @@
       "special": false
     },
     "26": {
-      "content": "Acinetobacter_radioresistens",
+      "content": "[Acinetobacter pittii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -217,7 +217,7 @@
       "special": false
     },
     "27": {
-      "content": "Acinetobacter_schindleri",
+      "content": "[Acinetobacter pseudolwoffii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -225,7 +225,7 @@
       "special": false
     },
     "28": {
-      "content": "Acinetobacter_seifertii",
+      "content": "[Acinetobacter radioresistens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -233,7 +233,7 @@
       "special": false
     },
     "29": {
-      "content": "Acinetobacter_thermotolerans",
+      "content": "[Acinetobacter schindleri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -241,7 +241,7 @@
       "special": false
     },
     "30": {
-      "content": "Acinetobacter_towneri",
+      "content": "[Acinetobacter seifertii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -249,7 +249,7 @@
       "special": false
     },
     "31": {
-      "content": "Acinetobacter_ursingii",
+      "content": "[Acinetobacter soli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -257,7 +257,7 @@
       "special": false
     },
     "32": {
-      "content": "Acinetobacter_variabilis",
+      "content": "[Acinetobacter thermotolerans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -265,7 +265,7 @@
       "special": false
     },
     "33": {
-      "content": "Acinetobacter_wuhouensis",
+      "content": "[Acinetobacter towneri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -273,7 +273,7 @@
       "special": false
     },
     "34": {
-      "content": "Acuticoccus",
+      "content": "[Acinetobacter ursingii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -281,7 +281,7 @@
       "special": false
     },
     "35": {
-      "content": "Aerococcus_urinaeequi",
+      "content": "[Acinetobacter variabilis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -289,7 +289,7 @@
       "special": false
     },
     "36": {
-      "content": "Aeromonas",
+      "content": "[Acinetobacter wuhouensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -297,7 +297,7 @@
       "special": false
     },
     "37": {
-      "content": "Aeromonas_caviae",
+      "content": "[Acinetobacter yuyunsongii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -305,7 +305,7 @@
       "special": false
     },
     "38": {
-      "content": "Aeromonas_dhakensis",
+      "content": "[Acinetobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -313,7 +313,7 @@
       "special": false
     },
     "39": {
-      "content": "Aeromonas_hydrophila",
+      "content": "[Actinobacillus pleuropneumoniae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -321,7 +321,7 @@
       "special": false
     },
     "40": {
-      "content": "Aeromonas_media",
+      "content": "[Acuticoccus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -329,7 +329,7 @@
       "special": false
     },
     "41": {
-      "content": "Aeromonas_salmonicida",
+      "content": "[Aeromonas allosaccharophila]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -337,7 +337,7 @@
       "special": false
     },
     "42": {
-      "content": "Aeromonas_veronii",
+      "content": "[Aeromonas caviae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -345,7 +345,7 @@
       "special": false
     },
     "43": {
-      "content": "Agrobacterium_fabrum",
+      "content": "[Aeromonas dhakensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -353,7 +353,7 @@
       "special": false
     },
     "44": {
-      "content": "Agrobacterium_pusense",
+      "content": "[Aeromonas hydrophila]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -361,7 +361,7 @@
       "special": false
     },
     "45": {
-      "content": "Agrobacterium_tumefaciens",
+      "content": "[Aeromonas media]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -369,7 +369,7 @@
       "special": false
     },
     "46": {
-      "content": "Allobosea",
+      "content": "[Aeromonas rivipollensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -377,7 +377,7 @@
       "special": false
     },
     "47": {
-      "content": "Allochromatium_tepidum",
+      "content": "[Aeromonas salmonicida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -385,7 +385,7 @@
       "special": false
     },
     "48": {
-      "content": "Alteromonas_mediterranea",
+      "content": "[Aeromonas veronii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -393,7 +393,7 @@
       "special": false
     },
     "49": {
-      "content": "Aquicella_lusitana",
+      "content": "[Aeromonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -401,7 +401,7 @@
       "special": false
     },
     "50": {
-      "content": "Arenibacterium",
+      "content": "[Agrobacterium fabrum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -409,7 +409,7 @@
       "special": false
     },
     "51": {
-      "content": "Arsenophonus",
+      "content": "[Agrobacterium pusense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -417,7 +417,7 @@
       "special": false
     },
     "52": {
-      "content": "Arsenophonus_apicola",
+      "content": "[Agrobacterium tumefaciens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -425,7 +425,7 @@
       "special": false
     },
     "53": {
-      "content": "Arsenophonus_nasoniae",
+      "content": "[Agrobacterium vitis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -433,7 +433,7 @@
       "special": false
     },
     "54": {
-      "content": "Asticcacaulis",
+      "content": "[Aliarcobacter butzleri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -441,7 +441,7 @@
       "special": false
     },
     "55": {
-      "content": "Atlantibacter_hermannii",
+      "content": "[Aliarcobacter cryaerophilus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -449,7 +449,7 @@
       "special": false
     },
     "56": {
-      "content": "Aureibacter_tunicatorum",
+      "content": "[Aliiroseovarius crassostreae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -457,7 +457,7 @@
       "special": false
     },
     "57": {
-      "content": "Azospirillum",
+      "content": "[Aliivibrio fischeri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -465,7 +465,7 @@
       "special": false
     },
     "58": {
-      "content": "Azospirillum_argentinense",
+      "content": "[Aliivibrio salmonicida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -473,7 +473,7 @@
       "special": false
     },
     "59": {
-      "content": "Azospirillum_melinis",
+      "content": "[Allobosea]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -481,7 +481,7 @@
       "special": false
     },
     "60": {
-      "content": "Azospirillum_ramasamyi",
+      "content": "[Alloyangia pacifica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -489,7 +489,7 @@
       "special": false
     },
     "61": {
-      "content": "Azospirillum_thermophilum",
+      "content": "[Alteromonas mediterranea]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -497,7 +497,7 @@
       "special": false
     },
     "62": {
-      "content": "Azotobacter_chroococcum",
+      "content": "[Aminobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -505,7 +505,7 @@
       "special": false
     },
     "63": {
-      "content": "Bacillus",
+      "content": "[Anabaena]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -513,7 +513,7 @@
       "special": false
     },
     "64": {
-      "content": "Bacillus_altitudinis",
+      "content": "[Arenibacterium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -521,7 +521,7 @@
       "special": false
     },
     "65": {
-      "content": "Bacillus_amyloliquefaciens",
+      "content": "[Arsenophonus apicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -529,7 +529,7 @@
       "special": false
     },
     "66": {
-      "content": "Bacillus_arachidis",
+      "content": "[Arsenophonus nasoniae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -537,7 +537,7 @@
       "special": false
     },
     "67": {
-      "content": "Bacillus_cereus",
+      "content": "[Arsenophonus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -545,7 +545,7 @@
       "special": false
     },
     "68": {
-      "content": "Bacillus_licheniformis",
+      "content": "[Asticcacaulis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -553,7 +553,7 @@
       "special": false
     },
     "69": {
-      "content": "Bacillus_mycoides",
+      "content": "[Atlantibacter hermannii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -561,7 +561,7 @@
       "special": false
     },
     "70": {
-      "content": "Bacillus_paranthracis",
+      "content": "[Aureibacter tunicatorum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -569,7 +569,7 @@
       "special": false
     },
     "71": {
-      "content": "Bacillus_pseudomycoides",
+      "content": "[Azospirillum argentinense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -577,7 +577,7 @@
       "special": false
     },
     "72": {
-      "content": "Bacillus_pumilus",
+      "content": "[Azospirillum brasilense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -585,7 +585,7 @@
       "special": false
     },
     "73": {
-      "content": "Bacillus_safensis",
+      "content": "[Azospirillum melinis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -593,7 +593,7 @@
       "special": false
     },
     "74": {
-      "content": "Bacillus_sonorensis",
+      "content": "[Azospirillum ramasamyi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -601,7 +601,7 @@
       "special": false
     },
     "75": {
-      "content": "Bacillus_subtilis",
+      "content": "[Azospirillum thermophilum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -609,7 +609,7 @@
       "special": false
     },
     "76": {
-      "content": "Bacillus_thuringiensis",
+      "content": "[Azospirillum thiophilum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -617,7 +617,7 @@
       "special": false
     },
     "77": {
-      "content": "Bacillus_toyonensis",
+      "content": "[Azospirillum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -625,7 +625,7 @@
       "special": false
     },
     "78": {
-      "content": "Bacillus_tropicus",
+      "content": "[Azotobacter chroococcum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -633,7 +633,7 @@
       "special": false
     },
     "79": {
-      "content": "Bacillus_velezensis",
+      "content": "[Bacillus altitudinis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -641,7 +641,7 @@
       "special": false
     },
     "80": {
-      "content": "Bacillus_wiedmannii",
+      "content": "[Bacillus amyloliquefaciens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -649,7 +649,7 @@
       "special": false
     },
     "81": {
-      "content": "Bacteroides_fragilis",
+      "content": "[Bacillus anthracis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -657,7 +657,7 @@
       "special": false
     },
     "82": {
-      "content": "Bartonella",
+      "content": "[Bacillus cereus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -665,7 +665,7 @@
       "special": false
     },
     "83": {
-      "content": "Bartonella_schoenbuchensis",
+      "content": "[Bacillus cytotoxicus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -673,7 +673,7 @@
       "special": false
     },
     "84": {
-      "content": "Bifidobacterium_fermentum",
+      "content": "[Bacillus licheniformis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -681,7 +681,7 @@
       "special": false
     },
     "85": {
-      "content": "Bifidobacterium_longum",
+      "content": "[Bacillus mycoides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -689,7 +689,7 @@
       "special": false
     },
     "86": {
-      "content": "Brucella",
+      "content": "[Bacillus paranthracis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -697,7 +697,7 @@
       "special": false
     },
     "87": {
-      "content": "Brucella_intermedia",
+      "content": "[Bacillus pseudomycoides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -705,7 +705,7 @@
       "special": false
     },
     "88": {
-      "content": "Buchnera_aphidicola",
+      "content": "[Bacillus pumilus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -713,7 +713,7 @@
       "special": false
     },
     "89": {
-      "content": "Burkholderia",
+      "content": "[Bacillus safensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -721,7 +721,7 @@
       "special": false
     },
     "90": {
-      "content": "Burkholderia_aenigmatica",
+      "content": "[Bacillus sonorensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -729,7 +729,7 @@
       "special": false
     },
     "91": {
-      "content": "Burkholderia_cenocepacia",
+      "content": "[Bacillus subtilis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -737,7 +737,7 @@
       "special": false
     },
     "92": {
-      "content": "Burkholderia_contaminans",
+      "content": "[Bacillus thuringiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -745,7 +745,7 @@
       "special": false
     },
     "93": {
-      "content": "Burkholderia_gladioli",
+      "content": "[Bacillus toyonensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -753,7 +753,7 @@
       "special": false
     },
     "94": {
-      "content": "Burkholderia_glumae",
+      "content": "[Bacillus tropicus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -761,7 +761,7 @@
       "special": false
     },
     "95": {
-      "content": "Burkholderia_multivorans",
+      "content": "[Bacillus velezensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -769,7 +769,7 @@
       "special": false
     },
     "96": {
-      "content": "Burkholderia_pseudomallei",
+      "content": "[Bacillus wiedmannii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -777,7 +777,7 @@
       "special": false
     },
     "97": {
-      "content": "Burkholderia_thailandensis",
+      "content": "[Bacillus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -785,7 +785,7 @@
       "special": false
     },
     "98": {
-      "content": "Burkholderia_ubonensis",
+      "content": "[Bacteroides faecis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -793,7 +793,7 @@
       "special": false
     },
     "99": {
-      "content": "Buttiauxella",
+      "content": "[Bacteroides fragilis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -801,7 +801,7 @@
       "special": false
     },
     "100": {
-      "content": "Butyrivibrio_proteoclasticus",
+      "content": "[Bacteroides ovatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -809,7 +809,7 @@
       "special": false
     },
     "101": {
-      "content": "Caballeronia",
+      "content": "[Bacteroides thetaiotaomicron]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -817,7 +817,7 @@
       "special": false
     },
     "102": {
-      "content": "Caballeronia_grimmiae",
+      "content": "[Bacteroides uniformis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -825,7 +825,7 @@
       "special": false
     },
     "103": {
-      "content": "Campylobacter",
+      "content": "[Bacteroides xylanisolvens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -833,7 +833,7 @@
       "special": false
     },
     "104": {
-      "content": "Campylobacter_coli",
+      "content": "[Bartonella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -841,7 +841,7 @@
       "special": false
     },
     "105": {
-      "content": "Campylobacter_concisus",
+      "content": "[Bifidobacterium fermentum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -849,7 +849,7 @@
       "special": false
     },
     "106": {
-      "content": "Campylobacter_jejuni",
+      "content": "[Bifidobacterium longum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -857,7 +857,7 @@
       "special": false
     },
     "107": {
-      "content": "Candidatus",
+      "content": "[Borrelia salvatorii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -865,7 +865,7 @@
       "special": false
     },
     "108": {
-      "content": "Carnobacterium",
+      "content": "[Bradyrhizobium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -873,7 +873,7 @@
       "special": false
     },
     "109": {
-      "content": "Carnobacterium_maltaromaticum",
+      "content": "[Brucella abortus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -881,7 +881,7 @@
       "special": false
     },
     "110": {
-      "content": "Carnobacterium_viridans",
+      "content": "[Brucella anthropi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -889,7 +889,7 @@
       "special": false
     },
     "111": {
-      "content": "Caulobacter",
+      "content": "[Brucella canis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -897,7 +897,7 @@
       "special": false
     },
     "112": {
-      "content": "Cereibacter_azotoformans",
+      "content": "[Brucella ceti]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -905,7 +905,7 @@
       "special": false
     },
     "113": {
-      "content": "Cereibacter_sphaeroides",
+      "content": "[Brucella intermedia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -913,7 +913,7 @@
       "special": false
     },
     "114": {
-      "content": "Cetobacterium_somerae",
+      "content": "[Brucella melitensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -921,7 +921,7 @@
       "special": false
     },
     "115": {
-      "content": "Chondrinema_litorale",
+      "content": "[Brucella pseudogrignonensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -929,7 +929,7 @@
       "special": false
     },
     "116": {
-      "content": "Citrobacter",
+      "content": "[Brucella suis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -937,7 +937,7 @@
       "special": false
     },
     "117": {
-      "content": "Citrobacter_amalonaticus",
+      "content": "[Brucella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -945,7 +945,7 @@
       "special": false
     },
     "118": {
-      "content": "Citrobacter_braakii",
+      "content": "[Buchnera aphidicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -953,7 +953,7 @@
       "special": false
     },
     "119": {
-      "content": "Citrobacter_freundii",
+      "content": "[Burkholderia aenigmatica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -961,7 +961,7 @@
       "special": false
     },
     "120": {
-      "content": "Citrobacter_meridianamericanus",
+      "content": "[Burkholderia ambifaria]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -969,7 +969,7 @@
       "special": false
     },
     "121": {
-      "content": "Citrobacter_portucalensis",
+      "content": "[Burkholderia cenocepacia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -977,7 +977,7 @@
       "special": false
     },
     "122": {
-      "content": "Clavibacter_michiganensis",
+      "content": "[Burkholderia cepacia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -985,7 +985,7 @@
       "special": false
     },
     "123": {
-      "content": "Clostridioides_difficile",
+      "content": "[Burkholderia contaminans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -993,7 +993,7 @@
       "special": false
     },
     "124": {
-      "content": "Clostridium",
+      "content": "[Burkholderia gladioli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1001,7 +1001,7 @@
       "special": false
     },
     "125": {
-      "content": "Clostridium_baratii",
+      "content": "[Burkholderia glumae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1009,7 +1009,7 @@
       "special": false
     },
     "126": {
-      "content": "Clostridium_botulinum",
+      "content": "[Burkholderia mallei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1017,7 +1017,7 @@
       "special": false
     },
     "127": {
-      "content": "Clostridium_caseinilyticum",
+      "content": "[Burkholderia multivorans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1025,7 +1025,7 @@
       "special": false
     },
     "128": {
-      "content": "Clostridium_estertheticum",
+      "content": "[Burkholderia pseudomallei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1033,7 +1033,7 @@
       "special": false
     },
     "129": {
-      "content": "Clostridium_novyi",
+      "content": "[Burkholderia sola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1041,7 +1041,7 @@
       "special": false
     },
     "130": {
-      "content": "Clostridium_perfringens",
+      "content": "[Burkholderia thailandensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1049,7 +1049,7 @@
       "special": false
     },
     "131": {
-      "content": "Clostridium_taeniosporum",
+      "content": "[Burkholderia ubonensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1057,7 +1057,7 @@
       "special": false
     },
     "132": {
-      "content": "Clostridium_tagluense",
+      "content": "[Burkholderia vietnamiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1065,7 +1065,7 @@
       "special": false
     },
     "133": {
-      "content": "Clostridium_tetani",
+      "content": "[Burkholderia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1073,7 +1073,7 @@
       "special": false
     },
     "134": {
-      "content": "Comamonas_thiooxydans",
+      "content": "[Butyrivibrio proteoclasticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1081,7 +1081,7 @@
       "special": false
     },
     "135": {
-      "content": "Companilactobacillus_paralimentarius",
+      "content": "[Caballeronia grimmiae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1089,7 +1089,7 @@
       "special": false
     },
     "136": {
-      "content": "Corynebacterium",
+      "content": "[Caballeronia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1097,7 +1097,7 @@
       "special": false
     },
     "137": {
-      "content": "Corynebacterium_tuberculostearicum",
+      "content": "[Campylobacter coli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1105,7 +1105,7 @@
       "special": false
     },
     "138": {
-      "content": "Crocosphaera_subtropica",
+      "content": "[Campylobacter concisus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1113,7 +1113,7 @@
       "special": false
     },
     "139": {
-      "content": "Cronobacter_malonaticus",
+      "content": "[Campylobacter fetus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1121,7 +1121,7 @@
       "special": false
     },
     "140": {
-      "content": "Cronobacter_sakazakii",
+      "content": "[Campylobacter jejuni]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1129,7 +1129,7 @@
       "special": false
     },
     "141": {
-      "content": "Cronobacter_turicensis",
+      "content": "[Campylobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1137,7 +1137,7 @@
       "special": false
     },
     "142": {
-      "content": "Cupriavidus",
+      "content": "[Candidatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1145,7 +1145,7 @@
       "special": false
     },
     "143": {
-      "content": "Cupriavidus_necator",
+      "content": "[Carnobacterium divergens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1153,7 +1153,7 @@
       "special": false
     },
     "144": {
-      "content": "Cupriavidus_oxalaticus",
+      "content": "[Carnobacterium maltaromaticum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1161,7 +1161,7 @@
       "special": false
     },
     "145": {
-      "content": "Cupriavidus_pauculus",
+      "content": "[Carnobacterium viridans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1169,7 +1169,7 @@
       "special": false
     },
     "146": {
-      "content": "Cupriavidus_taiwanensis",
+      "content": "[Caulobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1177,7 +1177,7 @@
       "special": false
     },
     "147": {
-      "content": "Cylindrospermum_stagnale",
+      "content": "[Cereibacter azotoformans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1185,7 +1185,7 @@
       "special": false
     },
     "148": {
-      "content": "Cytobacillus_firmus",
+      "content": "[Cereibacter sphaeroides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1193,7 +1193,7 @@
       "special": false
     },
     "149": {
-      "content": "Cytobacillus_oceanisediminis",
+      "content": "[Cetobacterium somerae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1201,7 +1201,7 @@
       "special": false
     },
     "150": {
-      "content": "Deinococcus",
+      "content": "[Chlamydia trachomatis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1209,7 +1209,7 @@
       "special": false
     },
     "151": {
-      "content": "Deinococcus_altitudinis",
+      "content": "[Chondrinema litorale]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1217,7 +1217,7 @@
       "special": false
     },
     "152": {
-      "content": "Deinococcus_deserti",
+      "content": "[Chromobacterium violaceum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1225,7 +1225,7 @@
       "special": false
     },
     "153": {
-      "content": "Deinococcus_gobiensis",
+      "content": "[Citrobacter amalonaticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1233,7 +1233,7 @@
       "special": false
     },
     "154": {
-      "content": "Deinococcus_proteolyticus",
+      "content": "[Citrobacter braakii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1241,7 +1241,7 @@
       "special": false
     },
     "155": {
-      "content": "Deinococcus_psychrotolerans",
+      "content": "[Citrobacter cronae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1249,7 +1249,7 @@
       "special": false
     },
     "156": {
-      "content": "Deinococcus_radiomollis",
+      "content": "[Citrobacter farmeri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1257,7 +1257,7 @@
       "special": false
     },
     "157": {
-      "content": "Deinococcus_radiophilus",
+      "content": "[Citrobacter freundii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1265,7 +1265,7 @@
       "special": false
     },
     "158": {
-      "content": "Deinococcus_sonorensis",
+      "content": "[Citrobacter koseri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1273,7 +1273,7 @@
       "special": false
     },
     "159": {
-      "content": "Deinococcus_taeanensis",
+      "content": "[Citrobacter meridianamericanus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1281,7 +1281,7 @@
       "special": false
     },
     "160": {
-      "content": "Deinococcus_wulumuqiensis",
+      "content": "[Citrobacter portucalensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1289,7 +1289,7 @@
       "special": false
     },
     "161": {
-      "content": "Deinococcus_yunweiensis",
+      "content": "[Citrobacter werkmanii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1297,7 +1297,7 @@
       "special": false
     },
     "162": {
-      "content": "Desemzia_incerta",
+      "content": "[Citrobacter youngae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1305,7 +1305,7 @@
       "special": false
     },
     "163": {
-      "content": "Dolichospermum",
+      "content": "[Citrobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1313,7 +1313,7 @@
       "special": false
     },
     "164": {
-      "content": "Edwardsiella_ictaluri",
+      "content": "[Clavibacter michiganensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1321,7 +1321,7 @@
       "special": false
     },
     "165": {
-      "content": "Edwardsiella_piscicida",
+      "content": "[Clostridioides difficile]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1329,7 +1329,7 @@
       "special": false
     },
     "166": {
-      "content": "Edwardsiella_tarda",
+      "content": "[Clostridium acetobutylicum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1337,7 +1337,7 @@
       "special": false
     },
     "167": {
-      "content": "Emticicia_oligotrophica",
+      "content": "[Clostridium baratii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1345,7 +1345,7 @@
       "special": false
     },
     "168": {
-      "content": "Enterobacter",
+      "content": "[Clostridium botulinum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1353,7 +1353,7 @@
       "special": false
     },
     "169": {
-      "content": "Enterobacter_asburiae",
+      "content": "[Clostridium caseinilyticum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1361,7 +1361,7 @@
       "special": false
     },
     "170": {
-      "content": "Enterobacter_bugandensis",
+      "content": "[Clostridium estertheticum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1369,7 +1369,7 @@
       "special": false
     },
     "171": {
-      "content": "Enterobacter_cancerogenus",
+      "content": "[Clostridium felsineum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1377,7 +1377,7 @@
       "special": false
     },
     "172": {
-      "content": "Enterobacter_cloacae",
+      "content": "[Clostridium novyi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1385,7 +1385,7 @@
       "special": false
     },
     "173": {
-      "content": "Enterobacter_hormaechei",
+      "content": "[Clostridium perfringens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1393,7 +1393,7 @@
       "special": false
     },
     "174": {
-      "content": "Enterobacter_kobei",
+      "content": "[Clostridium tagluense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1401,7 +1401,7 @@
       "special": false
     },
     "175": {
-      "content": "Enterobacter_roggenkampii",
+      "content": "[Clostridium tetani]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1409,7 +1409,7 @@
       "special": false
     },
     "176": {
-      "content": "Enterobacter_soli",
+      "content": "[Clostridium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1417,7 +1417,7 @@
       "special": false
     },
     "177": {
-      "content": "Enterobacteriaceae_endosymbiont",
+      "content": "[Comamonas thiooxydans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1425,7 +1425,7 @@
       "special": false
     },
     "178": {
-      "content": "Enterococcus",
+      "content": "[Companilactobacillus crustorum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1433,7 +1433,7 @@
       "special": false
     },
     "179": {
-      "content": "Enterococcus_casseliflavus",
+      "content": "[Companilactobacillus futsaii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1441,7 +1441,7 @@
       "special": false
     },
     "180": {
-      "content": "Enterococcus_faecalis",
+      "content": "[Companilactobacillus paralimentarius]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1449,7 +1449,7 @@
       "special": false
     },
     "181": {
-      "content": "Enterococcus_faecium",
+      "content": "[Corynebacterium tuberculostearicum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1457,7 +1457,7 @@
       "special": false
     },
     "182": {
-      "content": "Enterococcus_hirae",
+      "content": "[Corynebacterium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1465,7 +1465,7 @@
       "special": false
     },
     "183": {
-      "content": "Enterococcus_mundtii",
+      "content": "[Crocosphaera subtropica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1473,7 +1473,7 @@
       "special": false
     },
     "184": {
-      "content": "Enterococcus_saigonensis",
+      "content": "[Cronobacter dublinensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1481,7 +1481,7 @@
       "special": false
     },
     "185": {
-      "content": "Erwinia",
+      "content": "[Cronobacter malonaticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1489,7 +1489,7 @@
       "special": false
     },
     "186": {
-      "content": "Erwinia_persicina",
+      "content": "[Cronobacter sakazakii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1497,7 +1497,7 @@
       "special": false
     },
     "187": {
-      "content": "Erwinia_tasmaniensis",
+      "content": "[Cronobacter turicensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1505,7 +1505,7 @@
       "special": false
     },
     "188": {
-      "content": "Escherichia_albertii",
+      "content": "[Cupriavidus gilardii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1513,7 +1513,7 @@
       "special": false
     },
     "189": {
-      "content": "Escherichia_coli",
+      "content": "[Cupriavidus metallidurans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1521,7 +1521,7 @@
       "special": false
     },
     "190": {
-      "content": "Escherichia_fergusonii",
+      "content": "[Cupriavidus necator]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1529,7 +1529,7 @@
       "special": false
     },
     "191": {
-      "content": "Escherichia_marmotae",
+      "content": "[Cupriavidus oxalaticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1537,7 +1537,7 @@
       "special": false
     },
     "192": {
-      "content": "Ewingella_americana",
+      "content": "[Cupriavidus pauculus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1545,7 +1545,7 @@
       "special": false
     },
     "193": {
-      "content": "Faucicola_osloensis",
+      "content": "[Cupriavidus taiwanensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1553,7 +1553,7 @@
       "special": false
     },
     "194": {
-      "content": "Franconibacter_helveticus",
+      "content": "[Cupriavidus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1561,7 +1561,7 @@
       "special": false
     },
     "195": {
-      "content": "Fructilactobacillus_sanfranciscensis",
+      "content": "[Cytobacillus oceanisediminis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1569,7 +1569,7 @@
       "special": false
     },
     "196": {
-      "content": "Fulvitalea_axinellae",
+      "content": "[Deinococcus altitudinis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1577,7 +1577,7 @@
       "special": false
     },
     "197": {
-      "content": "Furfurilactobacillus_rossiae",
+      "content": "[Deinococcus gobiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1585,7 +1585,7 @@
       "special": false
     },
     "198": {
-      "content": "Fusobacterium_animalis",
+      "content": "[Deinococcus proteolyticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1593,7 +1593,7 @@
       "special": false
     },
     "199": {
-      "content": "Fusobacterium_polymorphum",
+      "content": "[Deinococcus radiodurans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1601,7 +1601,7 @@
       "special": false
     },
     "200": {
-      "content": "Geobacillus_thermodenitrificans",
+      "content": "[Deinococcus radiomollis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1609,7 +1609,7 @@
       "special": false
     },
     "201": {
-      "content": "Geobacillus_thermoleovorans",
+      "content": "[Deinococcus radiophilus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1617,7 +1617,7 @@
       "special": false
     },
     "202": {
-      "content": "Hafnia_alvei",
+      "content": "[Deinococcus taeanensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1625,7 +1625,7 @@
       "special": false
     },
     "203": {
-      "content": "Haliovirga_abyssi",
+      "content": "[Deinococcus wulumuqiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1633,7 +1633,7 @@
       "special": false
     },
     "204": {
-      "content": "Halomonas",
+      "content": "[Deinococcus yunweiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1641,7 +1641,7 @@
       "special": false
     },
     "205": {
-      "content": "Halomonas_casei",
+      "content": "[Deinococcus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1649,7 +1649,7 @@
       "special": false
     },
     "206": {
-      "content": "Helicobacter_cetorum",
+      "content": "[Desemzia incerta]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1657,7 +1657,7 @@
       "special": false
     },
     "207": {
-      "content": "Helicobacter_cinaedi",
+      "content": "[Diaphorobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1665,7 +1665,7 @@
       "special": false
     },
     "208": {
-      "content": "Helicobacter_felistomachi",
+      "content": "[Dinoroseobacter shibae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1673,7 +1673,7 @@
       "special": false
     },
     "209": {
-      "content": "Helicobacter_gastrofelis",
+      "content": "[Dolichospermum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1681,7 +1681,7 @@
       "special": false
     },
     "210": {
-      "content": "Helicobacter_pylori",
+      "content": "[Edwardsiella anguillarum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1689,7 +1689,7 @@
       "special": false
     },
     "211": {
-      "content": "Helicobacter_suis",
+      "content": "[Edwardsiella ictaluri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1697,7 +1697,7 @@
       "special": false
     },
     "212": {
-      "content": "Hydrogenophaga",
+      "content": "[Edwardsiella piscicida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1705,7 +1705,7 @@
       "special": false
     },
     "213": {
-      "content": "Hymenobacter",
+      "content": "[Edwardsiella tarda]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1713,7 +1713,7 @@
       "special": false
     },
     "214": {
-      "content": "Hymenobacter_cellulosilyticus",
+      "content": "[Emticicia oligotrophica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1721,7 +1721,7 @@
       "special": false
     },
     "215": {
-      "content": "Hymenobacter_monticola",
+      "content": "[Enterobacter adelaidei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1729,7 +1729,7 @@
       "special": false
     },
     "216": {
-      "content": "Hymenobacter_volaticus",
+      "content": "[Enterobacter asburiae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1737,7 +1737,7 @@
       "special": false
     },
     "217": {
-      "content": "Hymenobacter_yonginensis",
+      "content": "[Enterobacter bugandensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1745,7 +1745,7 @@
       "special": false
     },
     "218": {
-      "content": "Klebsiella",
+      "content": "[Enterobacter cancerogenus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1753,7 +1753,7 @@
       "special": false
     },
     "219": {
-      "content": "Klebsiella_aerogenes",
+      "content": "[Enterobacter chuandaensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1761,7 +1761,7 @@
       "special": false
     },
     "220": {
-      "content": "Klebsiella_grimontii",
+      "content": "[Enterobacter cloacae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1769,7 +1769,7 @@
       "special": false
     },
     "221": {
-      "content": "Klebsiella_michiganensis",
+      "content": "[Enterobacter hormaechei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1777,7 +1777,7 @@
       "special": false
     },
     "222": {
-      "content": "Klebsiella_ornithinolytica",
+      "content": "[Enterobacter kobei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1785,7 +1785,7 @@
       "special": false
     },
     "223": {
-      "content": "Klebsiella_oxytoca",
+      "content": "[Enterobacter ludwigii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1793,7 +1793,7 @@
       "special": false
     },
     "224": {
-      "content": "Klebsiella_pasteurii",
+      "content": "[Enterobacter mori]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1801,7 +1801,7 @@
       "special": false
     },
     "225": {
-      "content": "Klebsiella_planticola",
+      "content": "[Enterobacter roggenkampii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1809,7 +1809,7 @@
       "special": false
     },
     "226": {
-      "content": "Klebsiella_pneumoniae",
+      "content": "[Enterobacter sichuanensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1817,7 +1817,7 @@
       "special": false
     },
     "227": {
-      "content": "Klebsiella_quasipneumoniae",
+      "content": "[Enterobacter soli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1825,7 +1825,7 @@
       "special": false
     },
     "228": {
-      "content": "Klebsiella_variicola",
+      "content": "[Enterobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1833,7 +1833,7 @@
       "special": false
     },
     "229": {
-      "content": "Komagataeibacter_medellinensis",
+      "content": "[Enterobacteriaceae endosymbiont]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1841,7 +1841,7 @@
       "special": false
     },
     "230": {
-      "content": "Komagataeibacter_nataicola",
+      "content": "[Enterococcus casseliflavus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1849,7 +1849,7 @@
       "special": false
     },
     "231": {
-      "content": "Komagataeibacter_oboediens",
+      "content": "[Enterococcus durans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1857,7 +1857,7 @@
       "special": false
     },
     "232": {
-      "content": "Komagataeibacter_saccharivorans",
+      "content": "[Enterococcus faecalis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1865,7 +1865,7 @@
       "special": false
     },
     "233": {
-      "content": "Komagataeibacter_xylinus",
+      "content": "[Enterococcus faecium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1873,7 +1873,7 @@
       "special": false
     },
     "234": {
-      "content": "Kosakonia_arachidis",
+      "content": "[Enterococcus gallinarum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1881,7 +1881,7 @@
       "special": false
     },
     "235": {
-      "content": "Kosakonia_cowanii",
+      "content": "[Enterococcus hirae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1889,7 +1889,7 @@
       "special": false
     },
     "236": {
-      "content": "Kozakia_baliensis",
+      "content": "[Enterococcus lactis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1897,7 +1897,7 @@
       "special": false
     },
     "237": {
-      "content": "Lacticaseibacillus_paracasei",
+      "content": "[Enterococcus mundtii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1905,7 +1905,7 @@
       "special": false
     },
     "238": {
-      "content": "Lacticaseibacillus_rhamnosus",
+      "content": "[Enterococcus raffinosus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1913,7 +1913,7 @@
       "special": false
     },
     "239": {
-      "content": "Lactiplantibacillus_pentosus",
+      "content": "[Enterococcus saigonensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1921,7 +1921,7 @@
       "special": false
     },
     "240": {
-      "content": "Lactiplantibacillus_plantarum",
+      "content": "[Enterococcus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1929,7 +1929,7 @@
       "special": false
     },
     "241": {
-      "content": "Lactobacillus_amylovorus",
+      "content": "[Erwinia amylovora]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1937,7 +1937,7 @@
       "special": false
     },
     "242": {
-      "content": "Lactobacillus_crispatus",
+      "content": "[Erwinia aphidicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1945,7 +1945,7 @@
       "special": false
     },
     "243": {
-      "content": "Lactobacillus_gasseri",
+      "content": "[Erwinia persicina]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1953,7 +1953,7 @@
       "special": false
     },
     "244": {
-      "content": "Lactobacillus_johnsonii",
+      "content": "[Erwinia pyrifoliae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1961,7 +1961,7 @@
       "special": false
     },
     "245": {
-      "content": "Lactococcus",
+      "content": "[Erwinia tasmaniensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1969,7 +1969,7 @@
       "special": false
     },
     "246": {
-      "content": "Lactococcus_cremoris",
+      "content": "[Erwinia tracheiphila]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1977,7 +1977,7 @@
       "special": false
     },
     "247": {
-      "content": "Lactococcus_formosensis",
+      "content": "[Erwinia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1985,7 +1985,7 @@
       "special": false
     },
     "248": {
-      "content": "Lactococcus_garvieae",
+      "content": "[Escherichia albertii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -1993,7 +1993,7 @@
       "special": false
     },
     "249": {
-      "content": "Lactococcus_lactis",
+      "content": "[Escherichia coli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2001,7 +2001,7 @@
       "special": false
     },
     "250": {
-      "content": "Lactococcus_petauri",
+      "content": "[Escherichia fergusonii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2009,7 +2009,7 @@
       "special": false
     },
     "251": {
-      "content": "Latilactobacillus_curvatus",
+      "content": "[Escherichia marmotae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2017,7 +2017,7 @@
       "special": false
     },
     "252": {
-      "content": "Latilactobacillus_sakei",
+      "content": "[Escherichia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2025,7 +2025,7 @@
       "special": false
     },
     "253": {
-      "content": "Leclercia",
+      "content": "[Faucicola osloensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2033,7 +2033,7 @@
       "special": false
     },
     "254": {
-      "content": "Leclercia_adecarboxylata",
+      "content": "[Flavobacterium psychrophilum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2041,7 +2041,7 @@
       "special": false
     },
     "255": {
-      "content": "Legionella_antarctica",
+      "content": "[Francisella philomiragia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2049,7 +2049,7 @@
       "special": false
     },
     "256": {
-      "content": "Lelliottia",
+      "content": "[Franconibacter helveticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2057,7 +2057,7 @@
       "special": false
     },
     "257": {
-      "content": "Lelliottia_amnigena",
+      "content": "[Fructilactobacillus sanfranciscensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2065,7 +2065,7 @@
       "special": false
     },
     "258": {
-      "content": "Lentilactobacillus_buchneri",
+      "content": "[Fulvitalea axinellae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2073,7 +2073,7 @@
       "special": false
     },
     "259": {
-      "content": "Lentilactobacillus_kefiri",
+      "content": "[Furfurilactobacillus rossiae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2081,7 +2081,7 @@
       "special": false
     },
     "260": {
-      "content": "Leptotrichia_alba",
+      "content": "[Fusobacterium animalis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2089,7 +2089,7 @@
       "special": false
     },
     "261": {
-      "content": "Leptotrichia_rugosa",
+      "content": "[Fusobacterium polymorphum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2097,7 +2097,7 @@
       "special": false
     },
     "262": {
-      "content": "Leptotrichia_shahii",
+      "content": "[Glaesserella parasuis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2105,7 +2105,7 @@
       "special": false
     },
     "263": {
-      "content": "Leptotrichia_wadei",
+      "content": "[Gluconobacter oxydans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2113,7 +2113,7 @@
       "special": false
     },
     "264": {
-      "content": "Leuconostoc_citreum",
+      "content": "[Hafnia alvei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2121,7 +2121,7 @@
       "special": false
     },
     "265": {
-      "content": "Leuconostoc_mesenteroides",
+      "content": "[Hafnia paralvei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2129,7 +2129,7 @@
       "special": false
     },
     "266": {
-      "content": "Levilactobacillus_brevis",
+      "content": "[Halomonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2137,7 +2137,7 @@
       "special": false
     },
     "267": {
-      "content": "Ligilactobacillus_acidipiscis",
+      "content": "[Helicobacter cinaedi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2145,7 +2145,7 @@
       "special": false
     },
     "268": {
-      "content": "Ligilactobacillus_salivarius",
+      "content": "[Helicobacter felistomachi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2153,7 +2153,7 @@
       "special": false
     },
     "269": {
-      "content": "Limosilactobacillus_fermentum",
+      "content": "[Helicobacter gastrofelis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2161,7 +2161,7 @@
       "special": false
     },
     "270": {
-      "content": "Limosilactobacillus_reuteri",
+      "content": "[Helicobacter pylori]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2169,7 +2169,7 @@
       "special": false
     },
     "271": {
-      "content": "Listeria_monocytogenes",
+      "content": "[Helicobacter suis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2177,7 +2177,7 @@
       "special": false
     },
     "272": {
-      "content": "Loigolactobacillus_backii",
+      "content": "[Hydrogenophaga]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2185,7 +2185,7 @@
       "special": false
     },
     "273": {
-      "content": "Lysinibacillus",
+      "content": "[Hymenobacter monticola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2193,7 +2193,7 @@
       "special": false
     },
     "274": {
-      "content": "Lysinibacillus_capsici",
+      "content": "[Hymenobacter volaticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2201,7 +2201,7 @@
       "special": false
     },
     "275": {
-      "content": "Macrococcoides_caseolyticum",
+      "content": "[Hymenobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2209,7 +2209,7 @@
       "special": false
     },
     "276": {
-      "content": "Macrococcus_psychrotolerans",
+      "content": "[Klebsiella aerogenes]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2217,7 +2217,7 @@
       "special": false
     },
     "277": {
-      "content": "Mammaliicoccus_lentus",
+      "content": "[Klebsiella electrica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2225,7 +2225,7 @@
       "special": false
     },
     "278": {
-      "content": "Mammaliicoccus_sciuri",
+      "content": "[Klebsiella grimontii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2233,7 +2233,7 @@
       "special": false
     },
     "279": {
-      "content": "Marinobacter",
+      "content": "[Klebsiella michiganensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2241,7 +2241,7 @@
       "special": false
     },
     "280": {
-      "content": "Marinovum_algicola",
+      "content": "[Klebsiella ornithinolytica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2249,7 +2249,7 @@
       "special": false
     },
     "281": {
-      "content": "Mediterraneibacter_gnavus",
+      "content": "[Klebsiella oxytoca]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2257,7 +2257,7 @@
       "special": false
     },
     "282": {
-      "content": "Mesorhizobium",
+      "content": "[Klebsiella pasteurii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2265,7 +2265,7 @@
       "special": false
     },
     "283": {
-      "content": "Metabacillus_halosaccharovorans",
+      "content": "[Klebsiella planticola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2273,7 +2273,7 @@
       "special": false
     },
     "284": {
-      "content": "Methylobacter",
+      "content": "[Klebsiella pneumoniae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2281,7 +2281,7 @@
       "special": false
     },
     "285": {
-      "content": "Methylobacterium_currus",
+      "content": "[Klebsiella quasipneumoniae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2289,7 +2289,7 @@
       "special": false
     },
     "286": {
-      "content": "Methylomagnum_ishizawai",
+      "content": "[Klebsiella quasivariicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2297,7 +2297,7 @@
       "special": false
     },
     "287": {
-      "content": "Methylomonas",
+      "content": "[Klebsiella terrigena]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2305,7 +2305,7 @@
       "special": false
     },
     "288": {
-      "content": "Methylotuvimicrobium",
+      "content": "[Klebsiella variicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2313,7 +2313,7 @@
       "special": false
     },
     "289": {
-      "content": "Methylotuvimicrobium_alcaliphilum",
+      "content": "[Klebsiella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2321,7 +2321,7 @@
       "special": false
     },
     "290": {
-      "content": "Microvirga",
+      "content": "[Kluyvera ascorbata]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2329,7 +2329,7 @@
       "special": false
     },
     "291": {
-      "content": "Moellerella_wisconsensis",
+      "content": "[Kluyvera intermedia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2337,7 +2337,7 @@
       "special": false
     },
     "292": {
-      "content": "Moraxella",
+      "content": "[Komagataeibacter medellinensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2345,7 +2345,7 @@
       "special": false
     },
     "293": {
-      "content": "Moraxella_bovis",
+      "content": "[Komagataeibacter nataicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2353,7 +2353,7 @@
       "special": false
     },
     "294": {
-      "content": "Moraxella_nonliquefaciens",
+      "content": "[Komagataeibacter oboediens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2361,7 +2361,7 @@
       "special": false
     },
     "295": {
-      "content": "Morganella_morganii",
+      "content": "[Komagataeibacter rhaeticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2369,7 +2369,7 @@
       "special": false
     },
     "296": {
-      "content": "Neisseria_gonorrhoeae",
+      "content": "[Komagataeibacter saccharivorans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2377,7 +2377,7 @@
       "special": false
     },
     "297": {
-      "content": "Niallia",
+      "content": "[Komagataeibacter sucrofermentans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2385,7 +2385,7 @@
       "special": false
     },
     "298": {
-      "content": "Nissabacter",
+      "content": "[Komagataeibacter xylinus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2393,7 +2393,7 @@
       "special": false
     },
     "299": {
-      "content": "Nitratiruptor",
+      "content": "[Kosakonia cowanii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2401,7 +2401,7 @@
       "special": false
     },
     "300": {
-      "content": "Nostoc",
+      "content": "[Kozakia baliensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2409,7 +2409,7 @@
       "special": false
     },
     "301": {
-      "content": "Nostoc_commune",
+      "content": "[Labrenzia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2417,7 +2417,7 @@
       "special": false
     },
     "302": {
-      "content": "Nostoc_flagelliforme",
+      "content": "[Lacticaseibacillus paracasei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2425,7 +2425,7 @@
       "special": false
     },
     "303": {
-      "content": "Nostoc_sphaeroides",
+      "content": "[Lacticaseibacillus rhamnosus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2433,7 +2433,7 @@
       "special": false
     },
     "304": {
-      "content": "Novacetimonas_hansenii",
+      "content": "[Lactiplantibacillus paraplantarum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2441,7 +2441,7 @@
       "special": false
     },
     "305": {
-      "content": "Novosphingobium",
+      "content": "[Lactiplantibacillus pentosus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2449,7 +2449,7 @@
       "special": false
     },
     "306": {
-      "content": "Novosphingobium_resinovorum",
+      "content": "[Lactiplantibacillus plantarum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2457,7 +2457,7 @@
       "special": false
     },
     "307": {
-      "content": "Octadecabacter_arcticus",
+      "content": "[Lactobacillus amylovorus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2465,7 +2465,7 @@
       "special": false
     },
     "308": {
-      "content": "Pacificitalea_manganoxidans",
+      "content": "[Lactobacillus crispatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2473,7 +2473,7 @@
       "special": false
     },
     "309": {
-      "content": "Paenibacillus",
+      "content": "[Lactobacillus delbrueckii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2481,7 +2481,7 @@
       "special": false
     },
     "310": {
-      "content": "Paenibacillus_lautus",
+      "content": "[Lactobacillus gasseri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2489,7 +2489,7 @@
       "special": false
     },
     "311": {
-      "content": "Paenibacillus_polymyxa",
+      "content": "[Lactobacillus helveticus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2497,7 +2497,7 @@
       "special": false
     },
     "312": {
-      "content": "Paenibacillus_urinalis",
+      "content": "[Lactobacillus johnsonii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2505,7 +2505,7 @@
       "special": false
     },
     "313": {
-      "content": "Pantoea",
+      "content": "[Lactobacillus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2513,7 +2513,7 @@
       "special": false
     },
     "314": {
-      "content": "Pantoea_agglomerans",
+      "content": "[Lactococcus cremoris]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2521,7 +2521,7 @@
       "special": false
     },
     "315": {
-      "content": "Pantoea_ananatis",
+      "content": "[Lactococcus formosensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2529,7 +2529,7 @@
       "special": false
     },
     "316": {
-      "content": "Pantoea_cypripedii",
+      "content": "[Lactococcus garvieae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2537,7 +2537,7 @@
       "special": false
     },
     "317": {
-      "content": "Pantoea_dispersa",
+      "content": "[Lactococcus lactis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2545,7 +2545,7 @@
       "special": false
     },
     "318": {
-      "content": "Pantoea_piersonii",
+      "content": "[Lactococcus petauri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2553,7 +2553,7 @@
       "special": false
     },
     "319": {
-      "content": "Pantoea_stewartii",
+      "content": "[Lactococcus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2561,7 +2561,7 @@
       "special": false
     },
     "320": {
-      "content": "Pantoea_vagans",
+      "content": "[Latilactobacillus curvatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2569,7 +2569,7 @@
       "special": false
     },
     "321": {
-      "content": "Paraburkholderia",
+      "content": "[Latilactobacillus sakei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2577,7 +2577,7 @@
       "special": false
     },
     "322": {
-      "content": "Paraburkholderia_aromaticivorans",
+      "content": "[Leclercia adecarboxylata]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2585,7 +2585,7 @@
       "special": false
     },
     "323": {
-      "content": "Paraburkholderia_fungorum",
+      "content": "[Leclercia pneumoniae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2593,7 +2593,7 @@
       "special": false
     },
     "324": {
-      "content": "Paraclostridium_bifermentans",
+      "content": "[Leclercia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2601,7 +2601,7 @@
       "special": false
     },
     "325": {
-      "content": "Paraclostridium_ghonii",
+      "content": "[Legionella pneumophila]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2609,7 +2609,7 @@
       "special": false
     },
     "326": {
-      "content": "Paraclostridium_sordellii",
+      "content": "[Leisingera aquaemixtae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2617,7 +2617,7 @@
       "special": false
     },
     "327": {
-      "content": "Paracoccus",
+      "content": "[Leisingera caerulea]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2625,7 +2625,7 @@
       "special": false
     },
     "328": {
-      "content": "Paracoccus_denitrificans",
+      "content": "[Leisingera]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2633,7 +2633,7 @@
       "special": false
     },
     "329": {
-      "content": "Paracoccus_kondratievae",
+      "content": "[Lelliottia amnigena]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2641,7 +2641,7 @@
       "special": false
     },
     "330": {
-      "content": "Paracoccus_liaowanqingii",
+      "content": "[Lentilactobacillus buchneri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2649,7 +2649,7 @@
       "special": false
     },
     "331": {
-      "content": "Paracoccus_marcusii",
+      "content": "[Lentilactobacillus kefiri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2657,7 +2657,7 @@
       "special": false
     },
     "332": {
-      "content": "Paracoccus_yeei",
+      "content": "[Leptospira interrogans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2665,7 +2665,7 @@
       "special": false
     },
     "333": {
-      "content": "Parageobacillus_thermoglucosidasius",
+      "content": "[Leptotrichia alba]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2673,7 +2673,7 @@
       "special": false
     },
     "334": {
-      "content": "Pasteurella_multocida",
+      "content": "[Leptotrichia wadei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2681,7 +2681,7 @@
       "special": false
     },
     "335": {
-      "content": "Pediococcus_acidilactici",
+      "content": "[Leuconostoc carnosum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2689,7 +2689,7 @@
       "special": false
     },
     "336": {
-      "content": "Pediococcus_claussenii",
+      "content": "[Leuconostoc citreum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2697,7 +2697,7 @@
       "special": false
     },
     "337": {
-      "content": "Pediococcus_pentosaceus",
+      "content": "[Leuconostoc lactis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2705,7 +2705,7 @@
       "special": false
     },
     "338": {
-      "content": "Peribacillus",
+      "content": "[Leuconostoc mesenteroides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2713,7 +2713,7 @@
       "special": false
     },
     "339": {
-      "content": "Peribacillus_asahii",
+      "content": "[Leuconostoc]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2721,7 +2721,7 @@
       "special": false
     },
     "340": {
-      "content": "Persicobacter_psychrovividus",
+      "content": "[Levilactobacillus brevis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2729,7 +2729,7 @@
       "special": false
     },
     "341": {
-      "content": "Phaeobacter_inhibens",
+      "content": "[Levilactobacillus parabrevis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2737,7 +2737,7 @@
       "special": false
     },
     "342": {
-      "content": "Photobacterium",
+      "content": "[Ligilactobacillus salivarius]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2745,7 +2745,7 @@
       "special": false
     },
     "343": {
-      "content": "Photobacterium_damselae",
+      "content": "[Limosilactobacillus fermentum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2753,7 +2753,7 @@
       "special": false
     },
     "344": {
-      "content": "Photobacterium_ganghwense",
+      "content": "[Limosilactobacillus reuteri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2761,7 +2761,7 @@
       "special": false
     },
     "345": {
-      "content": "Photobacterium_leiognathi",
+      "content": "[Listeria innocua]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2769,7 +2769,7 @@
       "special": false
     },
     "346": {
-      "content": "Photobacterium_profundum",
+      "content": "[Listeria monocytogenes]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2777,7 +2777,7 @@
       "special": false
     },
     "347": {
-      "content": "Photobacterium_toruni",
+      "content": "[Loigolactobacillus backii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2785,7 +2785,7 @@
       "special": false
     },
     "348": {
-      "content": "Phytobacter",
+      "content": "[Loigolactobacillus coryniformis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2793,7 +2793,7 @@
       "special": false
     },
     "349": {
-      "content": "Phytobacter_ursingii",
+      "content": "[Lysinibacillus capsici]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2801,7 +2801,7 @@
       "special": false
     },
     "350": {
-      "content": "Piscirickettsia_salmonis",
+      "content": "[Lysinibacillus sphaericus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2809,7 +2809,7 @@
       "special": false
     },
     "351": {
-      "content": "Planktothrix_agardhii",
+      "content": "[Lysinibacillus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2817,7 +2817,7 @@
       "special": false
     },
     "352": {
-      "content": "Planococcus",
+      "content": "[Macrococcoides bohemicum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2825,7 +2825,7 @@
       "special": false
     },
     "353": {
-      "content": "Planococcus_glaciei",
+      "content": "[Macrococcoides canis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2833,7 +2833,7 @@
       "special": false
     },
     "354": {
-      "content": "Planococcus_rifietoensis",
+      "content": "[Macrococcoides caseolyticum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2841,7 +2841,7 @@
       "special": false
     },
     "355": {
-      "content": "Plesiomonas_shigelloides",
+      "content": "[Macrococcus armenti]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2849,7 +2849,7 @@
       "special": false
     },
     "356": {
-      "content": "Polaromonas_hydrogenivorans",
+      "content": "[Macrococcus psychrotolerans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2857,7 +2857,7 @@
       "special": false
     },
     "357": {
-      "content": "Polaromonas_naphthalenivorans",
+      "content": "[Mammaliicoccus lentus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2865,7 +2865,7 @@
       "special": false
     },
     "358": {
-      "content": "Prevotella_bivia",
+      "content": "[Mammaliicoccus sciuri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2873,7 +2873,7 @@
       "special": false
     },
     "359": {
-      "content": "Prevotella_melaninogenica",
+      "content": "[Mammaliicoccus vitulinus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2881,7 +2881,7 @@
       "special": false
     },
     "360": {
-      "content": "Priestia_aryabhattai",
+      "content": "[Marinovum algicola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2889,7 +2889,7 @@
       "special": false
     },
     "361": {
-      "content": "Priestia_flexa",
+      "content": "[Mediterraneibacter gnavus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2897,7 +2897,7 @@
       "special": false
     },
     "362": {
-      "content": "Priestia_megaterium",
+      "content": "[Melissococcus plutonius]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2905,7 +2905,7 @@
       "special": false
     },
     "363": {
-      "content": "Proteus_mirabilis",
+      "content": "[Mesorhizobium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2913,7 +2913,7 @@
       "special": false
     },
     "364": {
-      "content": "Providencia",
+      "content": "[Methylomagnum ishizawai]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2921,7 +2921,7 @@
       "special": false
     },
     "365": {
-      "content": "Providencia_alcalifaciens",
+      "content": "[Methylomonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2929,7 +2929,7 @@
       "special": false
     },
     "366": {
-      "content": "Providencia_rettgeri",
+      "content": "[Microvirga]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2937,7 +2937,7 @@
       "special": false
     },
     "367": {
-      "content": "Providencia_stuartii",
+      "content": "[Moellerella wisconsensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2945,7 +2945,7 @@
       "special": false
     },
     "368": {
-      "content": "Pseudanabaena_galeata",
+      "content": "[Moraxella bovis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2953,7 +2953,7 @@
       "special": false
     },
     "369": {
-      "content": "Pseudoalteromonas",
+      "content": "[Moraxella nonliquefaciens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2961,7 +2961,7 @@
       "special": false
     },
     "370": {
-      "content": "Pseudoalteromonas_ulvae",
+      "content": "[Moraxella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2969,7 +2969,7 @@
       "special": false
     },
     "371": {
-      "content": "Pseudolactococcus_raffinolactis",
+      "content": "[Morganella morganii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2977,7 +2977,7 @@
       "special": false
     },
     "372": {
-      "content": "Pseudomonas",
+      "content": "[Neisseria gonorrhoeae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2985,7 +2985,7 @@
       "special": false
     },
     "373": {
-      "content": "Pseudomonas_aeruginosa",
+      "content": "[Niallia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -2993,7 +2993,7 @@
       "special": false
     },
     "374": {
-      "content": "Pseudomonas_amygdali",
+      "content": "[Nissabacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3001,7 +3001,7 @@
       "special": false
     },
     "375": {
-      "content": "Pseudomonas_fragi",
+      "content": "[Nitratiruptor]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3009,7 +3009,7 @@
       "special": false
     },
     "376": {
-      "content": "Pseudomonas_luteola",
+      "content": "[Nostoc flagelliforme]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3017,7 +3017,7 @@
       "special": false
     },
     "377": {
-      "content": "Pseudomonas_putida",
+      "content": "[Nostoc sphaeroides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3025,7 +3025,7 @@
       "special": false
     },
     "378": {
-      "content": "Pseudomonas_rhodesiae",
+      "content": "[Nostoc]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3033,7 +3033,7 @@
       "special": false
     },
     "379": {
-      "content": "Pseudomonas_syringae",
+      "content": "[Novacetimonas hansenii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3041,7 +3041,7 @@
       "special": false
     },
     "380": {
-      "content": "Pseudosulfitobacter",
+      "content": "[Novosphingobium resinovorum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3049,7 +3049,7 @@
       "special": false
     },
     "381": {
-      "content": "Psychrobacter",
+      "content": "[Novosphingobium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3057,7 +3057,7 @@
       "special": false
     },
     "382": {
-      "content": "Psychrobacter_sanguinis",
+      "content": "[Paenibacillus melissococcoides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3065,7 +3065,7 @@
       "special": false
     },
     "383": {
-      "content": "Psychrobacter_urativorans",
+      "content": "[Paenibacillus polymyxa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3073,7 +3073,7 @@
       "special": false
     },
     "384": {
-      "content": "Psychromonas",
+      "content": "[Paenibacillus urinalis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3081,7 +3081,7 @@
       "special": false
     },
     "385": {
-      "content": "Rahnella_aceris",
+      "content": "[Paenibacillus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3089,7 +3089,7 @@
       "special": false
     },
     "386": {
-      "content": "Rahnella_inusitata",
+      "content": "[Pantoea agglomerans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3097,7 +3097,7 @@
       "special": false
     },
     "387": {
-      "content": "Ralstonia",
+      "content": "[Pantoea ananatis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3105,7 +3105,7 @@
       "special": false
     },
     "388": {
-      "content": "Ralstonia_pseudosolanacearum",
+      "content": "[Pantoea cypripedii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3113,7 +3113,7 @@
       "special": false
     },
     "389": {
-      "content": "Ralstonia_solanacearum",
+      "content": "[Pantoea dispersa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3121,7 +3121,7 @@
       "special": false
     },
     "390": {
-      "content": "Rhizobium",
+      "content": "[Pantoea piersonii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3129,7 +3129,7 @@
       "special": false
     },
     "391": {
-      "content": "Rhizobium_etli",
+      "content": "[Pantoea stewartii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3137,7 +3137,7 @@
       "special": false
     },
     "392": {
-      "content": "Rhizobium_leguminosarum",
+      "content": "[Pantoea vagans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3145,7 +3145,7 @@
       "special": false
     },
     "393": {
-      "content": "Rhodococcus",
+      "content": "[Pantoea]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3153,7 +3153,7 @@
       "special": false
     },
     "394": {
-      "content": "Rhodococcus_opacus",
+      "content": "[Parabacteroides distasonis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3161,7 +3161,7 @@
       "special": false
     },
     "395": {
-      "content": "Rhodococcus_pyridinivorans",
+      "content": "[Paraburkholderia aromaticivorans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3169,7 +3169,7 @@
       "special": false
     },
     "396": {
-      "content": "Rhodovastum_atsumiense",
+      "content": "[Paraburkholderia caribensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3177,7 +3177,7 @@
       "special": false
     },
     "397": {
-      "content": "Riemerella_anatipestifer",
+      "content": "[Paraburkholderia fungorum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3185,7 +3185,7 @@
       "special": false
     },
     "398": {
-      "content": "Robbsia_andropogonis",
+      "content": "[Paraburkholderia hospita]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3193,7 +3193,7 @@
       "special": false
     },
     "399": {
-      "content": "Roseibium_aggregatum",
+      "content": "[Paraburkholderia terrae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3201,7 +3201,7 @@
       "special": false
     },
     "400": {
-      "content": "Roseomonas",
+      "content": "[Paraburkholderia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3209,7 +3209,7 @@
       "special": false
     },
     "401": {
-      "content": "Roseomonas_marmotae",
+      "content": "[Paraclostridium bifermentans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3217,7 +3217,7 @@
       "special": false
     },
     "402": {
-      "content": "Roseomonas_mucosa",
+      "content": "[Paraclostridium sordellii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3225,7 +3225,7 @@
       "special": false
     },
     "403": {
-      "content": "Salinibacter_ruber",
+      "content": "[Paracoccus denitrificans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3233,7 +3233,7 @@
       "special": false
     },
     "404": {
-      "content": "Salmonella",
+      "content": "[Paracoccus kondratievae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3241,7 +3241,7 @@
       "special": false
     },
     "405": {
-      "content": "Salmonella_enterica",
+      "content": "[Paracoccus liaowanqingii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3249,7 +3249,7 @@
       "special": false
     },
     "406": {
-      "content": "Selenomonas_ruminantium",
+      "content": "[Paracoccus marcusii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3257,7 +3257,7 @@
       "special": false
     },
     "407": {
-      "content": "Serratia",
+      "content": "[Paracoccus methylovorus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3265,7 +3265,7 @@
       "special": false
     },
     "408": {
-      "content": "Serratia_fonticola",
+      "content": "[Paracoccus yeei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3273,7 +3273,7 @@
       "special": false
     },
     "409": {
-      "content": "Serratia_liquefaciens",
+      "content": "[Paracoccus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3281,7 +3281,7 @@
       "special": false
     },
     "410": {
-      "content": "Serratia_marcescens",
+      "content": "[Parageobacillus thermoglucosidasius]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3289,7 +3289,7 @@
       "special": false
     },
     "411": {
-      "content": "Serratia_nevei",
+      "content": "[Pasteurella multocida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3297,7 +3297,7 @@
       "special": false
     },
     "412": {
-      "content": "Shewanella",
+      "content": "[Pediococcus acidilactici]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3305,7 +3305,7 @@
       "special": false
     },
     "413": {
-      "content": "Shigella_dysenteriae",
+      "content": "[Pediococcus claussenii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3313,7 +3313,7 @@
       "special": false
     },
     "414": {
-      "content": "Shigella_flexneri",
+      "content": "[Pediococcus damnosus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3321,7 +3321,7 @@
       "special": false
     },
     "415": {
-      "content": "Shinella_zoogloeoides",
+      "content": "[Pediococcus inopinatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3329,7 +3329,7 @@
       "special": false
     },
     "416": {
-      "content": "Siccibacter_turicensis",
+      "content": "[Pediococcus parvulus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3337,7 +3337,7 @@
       "special": false
     },
     "417": {
-      "content": "Sinorhizobium_fredii",
+      "content": "[Pediococcus pentosaceus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3345,7 +3345,7 @@
       "special": false
     },
     "418": {
-      "content": "Sinorhizobium_medicae",
+      "content": "[Peribacillus asahii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3353,7 +3353,7 @@
       "special": false
     },
     "419": {
-      "content": "Sinorhizobium_meliloti",
+      "content": "[Persicobacter psychrovividus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3361,7 +3361,7 @@
       "special": false
     },
     "420": {
-      "content": "Spartinivicinus_ruber",
+      "content": "[Phaeobacter gallaeciensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3369,7 +3369,7 @@
       "special": false
     },
     "421": {
-      "content": "Sphingobium",
+      "content": "[Phaeobacter inhibens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3377,7 +3377,7 @@
       "special": false
     },
     "422": {
-      "content": "Sphingobium_fuliginis",
+      "content": "[Phaeobacter piscinae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3385,7 +3385,7 @@
       "special": false
     },
     "423": {
-      "content": "Sphingobium_indicum",
+      "content": "[Phocaeicola vulgatus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3393,7 +3393,7 @@
       "special": false
     },
     "424": {
-      "content": "Sphingobium_wenxiniae",
+      "content": "[Photobacterium damselae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3401,7 +3401,7 @@
       "special": false
     },
     "425": {
-      "content": "Sphingobium_yanoikuyae",
+      "content": "[Photobacterium ganghwense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3409,7 +3409,7 @@
       "special": false
     },
     "426": {
-      "content": "Sphingomonas",
+      "content": "[Photobacterium leiognathi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3417,7 +3417,7 @@
       "special": false
     },
     "427": {
-      "content": "Spiroplasma_ixodetis",
+      "content": "[Photobacterium toruni]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3425,7 +3425,7 @@
       "special": false
     },
     "428": {
-      "content": "Spirosoma_linguale",
+      "content": "[Photobacterium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3433,7 +3433,7 @@
       "special": false
     },
     "429": {
-      "content": "Spirosoma_oryzicola",
+      "content": "[Phytobacter diazotrophicus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3441,7 +3441,7 @@
       "special": false
     },
     "430": {
-      "content": "Staphylococcus",
+      "content": "[Phytobacter ursingii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3449,7 +3449,7 @@
       "special": false
     },
     "431": {
-      "content": "Staphylococcus_arlettae",
+      "content": "[Piscirickettsia salmonis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3457,7 +3457,7 @@
       "special": false
     },
     "432": {
-      "content": "Staphylococcus_aureus",
+      "content": "[Planktothrix agardhii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3465,7 +3465,7 @@
       "special": false
     },
     "433": {
-      "content": "Staphylococcus_capitis",
+      "content": "[Planococcus rifietoensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3473,7 +3473,7 @@
       "special": false
     },
     "434": {
-      "content": "Staphylococcus_caprae",
+      "content": "[Planococcus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3481,7 +3481,7 @@
       "special": false
     },
     "435": {
-      "content": "Staphylococcus_carnosus",
+      "content": "[Plesiomonas shigelloides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3489,7 +3489,7 @@
       "special": false
     },
     "436": {
-      "content": "Staphylococcus_casei",
+      "content": "[Polaromonas naphthalenivorans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3497,7 +3497,7 @@
       "special": false
     },
     "437": {
-      "content": "Staphylococcus_chromogenes",
+      "content": "[Prevotella intermedia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3505,7 +3505,7 @@
       "special": false
     },
     "438": {
-      "content": "Staphylococcus_epidermidis",
+      "content": "[Prevotella melaninogenica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3513,7 +3513,7 @@
       "special": false
     },
     "439": {
-      "content": "Staphylococcus_equorum",
+      "content": "[Prevotella nigrescens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3521,7 +3521,7 @@
       "special": false
     },
     "440": {
-      "content": "Staphylococcus_haemolyticus",
+      "content": "[Priestia aryabhattai]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3529,7 +3529,7 @@
       "special": false
     },
     "441": {
-      "content": "Staphylococcus_hominis",
+      "content": "[Priestia flexa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3537,7 +3537,7 @@
       "special": false
     },
     "442": {
-      "content": "Staphylococcus_hyicus",
+      "content": "[Priestia megaterium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3545,7 +3545,7 @@
       "special": false
     },
     "443": {
-      "content": "Staphylococcus_lugdunensis",
+      "content": "[Priestia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3553,7 +3553,7 @@
       "special": false
     },
     "444": {
-      "content": "Staphylococcus_nepalensis",
+      "content": "[Proteus mirabilis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3561,7 +3561,7 @@
       "special": false
     },
     "445": {
-      "content": "Staphylococcus_pasteuri",
+      "content": "[Proteus terrae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3569,7 +3569,7 @@
       "special": false
     },
     "446": {
-      "content": "Staphylococcus_pseudintermedius",
+      "content": "[Proteus vulgaris]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3577,7 +3577,7 @@
       "special": false
     },
     "447": {
-      "content": "Staphylococcus_saprophyticus",
+      "content": "[Providencia alcalifaciens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3585,7 +3585,7 @@
       "special": false
     },
     "448": {
-      "content": "Staphylococcus_shinii",
+      "content": "[Providencia huaxiensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3593,7 +3593,7 @@
       "special": false
     },
     "449": {
-      "content": "Staphylococcus_simulans",
+      "content": "[Providencia rettgeri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3601,7 +3601,7 @@
       "special": false
     },
     "450": {
-      "content": "Staphylococcus_warneri",
+      "content": "[Providencia stuartii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3609,7 +3609,7 @@
       "special": false
     },
     "451": {
-      "content": "Staphylococcus_xylosus",
+      "content": "[Providencia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3617,7 +3617,7 @@
       "special": false
     },
     "452": {
-      "content": "Streptococcus_agalactiae",
+      "content": "[Pseudanabaena galeata]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3625,7 +3625,7 @@
       "special": false
     },
     "453": {
-      "content": "Streptococcus_anginosus",
+      "content": "[Pseudoalteromonas carrageenovora]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3633,7 +3633,7 @@
       "special": false
     },
     "454": {
-      "content": "Streptococcus_dysgalactiae",
+      "content": "[Pseudoalteromonas piscicida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3641,7 +3641,7 @@
       "special": false
     },
     "455": {
-      "content": "Streptococcus_gallolyticus",
+      "content": "[Pseudoalteromonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3649,7 +3649,7 @@
       "special": false
     },
     "456": {
-      "content": "Streptococcus_mutans",
+      "content": "[Pseudochrobactrum algeriensis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3657,7 +3657,7 @@
       "special": false
     },
     "457": {
-      "content": "Streptococcus_pneumoniae",
+      "content": "[Pseudolactococcus raffinolactis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3665,7 +3665,7 @@
       "special": false
     },
     "458": {
-      "content": "Streptococcus_suis",
+      "content": "[Pseudomonas aeruginosa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3673,7 +3673,7 @@
       "special": false
     },
     "459": {
-      "content": "Streptococcus_thermophilus",
+      "content": "[Pseudomonas amygdali]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3681,7 +3681,7 @@
       "special": false
     },
     "460": {
-      "content": "Streptomyces",
+      "content": "[Pseudomonas bubulae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3689,7 +3689,7 @@
       "special": false
     },
     "461": {
-      "content": "Sulfitobacter",
+      "content": "[Pseudomonas fragi]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3697,7 +3697,7 @@
       "special": false
     },
     "462": {
-      "content": "Sulfitobacter_dubius",
+      "content": "[Pseudomonas fulva]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3705,7 +3705,7 @@
       "special": false
     },
     "463": {
-      "content": "Sulfitobacter_faviae",
+      "content": "[Pseudomonas luteola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3713,7 +3713,7 @@
       "special": false
     },
     "464": {
-      "content": "Sulfitobacter_pontiacus",
+      "content": "[Pseudomonas monteilii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3721,7 +3721,7 @@
       "special": false
     },
     "465": {
-      "content": "Synechococcus_elongatus",
+      "content": "[Pseudomonas nitroreducens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3729,7 +3729,7 @@
       "special": false
     },
     "466": {
-      "content": "Synechocystis",
+      "content": "[Pseudomonas paraeruginosa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3737,7 +3737,7 @@
       "special": false
     },
     "467": {
-      "content": "Thalassoporum_mexicanum",
+      "content": "[Pseudomonas putida]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3745,7 +3745,7 @@
       "special": false
     },
     "468": {
-      "content": "Thaumasiovibrio_subtropicus",
+      "content": "[Pseudomonas syringae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3753,7 +3753,7 @@
       "special": false
     },
     "469": {
-      "content": "Thioclava",
+      "content": "[Pseudomonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3761,7 +3761,7 @@
       "special": false
     },
     "470": {
-      "content": "Thiomicrospira",
+      "content": "[Pseudosulfitobacter pseudonitzschiae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3769,7 +3769,7 @@
       "special": false
     },
     "471": {
-      "content": "Thiothrix_subterranea",
+      "content": "[Pseudosulfitobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3777,7 +3777,7 @@
       "special": false
     },
     "472": {
-      "content": "Thiothrix_unzii",
+      "content": "[Psychrobacter urativorans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3785,7 +3785,7 @@
       "special": false
     },
     "473": {
-      "content": "Tistrella_mobilis",
+      "content": "[Psychrobacter]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3793,7 +3793,7 @@
       "special": false
     },
     "474": {
-      "content": "Tritonibacter_mobilis",
+      "content": "[Rahnella aceris]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3801,7 +3801,7 @@
       "special": false
     },
     "475": {
-      "content": "Tritonibacter_scottomollicae",
+      "content": "[Ralstonia mannitolilytica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3809,7 +3809,7 @@
       "special": false
     },
     "476": {
-      "content": "Vagococcus_fluvialis",
+      "content": "[Ralstonia pickettii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3817,7 +3817,7 @@
       "special": false
     },
     "477": {
-      "content": "Vagococcus_lutrae",
+      "content": "[Ralstonia pseudosolanacearum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3825,7 +3825,7 @@
       "special": false
     },
     "478": {
-      "content": "Variovorax",
+      "content": "[Ralstonia solanacearum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3833,7 +3833,7 @@
       "special": false
     },
     "479": {
-      "content": "Vescimonas_fastidiosa",
+      "content": "[Ralstonia syzygii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3841,7 +3841,7 @@
       "special": false
     },
     "480": {
-      "content": "Vibrio",
+      "content": "[Ralstonia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3849,7 +3849,7 @@
       "special": false
     },
     "481": {
-      "content": "Vibrio_alfacsensis",
+      "content": "[Rhizobium beringeri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3857,7 +3857,7 @@
       "special": false
     },
     "482": {
-      "content": "Vibrio_alginolyticus",
+      "content": "[Rhizobium etli]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3865,7 +3865,7 @@
       "special": false
     },
     "483": {
-      "content": "Vibrio_anguillarum",
+      "content": "[Rhizobium gallicum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3873,7 +3873,7 @@
       "special": false
     },
     "484": {
-      "content": "Vibrio_aphrogenes",
+      "content": "[Rhizobium johnstonii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3881,7 +3881,7 @@
       "special": false
     },
     "485": {
-      "content": "Vibrio_campbellii",
+      "content": "[Rhizobium leguminosarum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3889,7 +3889,7 @@
       "special": false
     },
     "486": {
-      "content": "Vibrio_casei",
+      "content": "[Rhizobium rhizogenes]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3897,7 +3897,7 @@
       "special": false
     },
     "487": {
-      "content": "Vibrio_chagasii",
+      "content": "[Rhizobium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3905,7 +3905,7 @@
       "special": false
     },
     "488": {
-      "content": "Vibrio_cholerae",
+      "content": "[Rhodococcus opacus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3913,7 +3913,7 @@
       "special": false
     },
     "489": {
-      "content": "Vibrio_cincinnatiensis",
+      "content": "[Rhodococcus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3921,7 +3921,7 @@
       "special": false
     },
     "490": {
-      "content": "Vibrio_coralliilyticus",
+      "content": "[Rhodovastum atsumiense]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3929,7 +3929,7 @@
       "special": false
     },
     "491": {
-      "content": "Vibrio_cyclitrophicus",
+      "content": "[Rickettsia helvetica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3937,7 +3937,7 @@
       "special": false
     },
     "492": {
-      "content": "Vibrio_fluvialis",
+      "content": "[Riemerella anatipestifer]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3945,7 +3945,7 @@
       "special": false
     },
     "493": {
-      "content": "Vibrio_fortis",
+      "content": "[Robbsia andropogonis]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3953,7 +3953,7 @@
       "special": false
     },
     "494": {
-      "content": "Vibrio_furnissii",
+      "content": "[Rodentibacter abscessus]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3961,7 +3961,7 @@
       "special": false
     },
     "495": {
-      "content": "Vibrio_gigantis",
+      "content": "[Roseibium aggregatum]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3969,7 +3969,7 @@
       "special": false
     },
     "496": {
-      "content": "Vibrio_harveyi",
+      "content": "[Roseomonas marmotae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3977,7 +3977,7 @@
       "special": false
     },
     "497": {
-      "content": "Vibrio_mangrovi",
+      "content": "[Roseomonas mucosa]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3985,7 +3985,7 @@
       "special": false
     },
     "498": {
-      "content": "Vibrio_maritimus",
+      "content": "[Roseomonas]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -3993,7 +3993,7 @@
       "special": false
     },
     "499": {
-      "content": "Vibrio_mediterranei",
+      "content": "[Roseovarius]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4001,7 +4001,7 @@
       "special": false
     },
     "500": {
-      "content": "Vibrio_metschnikovii",
+      "content": "[Ruegeria]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4009,7 +4009,7 @@
       "special": false
     },
     "501": {
-      "content": "Vibrio_mimicus",
+      "content": "[Salinibacter ruber]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4017,7 +4017,7 @@
       "special": false
     },
     "502": {
-      "content": "Vibrio_owensii",
+      "content": "[Salmonella enterica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4025,7 +4025,7 @@
       "special": false
     },
     "503": {
-      "content": "Vibrio_parahaemolyticus",
+      "content": "[Salmonella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4033,7 +4033,7 @@
       "special": false
     },
     "504": {
-      "content": "Vibrio_plantisponsor",
+      "content": "[Secundilactobacillus paracollinoides]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4041,7 +4041,7 @@
       "special": false
     },
     "505": {
-      "content": "Vibrio_quintilis",
+      "content": "[Segatella bryantii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4049,7 +4049,7 @@
       "special": false
     },
     "506": {
-      "content": "Vibrio_rotiferianus",
+      "content": "[Selenomonas ruminantium]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4057,7 +4057,7 @@
       "special": false
     },
     "507": {
-      "content": "Vibrio_scophthalmi",
+      "content": "[Serratia fonticola]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4065,7 +4065,7 @@
       "special": false
     },
     "508": {
-      "content": "Vibrio_tapetis",
+      "content": "[Serratia liquefaciens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4073,7 +4073,7 @@
       "special": false
     },
     "509": {
-      "content": "Vibrio_tubiashii",
+      "content": "[Serratia marcescens]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4081,7 +4081,7 @@
       "special": false
     },
     "510": {
-      "content": "Vibrio_vulnificus",
+      "content": "[Serratia nevei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4089,7 +4089,7 @@
       "special": false
     },
     "511": {
-      "content": "Wohlfahrtiimonas_chitiniclastica",
+      "content": "[Serratia plymuthica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4097,7 +4097,7 @@
       "special": false
     },
     "512": {
-      "content": "Xanthomonas_citri",
+      "content": "[Serratia proteamaculans]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4105,7 +4105,7 @@
       "special": false
     },
     "513": {
-      "content": "Xanthomonas_euvesicatoria",
+      "content": "[Serratia sarumanii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4113,7 +4113,7 @@
       "special": false
     },
     "514": {
-      "content": "Xanthomonas_translucens",
+      "content": "[Serratia ureilytica]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4121,7 +4121,7 @@
       "special": false
     },
     "515": {
-      "content": "Xenorhabdus_bakwenae",
+      "content": "[Serratia]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4129,7 +4129,7 @@
       "special": false
     },
     "516": {
-      "content": "Xylella_fastidiosa",
+      "content": "[Shewanella algae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4137,7 +4137,7 @@
       "special": false
     },
     "517": {
-      "content": "Yersinia_enterocolitica",
+      "content": "[Shewanella]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4145,7 +4145,7 @@
       "special": false
     },
     "518": {
-      "content": "Yersinia_massiliensis",
+      "content": "[Shigella boydii]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4153,7 +4153,7 @@
       "special": false
     },
     "519": {
-      "content": "Yersinia_pestis",
+      "content": "[Shigella dysenteriae]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4161,7 +4161,7 @@
       "special": false
     },
     "520": {
-      "content": "Yersinia_pseudotuberculosis",
+      "content": "[Shigella flexneri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4169,7 +4169,7 @@
       "special": false
     },
     "521": {
-      "content": "Yersinia_ruckeri",
+      "content": "[Shigella sonnei]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -4177,7 +4177,1063 @@
       "special": false
     },
     "522": {
-      "content": "endosymbiont",
+      "content": "[Shinella]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "523": {
+      "content": "[Siccibacter turicensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "524": {
+      "content": "[Sinorhizobium americanum]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "525": {
+      "content": "[Sinorhizobium fredii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "526": {
+      "content": "[Sinorhizobium medicae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "527": {
+      "content": "[Sinorhizobium meliloti]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "528": {
+      "content": "[Sodalis glossinidius]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "529": {
+      "content": "[Sphingobium cloacae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "530": {
+      "content": "[Sphingobium wenxiniae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "531": {
+      "content": "[Sphingobium xenophagum]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "532": {
+      "content": "[Sphingobium yanoikuyae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "533": {
+      "content": "[Sphingobium]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "534": {
+      "content": "[Sphingomonas paucimobilis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "535": {
+      "content": "[Sphingomonas]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "536": {
+      "content": "[Sphingopyxis macrogoltabida]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "537": {
+      "content": "[Spiroplasma ixodetis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "538": {
+      "content": "[Spirosoma linguale]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "539": {
+      "content": "[Spirosoma oryzicola]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "540": {
+      "content": "[Staphylococcus argenteus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "541": {
+      "content": "[Staphylococcus arlettae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "542": {
+      "content": "[Staphylococcus aureus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "543": {
+      "content": "[Staphylococcus capitis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "544": {
+      "content": "[Staphylococcus caprae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "545": {
+      "content": "[Staphylococcus carnosus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "546": {
+      "content": "[Staphylococcus casei]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "547": {
+      "content": "[Staphylococcus chromogenes]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "548": {
+      "content": "[Staphylococcus cohnii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "549": {
+      "content": "[Staphylococcus condimenti]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "550": {
+      "content": "[Staphylococcus epidermidis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "551": {
+      "content": "[Staphylococcus equorum]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "552": {
+      "content": "[Staphylococcus haemolyticus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "553": {
+      "content": "[Staphylococcus hominis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "554": {
+      "content": "[Staphylococcus hyicus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "555": {
+      "content": "[Staphylococcus lugdunensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "556": {
+      "content": "[Staphylococcus nepalensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "557": {
+      "content": "[Staphylococcus pasteuri]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "558": {
+      "content": "[Staphylococcus pseudintermedius]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "559": {
+      "content": "[Staphylococcus pseudoxylosus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "560": {
+      "content": "[Staphylococcus rostri]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "561": {
+      "content": "[Staphylococcus saprophyticus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "562": {
+      "content": "[Staphylococcus shinii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "563": {
+      "content": "[Staphylococcus simulans]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "564": {
+      "content": "[Staphylococcus warneri]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "565": {
+      "content": "[Staphylococcus xylosus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "566": {
+      "content": "[Staphylococcus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "567": {
+      "content": "[Streptococcus agalactiae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "568": {
+      "content": "[Streptococcus anginosus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "569": {
+      "content": "[Streptococcus dysgalactiae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "570": {
+      "content": "[Streptococcus pneumoniae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "571": {
+      "content": "[Streptococcus pyogenes]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "572": {
+      "content": "[Streptococcus salivarius]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "573": {
+      "content": "[Streptococcus suis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "574": {
+      "content": "[Streptococcus thermophilus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "575": {
+      "content": "[Streptococcus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "576": {
+      "content": "[Streptomyces]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "577": {
+      "content": "[Sulfitobacter dubius]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "578": {
+      "content": "[Sulfitobacter faviae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "579": {
+      "content": "[Sulfitobacter pontiacus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "580": {
+      "content": "[Sulfitobacter]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "581": {
+      "content": "[Synechococcus elongatus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "582": {
+      "content": "[Synechocystis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "583": {
+      "content": "[Thaumasiovibrio subtropicus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "584": {
+      "content": "[Thermus thermophilus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "585": {
+      "content": "[Thioclava]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "586": {
+      "content": "[Thiomonas]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "587": {
+      "content": "[Thiothrix lacustris]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "588": {
+      "content": "[Thiothrix unzii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "589": {
+      "content": "[Tistrella bauzanensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "590": {
+      "content": "[Tistrella mobilis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "591": {
+      "content": "[Tolypothrix]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "592": {
+      "content": "[Trichormus variabilis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "593": {
+      "content": "[Tritonibacter mobilis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "594": {
+      "content": "[Vagococcus fluvialis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "595": {
+      "content": "[Vagococcus intermedius]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "596": {
+      "content": "[Vagococcus lutrae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "597": {
+      "content": "[Variovorax]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "598": {
+      "content": "[Vibrio aestuarianus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "599": {
+      "content": "[Vibrio alfacsensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "600": {
+      "content": "[Vibrio alginolyticus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "601": {
+      "content": "[Vibrio anguillarum]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "602": {
+      "content": "[Vibrio campbellii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "603": {
+      "content": "[Vibrio chaetopteri]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "604": {
+      "content": "[Vibrio chagasii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "605": {
+      "content": "[Vibrio cholerae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "606": {
+      "content": "[Vibrio cincinnatiensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "607": {
+      "content": "[Vibrio coralliilyticus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "608": {
+      "content": "[Vibrio crassostreae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "609": {
+      "content": "[Vibrio cyclitrophicus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "610": {
+      "content": "[Vibrio diabolicus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "611": {
+      "content": "[Vibrio europaeus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "612": {
+      "content": "[Vibrio fluvialis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "613": {
+      "content": "[Vibrio fortis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "614": {
+      "content": "[Vibrio furnissii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "615": {
+      "content": "[Vibrio gigantis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "616": {
+      "content": "[Vibrio harveyi]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "617": {
+      "content": "[Vibrio kanaloae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "618": {
+      "content": "[Vibrio lentus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "619": {
+      "content": "[Vibrio mediterranei]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "620": {
+      "content": "[Vibrio metoecus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "621": {
+      "content": "[Vibrio metschnikovii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "622": {
+      "content": "[Vibrio mimicus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "623": {
+      "content": "[Vibrio natriegens]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "624": {
+      "content": "[Vibrio navarrensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "625": {
+      "content": "[Vibrio nigripulchritudo]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "626": {
+      "content": "[Vibrio owensii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "627": {
+      "content": "[Vibrio parahaemolyticus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "628": {
+      "content": "[Vibrio penaeicida]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "629": {
+      "content": "[Vibrio rotiferianus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "630": {
+      "content": "[Vibrio scophthalmi]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "631": {
+      "content": "[Vibrio splendidus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "632": {
+      "content": "[Vibrio tapetis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "633": {
+      "content": "[Vibrio tubiashii]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "634": {
+      "content": "[Vibrio vulnificus]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "635": {
+      "content": "[Vibrio]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "636": {
+      "content": "[Weissella cibaria]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "637": {
+      "content": "[Weissella confusa]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "638": {
+      "content": "[Weissella koreensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "639": {
+      "content": "[Xanthomonas axonopodis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "640": {
+      "content": "[Xanthomonas citri]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "641": {
+      "content": "[Xanthomonas euvesicatoria]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "642": {
+      "content": "[Xanthomonas fragariae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "643": {
+      "content": "[Xanthomonas hortorum]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "644": {
+      "content": "[Xanthomonas oryzae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "645": {
+      "content": "[Xanthomonas translucens]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "646": {
+      "content": "[Xanthomonas]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "647": {
+      "content": "[Xenorhabdus bakwenae]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "648": {
+      "content": "[Xylella fastidiosa]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "649": {
+      "content": "[Xylella taiwanensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "650": {
+      "content": "[Yersinia enterocolitica]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "651": {
+      "content": "[Yersinia massiliensis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "652": {
+      "content": "[Yersinia pestis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "653": {
+      "content": "[Yersinia pseudotuberculosis]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    "654": {
+      "content": "[Yersinia ruckeri]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,

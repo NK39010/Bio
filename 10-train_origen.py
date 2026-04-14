@@ -7,27 +7,27 @@ This version is refactored for clarity and adds an explicit switch for whether
 to include the replication-mechanism token in each training example.
 
 Input format expected by the training parquet:
-    - host species column, e.g. `host_species` or `species`
-    - Rep protein column, e.g. `rep_protein` or `rep_seq`
-    - oriV DNA sequence column, e.g. `oriv_sequence` or `rep_dna_seq`
+    - host species column, e.g. `species` or `host_species`
+    - Rep protein column, e.g. `rep_seq` or `rep_protein`
+    - oriV DNA sequence column, e.g. `OriC sequence`, `oriv_sequence`, or `rep_dna_seq`
     - optional replication mechanism column, e.g. `replication_mechanism_term`
 
 Examples:
     python 10-train_origen.py \
       --tokenizer-path tokenizer \
-      --dataset-path final_data.parquet \
-      --species-col host_species \
-      --rep-col rep_protein \
-      --seq-col oriv_sequence \
+      --dataset-path training_data \
+      --species-col species \
+      --rep-col rep_seq \
+      --seq-col "OriC sequence" \
       --include-mechanism-token \
       --mechanism-col replication_mechanism_term
 
     python 10-train_origen.py \
       --tokenizer-path tokenizer \
-      --dataset-path final_data.parquet \
-      --species-col host_species \
-      --rep-col rep_protein \
-      --seq-col oriv_sequence
+      --dataset-path training_data \
+      --species-col species \
+      --rep-col rep_seq \
+      --seq-col "rep_dna_seq"
 """
 
 from __future__ import annotations
@@ -35,6 +35,7 @@ from __future__ import annotations
 import logging
 import math
 import os
+import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -73,9 +74,9 @@ class ModelDataArguments:
         metadata={"help": "Path to a parquet file, a directory of parquet files, or a glob pattern"}
     )
 
-    species_col: str = field(default="host_species", metadata={"help": "Species column name"})
-    rep_col: str = field(default="rep_protein", metadata={"help": "Rep protein column name"})
-    seq_col: str = field(default="oriv_sequence", metadata={"help": "oriV DNA sequence column name"})
+    species_col: str = field(default="species", metadata={"help": "Species column name"})
+    rep_col: str = field(default="rep_seq", metadata={"help": "Rep protein column name"})
+    seq_col: str = field(default="OriC sequence", metadata={"help": "oriV DNA sequence column name"})
 
     include_mechanism_token: bool = field(
         default=False,
@@ -96,6 +97,10 @@ class ModelDataArguments:
         default=0.05,
         metadata={"help": "Validation split ratio used when no validation set is provided"},
     )
+    use_windows: bool = field(
+        default=False,
+        metadata={"help": "Use sliding windows for sequences longer than max_seq_len"},
+    )
 
 
 class CustomTrainingArguments(TrainingArguments):
@@ -111,8 +116,33 @@ def normalize_text(value: object) -> str:
     return text
 
 
+def normalize_bracketed_token(value: object) -> str:
+    text = normalize_text(value)
+    if not text:
+        return ""
+    text = text.replace("[", "").replace("]", "")
+    text = text.replace("_", " ")
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return ""
+    return f"[{text}]"
+
+
+def normalize_species_token(value: object) -> str:
+    return normalize_bracketed_token(value)
+
+
+def resolve_column_name(column_names: List[str], preferred: str, aliases: List[str]) -> str:
+    if preferred in column_names:
+        return preferred
+    for alias in aliases:
+        if alias in column_names:
+            return alias
+    return preferred
+
+
 def format_example(example: Dict[str, Any], args: ModelDataArguments) -> str:
-    species = normalize_text(example.get(args.species_col, ""))
+    species = normalize_species_token(example.get(args.species_col, ""))
     rep = normalize_text(example.get(args.rep_col, ""))
     seq = normalize_text(example.get(args.seq_col, ""))
 
@@ -129,13 +159,17 @@ def format_example(example: Dict[str, Any], args: ModelDataArguments) -> str:
         parts.append(rep)
 
     if args.include_mechanism_token:
-        mech = normalize_text(example.get(args.mechanism_col, ""))
+        mech = normalize_bracketed_token(example.get(args.mechanism_col, ""))
         if not mech:
-            mech = "unresolved"
+            mech = "[unresolved]"
         parts.append(mech)
 
     parts.append(seq)
     return " ".join(parts)
+
+
+def build_text_sequence(example: Dict[str, Any], args: ModelDataArguments) -> str:
+    return format_example(example, args)
 
 
 def ensure_tokenizer(tokenizer_path: str):
@@ -230,7 +264,7 @@ def add_text_column(raw_datasets: DatasetDict, args: ModelDataArguments) -> Data
         texts: List[str] = []
         for idx in range(len(next(iter(examples.values())))):
             example = {key: values[idx] for key, values in examples.items()}
-            texts.append(format_example(example, args))
+            texts.append(build_text_sequence(example, args))
         return {"text": texts}
 
     return raw_datasets.map(build_text_batch, batched=True, desc="Building training text")
@@ -246,14 +280,56 @@ def tokenize_datasets(
 
     non_empty = raw_datasets.filter(lambda example: bool(normalize_text(example["text"])), desc="Filtering empty text")
 
+    bos_id = tokenizer.bos_token_id
+    eos_id = tokenizer.eos_token_id
+    if bos_id is None or eos_id is None:
+        raise ValueError("Tokenizer must define bos_token and eos_token.")
+
+    content_max_len = max(1, model_args.max_seq_len - 2)
+    overlap = content_max_len // 2 if model_args.use_windows else 0
+    step = max(1, content_max_len - overlap)
+
     def tokenize_batch(examples: Dict[str, List[str]]) -> Dict[str, Any]:
-        return tokenizer(
-            examples["text"],
-            truncation=True,
-            max_length=model_args.max_seq_len,
-            padding=False,
-            add_special_tokens=True,
-        )
+        input_ids: List[List[int]] = []
+        attention_mask: List[List[int]] = []
+
+        for text in examples["text"]:
+            if not text:
+                continue
+
+            encoding = tokenizer(
+                text,
+                truncation=False,
+                padding=False,
+                add_special_tokens=False,
+            )
+            ids = encoding["input_ids"]
+            if not ids:
+                continue
+
+            if model_args.use_windows and len(ids) > content_max_len:
+                start = 0
+                while start < len(ids):
+                    chunk = ids[start : start + content_max_len]
+                    if not chunk:
+                        break
+                    window_ids = [bos_id] + chunk + [eos_id]
+                    input_ids.append(window_ids)
+                    attention_mask.append([1] * len(window_ids))
+                    if start + content_max_len >= len(ids):
+                        break
+                    start += step
+            else:
+                chunk = ids[:content_max_len]
+                window_ids = [bos_id] + chunk + [eos_id]
+                input_ids.append(window_ids)
+                attention_mask.append([1] * len(window_ids))
+
+        return {
+            "input_ids": input_ids,
+            "attention_mask": attention_mask,
+            "labels": [list(ids) for ids in input_ids],
+        }
 
     tokenized = non_empty.map(
         tokenize_batch,
@@ -328,6 +404,29 @@ def main() -> None:
         "Dataset sizes - train: %d, validation: %d",
         len(raw_datasets["train"]),
         len(raw_datasets["validation"]),
+    )
+
+    column_names = raw_datasets["train"].column_names
+    model_args.species_col = resolve_column_name(column_names, model_args.species_col, ["host_species"])
+    model_args.rep_col = resolve_column_name(column_names, model_args.rep_col, ["rep_protein"])
+    model_args.seq_col = resolve_column_name(
+        column_names,
+        model_args.seq_col,
+        ["oriv_sequence", "rep_dna_seq"],
+    )
+    if model_args.include_mechanism_token:
+        model_args.mechanism_col = resolve_column_name(
+            column_names,
+            model_args.mechanism_col,
+            ["replication_mechanism_call"],
+        )
+
+    logger.info(
+        "Resolved columns - species: %s, rep: %s, seq: %s%s",
+        model_args.species_col,
+        model_args.rep_col,
+        model_args.seq_col,
+        f", mechanism: {model_args.mechanism_col}" if model_args.include_mechanism_token else "",
     )
 
     with_text = add_text_column(raw_datasets, model_args)

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 
 import pandas as pd
 import pyarrow as pa
@@ -38,9 +39,13 @@ def normalize_mechanism_call(value):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Build training parquet file.")
+    parser = argparse.ArgumentParser(description="Build split training CSV and parquet files.")
     parser.add_argument("--input", default="final_data.csv", help="Input CSV file.")
-    parser.add_argument("--parquet", default="final_data.parquet", help="Output parquet file.")
+    parser.add_argument(
+        "--output-dir",
+        default="training_data",
+        help="Directory where train/validation CSV and parquet files will be written.",
+    )
     return parser.parse_args()
 
 
@@ -61,17 +66,35 @@ def normalize_split_columns(df):
     return df
 
 
-def main():
-    args = parse_args()
-    df = pd.read_csv(args.input, low_memory=False)
-    df = normalize_split_columns(df)
+def split_dataframe(df):
+    df = df.copy()
 
-    missing_cdhit_cols = [col for col in EXPECTED_CDHIT_COLS if col not in df.columns]
-    if missing_cdhit_cols:
-        print(
-            "⚠️ CD-HIT columns missing from input; parquet will not contain complete "
-            f"cluster metadata: {', '.join(missing_cdhit_cols)}"
-        )
+    split_source = None
+    for col in ("cdhit_split", "split"):
+        if col in df.columns:
+            split_source = col
+            break
+
+    if split_source is None:
+        df["split"] = "train"
+        df["cdhit_split"] = "train"
+        return df[df["split"] == "train"], df.iloc[0:0].copy()
+
+    split_values = df[split_source].fillna("").astype(str).str.strip().str.lower()
+    val_mask = split_values.isin({"validation", "val", "dev", "eval", "test"})
+    train_mask = ~val_mask
+
+    df.loc[train_mask, "split"] = "train"
+    df.loc[val_mask, "split"] = "validation"
+    df["cdhit_split"] = df["split"]
+
+    train_df = df.loc[train_mask].copy()
+    val_df = df.loc[val_mask].copy()
+    return train_df, val_df
+
+
+def finalize_table(df):
+    df = df.copy()
 
     keep_cols = [
         "OriC sequence",
@@ -111,18 +134,60 @@ def main():
         df_out["full_replicon_seq"] = df_out["full_replicon_seq"].apply(lambda x: clean_seq(x, is_aa=False))
 
     if "replication_mechanism_call" in df_out.columns:
-        df_out["replication_mechanism_call"] = (
-            df_out["replication_mechanism_call"].apply(normalize_mechanism_call)
+        df_out["replication_mechanism_call"] = df_out["replication_mechanism_call"].apply(
+            normalize_mechanism_call
         )
-        df_out["replication_mechanism_term"] = df_out["replication_mechanism_call"].fillna("unresolved").astype(str).str.strip().replace("", "unresolved")
+        df_out["replication_mechanism_term"] = (
+            df_out["replication_mechanism_call"]
+            .fillna("unresolved")
+            .astype(str)
+            .str.strip()
+            .replace("", "unresolved")
+        )
     else:
         df_out["replication_mechanism_term"] = "unresolved"
 
-    table = pa.Table.from_pandas(df_out, preserve_index=False)
-    pq.write_table(table, args.parquet, compression="snappy")
+    return df_out
 
-    print(f"✅ parquet: {args.parquet}")
-    print(f"📊 共 {len(df_out)} 条数据")
+
+def write_outputs(df, output_dir: Path, split_name: str):
+    csv_path = output_dir / f"{split_name}.csv"
+    parquet_path = output_dir / f"{split_name}.parquet"
+
+    df.to_csv(csv_path, index=False, encoding="utf-8-sig")
+    table = pa.Table.from_pandas(df, preserve_index=False)
+    pq.write_table(table, parquet_path, compression="snappy")
+    return csv_path, parquet_path
+
+
+def main():
+    args = parse_args()
+    df = pd.read_csv(args.input, low_memory=False)
+    df = normalize_split_columns(df)
+
+    missing_cdhit_cols = [col for col in EXPECTED_CDHIT_COLS if col not in df.columns]
+    if missing_cdhit_cols:
+        print(
+            "⚠️ CD-HIT columns missing from input; split files will not contain complete "
+            f"cluster metadata: {', '.join(missing_cdhit_cols)}"
+        )
+
+    train_df, val_df = split_dataframe(df)
+    train_out = finalize_table(train_df)
+    val_out = finalize_table(val_df)
+
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    train_csv, train_parquet = write_outputs(train_out, output_dir, "train")
+    val_csv, val_parquet = write_outputs(val_out, output_dir, "validation")
+
+    print(f"train csv: {train_csv}")
+    print(f"validation csv: {val_csv}")
+    print(f"train parquet: {train_parquet}")
+    print(f"validation parquet: {val_parquet}")
+    print(f"train rows: {len(train_out)}")
+    print(f"validation rows: {len(val_out)}")
 
 
 if __name__ == "__main__":

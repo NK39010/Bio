@@ -4,6 +4,7 @@ import argparse
 import shlex
 import subprocess
 import sys
+from pathlib import Path
 
 def run_cmd(cmd: list[str]) -> None:
     print(f"\n>>> Running: {' '.join(shlex.quote(x) for x in cmd)}")
@@ -43,6 +44,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-09", action="store_true")
     parser.add_argument("--final-csv", default="final_data.csv", help="Final filtered CSV output path.")
     parser.add_argument("--final-parquet", default="final_data.parquet", help="Final parquet path.")
+    parser.add_argument(
+        "--training-dir",
+        default="training_data",
+        help="Directory for split train/validation CSV and parquet files.",
+    )
     parser.add_argument("--token-json", default="tokenizer/tokenizer.json", help="Tokenizer JSON output path.")
     return parser.parse_args()
 
@@ -119,22 +125,22 @@ def main() -> None:
         run_python("03-长度分布.py", ["--input", args.final_csv, "--output-image", "length_after.png"])
 
     if not args.skip_08:
-        run_python("08-构建训练用的parquet.py", ["--input", args.final_csv, "--parquet", args.final_parquet])
+        run_python("08-构建训练用的parquet.py", ["--input", args.final_csv, "--output-dir", args.training_dir])
 
     if not args.skip_09:
         run_python(
             "09-构建词元.py",
             [
                 "--input",
-                args.final_csv,
+                str(Path(args.training_dir) / "train.csv"),
                 "--tokenizer-json",
                 args.token_json,
             ],
         )
 
     print("\nPipeline finished.")
-    print(f"Final CSV: {args.final_csv}")
-    print(f"Final Parquet: {args.final_parquet}")
+    print(f"Combined CSV: {args.final_csv}")
+    print(f"Training dir: {args.training_dir}")
     print(f"Tokenizer JSON: {args.token_json}")
 
 

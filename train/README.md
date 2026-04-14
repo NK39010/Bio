@@ -12,11 +12,11 @@ This folder keeps training-related files together.
 ```bash
 python train/train_origen.py \
   --tokenizer_path tokenizer \
-  --dataset_path final_data.parquet \
+  --dataset_path training_data \
   --output_dir train/outputs/origen_run1 \
-  --species_col host_species \
-  --rep_col rep_protein \
-  --seq_col oriv_sequence \
+  --species_col species \
+  --rep_col rep_seq \
+  --seq_col "OriC sequence" \
   --include_mechanism_token \
   --mechanism_col replication_mechanism_term
 ```
@@ -26,9 +26,9 @@ If you do not want the replication-mechanism token:
 ```bash
 python train/train_origen.py \
   --tokenizer_path tokenizer \
-  --dataset_path final_data.parquet \
+  --dataset_path training_data \
   --output_dir train/outputs/origen_run2 \
-  --species_col host_species \
-  --rep_col rep_protein \
-  --seq_col oriv_sequence
+  --species_col species \
+  --rep_col rep_seq \
+  --seq_col "rep_dna_seq"
 ```
