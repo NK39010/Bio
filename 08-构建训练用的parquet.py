@@ -7,6 +7,15 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 
+EXPECTED_CDHIT_COLS = [
+    "cdhit_cluster",
+    "cdhit_cluster_size",
+    "cdhit_cluster_representative_ori_id",
+    "cdhit_is_representative",
+    "cdhit_split",
+]
+
+
 def clean_seq(seq, is_aa=False):
     if pd.isna(seq):
         return ""
@@ -35,9 +44,34 @@ def parse_args():
     return parser.parse_args()
 
 
+def normalize_split_columns(df):
+    df = df.copy()
+
+    if "split" not in df.columns:
+        if "cdhit_split" in df.columns:
+            df["split"] = df["cdhit_split"]
+        elif "split_y" in df.columns:
+            df["split"] = df["split_y"]
+        elif "split_x" in df.columns:
+            df["split"] = df["split_x"]
+
+    if "cdhit_split" not in df.columns and "split" in df.columns:
+        df["cdhit_split"] = df["split"]
+
+    return df
+
+
 def main():
     args = parse_args()
     df = pd.read_csv(args.input, low_memory=False)
+    df = normalize_split_columns(df)
+
+    missing_cdhit_cols = [col for col in EXPECTED_CDHIT_COLS if col not in df.columns]
+    if missing_cdhit_cols:
+        print(
+            "⚠️ CD-HIT columns missing from input; parquet will not contain complete "
+            f"cluster metadata: {', '.join(missing_cdhit_cols)}"
+        )
 
     keep_cols = [
         "OriC sequence",
@@ -52,10 +86,15 @@ def main():
         "rep_dna_seq",
         "full_replicon_seq",
         "split",
+        "cdhit_split",
         "cdhit_cluster",
         "cdhit_cluster_size",
         "cdhit_cluster_representative_ori_id",
         "cdhit_is_representative",
+        "pairing_method",
+        "ori_midpoint",
+        "rep_midpoint",
+        "replicon_length",
         "__index_level_0__",
         "replication_mechanism_call",
     ]

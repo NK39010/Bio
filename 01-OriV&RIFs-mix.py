@@ -261,10 +261,50 @@ def clean_species(name):
     return f"{genus} {species}"
 
 
+def valid_replicon_length(value):
+    if pd.isna(value):
+        return np.nan
+
+    try:
+        length = float(value)
+    except (TypeError, ValueError):
+        return np.nan
+
+    return length if length > 0 else np.nan
+
+
+def feature_midpoint(start, end, replicon_length=np.nan):
+    start = float(start)
+    end = float(end)
+
+    if pd.notna(replicon_length) and start > end:
+        midpoint = (start + end + float(replicon_length)) / 2.0
+        if midpoint > float(replicon_length):
+            midpoint -= float(replicon_length)
+        return midpoint
+
+    return (start + end) / 2.0
+
+
+def circular_distance(position_a, position_b, replicon_length=np.nan):
+    linear_distance = abs(float(position_a) - float(position_b))
+    if pd.isna(replicon_length):
+        return linear_distance
+
+    length = float(replicon_length)
+    if length <= 0:
+        return linear_distance
+
+    wrapped_distance = linear_distance % length
+    return min(wrapped_distance, length - wrapped_distance)
+
+
 def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
     """
     Pair each rep with the nearest OriC within the same plasmid.
 
+    If Sequence_length is available, distances are measured on circular plasmid
+    coordinates so features spanning the coordinate origin are handled correctly.
     This avoids Cartesian expansion and keeps one paired row per rep.
     """
     paired_rows = []
@@ -283,34 +323,48 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
         if ori_group is None or ori_group.empty or rep_group.empty:
             continue
 
-        ori_mid = (
-            (ori_group["ori_start"].astype(float) + ori_group["ori_end"].astype(float)) / 2.0
-        ).to_numpy()
-        ori_order = np.argsort(ori_mid)
-        ori_mid_sorted = ori_mid[ori_order]
-        ori_sorted = ori_group.iloc[ori_order].reset_index(drop=True)
+        ori_group = ori_group.dropna(subset=["ori_start", "ori_end"]).reset_index(drop=True)
+        rep_group = rep_group.dropna(subset=["rep_start", "rep_end"]).reset_index(drop=True)
+        if ori_group.empty or rep_group.empty:
+            continue
 
-        rep_mid = (
-            (rep_group["rep_start"].astype(float) + rep_group["rep_end"].astype(float)) / 2.0
-        ).to_numpy()
+        length_values = rep_group["Sequence_length"].dropna().map(valid_replicon_length).dropna()
+        replicon_length = length_values.iloc[0] if not length_values.empty else np.nan
+
+        ori_mid = np.array(
+            [
+                feature_midpoint(row["ori_start"], row["ori_end"], replicon_length)
+                for _, row in ori_group.iterrows()
+            ],
+            dtype=float,
+        )
+
+        rep_mid = np.array(
+            [
+                feature_midpoint(row["rep_start"], row["rep_end"], replicon_length)
+                for _, row in rep_group.iterrows()
+            ],
+            dtype=float,
+        )
 
         for rep_idx, rep_row in rep_group.iterrows():
             rep_mid_value = float(rep_mid[rep_idx])
-            insert_pos = np.searchsorted(ori_mid_sorted, rep_mid_value)
-
-            candidate_positions = []
-            if insert_pos < len(ori_mid_sorted):
-                candidate_positions.append(insert_pos)
-            if insert_pos > 0:
-                candidate_positions.append(insert_pos - 1)
-
-            best_pos = min(
-                candidate_positions,
-                key=lambda pos: abs(float(ori_mid_sorted[pos]) - rep_mid_value),
+            distances = np.array(
+                [
+                    circular_distance(ori_mid_value, rep_mid_value, replicon_length)
+                    for ori_mid_value in ori_mid
+                ],
+                dtype=float,
             )
+            best_pos = int(np.argmin(distances))
 
-            ori_row = ori_sorted.iloc[best_pos]
-            distance = abs(float(ori_mid_sorted[best_pos]) - rep_mid_value)
+            ori_row = ori_group.iloc[best_pos]
+            distance = float(distances[best_pos])
+            pairing_method = (
+                "nearest_ori_by_rep_circular"
+                if pd.notna(replicon_length)
+                else "nearest_ori_by_rep_linear"
+            )
 
             paired_rows.append(
                 {
@@ -333,9 +387,10 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
                     "rep_start": rep_row["rep_start"],
                     "rep_end": rep_row["rep_end"],
                     "distance": distance,
-                    "pairing_method": "nearest_ori_by_rep",
-                    "ori_midpoint": float(ori_mid_sorted[best_pos]),
+                    "pairing_method": pairing_method,
+                    "ori_midpoint": float(ori_mid[best_pos]),
                     "rep_midpoint": rep_mid_value,
+                    "replicon_length": replicon_length,
                 }
             )
 
@@ -364,6 +419,7 @@ def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
                 "pairing_method",
                 "ori_midpoint",
                 "rep_midpoint",
+                "replicon_length",
             ]
         )
 
@@ -449,6 +505,7 @@ df_ori["ori_id"] = (
 )
 
 df_rip["Accession_Number"] = df_rip["Accession_Number"].astype(str).str.split(".").str[0]
+df_rip["Sequence_length"] = pd.to_numeric(df_rip["Sequence_length"], errors="coerce")
 df_rip["gene_start"] = pd.to_numeric(df_rip["gene_start"], errors="coerce")
 df_rip["gene_end"] = pd.to_numeric(df_rip["gene_end"], errors="coerce")
 df_rip["rep_start"] = df_rip["gene_start"]
@@ -479,6 +536,7 @@ df_rip_small = df_rip[
         "rep_id",
         "rep_start",
         "rep_end",
+        "Sequence_length",
         "gene_id",
         "product",
         "translation",
@@ -513,4 +571,3 @@ print(f"Output file: {output_file}")
 print("\nQuality checks:")
 print("Missing taxid ratio:", df_final["taxid"].isna().mean())
 print("Unknown species ratio:", (df_final["species"] == "unknown").mean())
-

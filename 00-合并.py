@@ -12,6 +12,11 @@ def parse_args():
         help="Output selected_ori_regions CSV path.",
     )
     parser.add_argument("--chunksize", type=int, default=20000, help="CSV chunk size.")
+    parser.add_argument(
+        "--append",
+        action="store_true",
+        help="Append to existing output files instead of replacing them.",
+    )
     return parser.parse_args()
 
 
@@ -24,13 +29,24 @@ def main():
     os.makedirs(os.path.dirname(output_A) or ".", exist_ok=True)
     os.makedirs(os.path.dirname(output_B) or ".", exist_ok=True)
 
-    written_A = False
-    written_B = False
+    if not args.append:
+        for output_file in (output_A, output_B):
+            if os.path.exists(output_file):
+                os.remove(output_file)
+                print(f"已删除旧输出：{output_file}")
 
-    for subdir, _, files in os.walk(root_dir):
-        for file in files:
+    written_A = args.append and os.path.exists(output_A) and os.path.getsize(output_A) > 0
+    written_B = args.append and os.path.exists(output_B) and os.path.getsize(output_B) > 0
+    output_paths = {os.path.abspath(output_A), os.path.abspath(output_B)}
+
+    for subdir, dirs, files in os.walk(root_dir):
+        dirs.sort()
+        for file in sorted(files):
             if file.endswith(".csv"):
                 file_path = os.path.join(subdir, file)
+                if os.path.abspath(file_path) in output_paths:
+                    continue
+
                 print("处理：", file_path)
 
                 try:

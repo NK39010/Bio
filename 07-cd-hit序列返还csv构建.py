@@ -150,13 +150,14 @@ def main() -> None:
         raise ValueError(f"No cluster records were parsed from: {clstr_path}")
 
     cluster_df = assign_cluster_split(cluster_df, args.validation_ratio, args.seed)
+    cluster_df["cdhit_split"] = cluster_df["split"]
     cluster_summary = (
         cluster_df.groupby("cdhit_cluster", as_index=False)
         .agg(
             cdhit_cluster_size=("ori_id", "size"),
             cdhit_cluster_representative_ori_id=("cdhit_cluster_representative_ori_id", "first"),
             cdhit_is_representative=("cdhit_is_representative", "sum"),
-            split=("split", "first"),
+            split=("cdhit_split", "first"),
         )
         .sort_values("cdhit_cluster", key=lambda s: s.astype(int))
         .reset_index(drop=True)
@@ -169,9 +170,14 @@ def main() -> None:
 
     df[args.id_column] = df[args.id_column].fillna("").astype(str).str.strip()
 
-    cluster_merge_df = cluster_df.rename(columns={"ori_id": "_cluster_ori_id"})
+    cluster_merge_df = cluster_df.rename(
+        columns={"ori_id": "_cluster_ori_id", "split": "_source_cluster_split"}
+    )
     df = df.merge(cluster_merge_df, how="left", left_on=args.id_column, right_on="_cluster_ori_id")
-    df = df.drop(columns=["_cluster_ori_id"])
+    df = df.drop(columns=["_cluster_ori_id", "_source_cluster_split"])
+
+    if "cdhit_split" in df.columns:
+        df["split"] = df["cdhit_split"]
 
     missing_cluster = df["cdhit_cluster"].isna().sum()
     if missing_cluster:
@@ -185,7 +191,7 @@ def main() -> None:
     print(f"Annotated rows: {len(df)}")
     print(f"Unique ori IDs with cluster labels: {cluster_df['ori_id'].nunique()}")
     print(f"Clusters: {cluster_df['cdhit_cluster'].nunique()}")
-    print(f"Validation rows: {(df['split'] == 'validation').sum() if 'split' in df.columns else 0}")
+    print(f"Validation rows: {(df['cdhit_split'] == 'validation').sum() if 'cdhit_split' in df.columns else 0}")
     print(f"Output file: {output_path}")
 
 
