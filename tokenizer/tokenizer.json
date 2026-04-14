@@ -77,7 +77,7 @@
     },
     {
       "id": 32,
-      "content": "Acaryochloris_marina",
+      "content": "Acaryochloris",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -86,7 +86,7 @@
     },
     {
       "id": 33,
-      "content": "Acidiphilium_multivorum",
+      "content": "Acaryochloris_marina",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -95,7 +95,7 @@
     },
     {
       "id": 34,
-      "content": "Acinetobacter_baumannii",
+      "content": "Acetobacter",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -104,7 +104,7 @@
     },
     {
       "id": 35,
-      "content": "Aeromonas_salmonicida",
+      "content": "Acetobacter_ascendens",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -113,7 +113,7 @@
     },
     {
       "id": 36,
-      "content": "Bacillus_cereus",
+      "content": "Acetobacter_ghanensis",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -122,7 +122,7 @@
     },
     {
       "id": 37,
-      "content": "Bifidobacterium_longum",
+      "content": "Acetobacter_orientalis",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -131,7 +131,7 @@
     },
     {
       "id": 38,
-      "content": "Burkholderia_gladioli",
+      "content": "Acetobacter_pasteurianus",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -140,7 +140,7 @@
     },
     {
       "id": 39,
-      "content": "Butyrivibrio_proteoclasticus",
+      "content": "Acidiphilium_multivorum",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -149,7 +149,7 @@
     },
     {
       "id": 40,
-      "content": "Candidatus",
+      "content": "Acidithiobacillus_ferrivorans",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -158,7 +158,7 @@
     },
     {
       "id": 41,
-      "content": "Clostridium_botulinum",
+      "content": "Acinetobacter",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -167,7 +167,7 @@
     },
     {
       "id": 42,
-      "content": "Crocosphaera_subtropica",
+      "content": "Acinetobacter_baumannii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -176,7 +176,7 @@
     },
     {
       "id": 43,
-      "content": "Cupriavidus_necator",
+      "content": "Acinetobacter_haemolyticus",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -185,7 +185,7 @@
     },
     {
       "id": 44,
-      "content": "Deinococcus_deserti",
+      "content": "Acinetobacter_indicus",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -194,7 +194,7 @@
     },
     {
       "id": 45,
-      "content": "Deinococcus_proteolyticus",
+      "content": "Acinetobacter_johnsonii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -203,7 +203,7 @@
     },
     {
       "id": 46,
-      "content": "Enterobacter_cloacae",
+      "content": "Acinetobacter_lwoffii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -212,7 +212,7 @@
     },
     {
       "id": 47,
-      "content": "Enterobacter_soli",
+      "content": "Acinetobacter_piscicola",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -221,7 +221,7 @@
     },
     {
       "id": 48,
-      "content": "Erwinia_tasmaniensis",
+      "content": "Acinetobacter_pittii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -230,7 +230,7 @@
     },
     {
       "id": 49,
-      "content": "Escherichia_coli",
+      "content": "Acinetobacter_pseudolwoffii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -239,7 +239,7 @@
     },
     {
       "id": 50,
-      "content": "Helicobacter_pylori",
+      "content": "Acinetobacter_radioresistens",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -248,7 +248,7 @@
     },
     {
       "id": 51,
-      "content": "Klebsiella_pneumoniae",
+      "content": "Acinetobacter_schindleri",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -257,7 +257,7 @@
     },
     {
       "id": 52,
-      "content": "Klebsiella_variicola",
+      "content": "Acinetobacter_seifertii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -266,7 +266,7 @@
     },
     {
       "id": 53,
-      "content": "Komagataeibacter_medellinensis",
+      "content": "Acinetobacter_thermotolerans",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -275,7 +275,7 @@
     },
     {
       "id": 54,
-      "content": "Lactobacillus_amylovorus",
+      "content": "Acinetobacter_towneri",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -284,7 +284,7 @@
     },
     {
       "id": 55,
-      "content": "Lactococcus_cremoris",
+      "content": "Acinetobacter_ursingii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -293,7 +293,7 @@
     },
     {
       "id": 56,
-      "content": "Leuconostoc_citreum",
+      "content": "Acinetobacter_variabilis",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -302,7 +302,7 @@
     },
     {
       "id": 57,
-      "content": "Ligilactobacillus_salivarius",
+      "content": "Acinetobacter_wuhouensis",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -311,7 +311,7 @@
     },
     {
       "id": 58,
-      "content": "Macrococcoides_caseolyticum",
+      "content": "Acuticoccus",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -320,7 +320,7 @@
     },
     {
       "id": 59,
-      "content": "Methylotuvimicrobium_alcaliphilum",
+      "content": "Aerococcus_urinaeequi",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -329,7 +329,7 @@
     },
     {
       "id": 60,
-      "content": "Pantoea",
+      "content": "Aeromonas",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -338,7 +338,7 @@
     },
     {
       "id": 61,
-      "content": "Parageobacillus_thermoglucosidasius",
+      "content": "Aeromonas_caviae",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -347,7 +347,7 @@
     },
     {
       "id": 62,
-      "content": "Pediococcus_claussenii",
+      "content": "Aeromonas_dhakensis",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -356,7 +356,7 @@
     },
     {
       "id": 63,
-      "content": "Photobacterium_profundum",
+      "content": "Aeromonas_hydrophila",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -365,7 +365,7 @@
     },
     {
       "id": 64,
-      "content": "Polaromonas_naphthalenivorans",
+      "content": "Aeromonas_media",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -374,7 +374,7 @@
     },
     {
       "id": 65,
-      "content": "Priestia_megaterium",
+      "content": "Aeromonas_salmonicida",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -383,7 +383,7 @@
     },
     {
       "id": 66,
-      "content": "Salmonella_enterica",
+      "content": "Aeromonas_veronii",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -392,7 +392,7 @@
     },
     {
       "id": 67,
-      "content": "Sphingobium_indicum",
+      "content": "Agrobacterium_fabrum",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -401,7 +401,7 @@
     },
     {
       "id": 68,
-      "content": "Spirosoma_linguale",
+      "content": "Agrobacterium_pusense",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -410,7 +410,7 @@
     },
     {
       "id": 69,
-      "content": "Staphylococcus_aureus",
+      "content": "Agrobacterium_tumefaciens",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -419,7 +419,7 @@
     },
     {
       "id": 70,
-      "content": "Staphylococcus_epidermidis",
+      "content": "Allobosea",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -428,7 +428,7 @@
     },
     {
       "id": 71,
-      "content": "Streptococcus_gallolyticus",
+      "content": "Allochromatium_tepidum",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -437,7 +437,7 @@
     },
     {
       "id": 72,
-      "content": "Vibrio_furnissii",
+      "content": "Alteromonas_mediterranea",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -446,7 +446,7 @@
     },
     {
       "id": 73,
-      "content": "Yersinia_pestis",
+      "content": "Aquicella_lusitana",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -455,7 +455,4255 @@
     },
     {
       "id": 74,
+      "content": "Arenibacterium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 75,
+      "content": "Arsenophonus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 76,
+      "content": "Arsenophonus_apicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 77,
+      "content": "Arsenophonus_nasoniae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 78,
+      "content": "Asticcacaulis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 79,
+      "content": "Atlantibacter_hermannii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 80,
+      "content": "Aureibacter_tunicatorum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 81,
+      "content": "Azospirillum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 82,
+      "content": "Azospirillum_argentinense",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 83,
+      "content": "Azospirillum_melinis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 84,
+      "content": "Azospirillum_ramasamyi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 85,
+      "content": "Azospirillum_thermophilum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 86,
+      "content": "Azotobacter_chroococcum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 87,
+      "content": "Bacillus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 88,
+      "content": "Bacillus_altitudinis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 89,
+      "content": "Bacillus_amyloliquefaciens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 90,
+      "content": "Bacillus_arachidis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 91,
+      "content": "Bacillus_cereus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 92,
+      "content": "Bacillus_licheniformis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 93,
+      "content": "Bacillus_mycoides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 94,
+      "content": "Bacillus_paranthracis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 95,
+      "content": "Bacillus_pseudomycoides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 96,
+      "content": "Bacillus_pumilus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 97,
+      "content": "Bacillus_safensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 98,
+      "content": "Bacillus_sonorensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 99,
+      "content": "Bacillus_subtilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 100,
+      "content": "Bacillus_thuringiensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 101,
+      "content": "Bacillus_toyonensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 102,
+      "content": "Bacillus_tropicus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 103,
+      "content": "Bacillus_velezensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 104,
+      "content": "Bacillus_wiedmannii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 105,
+      "content": "Bacteroides_fragilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 106,
+      "content": "Bartonella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 107,
+      "content": "Bartonella_schoenbuchensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 108,
+      "content": "Bifidobacterium_fermentum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 109,
+      "content": "Bifidobacterium_longum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 110,
+      "content": "Brucella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 111,
+      "content": "Brucella_intermedia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 112,
+      "content": "Buchnera_aphidicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 113,
+      "content": "Burkholderia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 114,
+      "content": "Burkholderia_aenigmatica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 115,
+      "content": "Burkholderia_cenocepacia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 116,
+      "content": "Burkholderia_contaminans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 117,
+      "content": "Burkholderia_gladioli",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 118,
+      "content": "Burkholderia_glumae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 119,
+      "content": "Burkholderia_multivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 120,
+      "content": "Burkholderia_pseudomallei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 121,
+      "content": "Burkholderia_thailandensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 122,
+      "content": "Burkholderia_ubonensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 123,
+      "content": "Buttiauxella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 124,
+      "content": "Butyrivibrio_proteoclasticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 125,
+      "content": "Caballeronia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 126,
+      "content": "Caballeronia_grimmiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 127,
+      "content": "Campylobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 128,
+      "content": "Campylobacter_coli",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 129,
+      "content": "Campylobacter_concisus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 130,
+      "content": "Campylobacter_jejuni",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 131,
+      "content": "Candidatus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 132,
+      "content": "Carnobacterium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 133,
+      "content": "Carnobacterium_maltaromaticum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 134,
+      "content": "Carnobacterium_viridans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 135,
+      "content": "Caulobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 136,
+      "content": "Cereibacter_azotoformans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 137,
+      "content": "Cereibacter_sphaeroides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 138,
+      "content": "Cetobacterium_somerae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 139,
+      "content": "Chondrinema_litorale",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 140,
+      "content": "Citrobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 141,
+      "content": "Citrobacter_amalonaticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 142,
+      "content": "Citrobacter_braakii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 143,
+      "content": "Citrobacter_freundii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 144,
+      "content": "Citrobacter_meridianamericanus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 145,
+      "content": "Citrobacter_portucalensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 146,
+      "content": "Clavibacter_michiganensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 147,
+      "content": "Clostridioides_difficile",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 148,
+      "content": "Clostridium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 149,
+      "content": "Clostridium_baratii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 150,
+      "content": "Clostridium_botulinum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 151,
+      "content": "Clostridium_caseinilyticum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 152,
+      "content": "Clostridium_estertheticum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 153,
+      "content": "Clostridium_novyi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 154,
+      "content": "Clostridium_perfringens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 155,
+      "content": "Clostridium_taeniosporum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 156,
+      "content": "Clostridium_tagluense",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 157,
+      "content": "Clostridium_tetani",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 158,
+      "content": "Comamonas_thiooxydans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 159,
+      "content": "Companilactobacillus_paralimentarius",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 160,
+      "content": "Corynebacterium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 161,
+      "content": "Corynebacterium_tuberculostearicum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 162,
+      "content": "Crocosphaera_subtropica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 163,
+      "content": "Cronobacter_malonaticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 164,
+      "content": "Cronobacter_sakazakii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 165,
+      "content": "Cronobacter_turicensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 166,
+      "content": "Cupriavidus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 167,
+      "content": "Cupriavidus_necator",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 168,
+      "content": "Cupriavidus_oxalaticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 169,
+      "content": "Cupriavidus_pauculus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 170,
+      "content": "Cupriavidus_taiwanensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 171,
+      "content": "Cylindrospermum_stagnale",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 172,
+      "content": "Cytobacillus_firmus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 173,
+      "content": "Cytobacillus_oceanisediminis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 174,
+      "content": "Deinococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 175,
+      "content": "Deinococcus_altitudinis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 176,
+      "content": "Deinococcus_deserti",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 177,
+      "content": "Deinococcus_gobiensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 178,
+      "content": "Deinococcus_proteolyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 179,
+      "content": "Deinococcus_psychrotolerans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 180,
+      "content": "Deinococcus_radiomollis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 181,
+      "content": "Deinococcus_radiophilus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 182,
+      "content": "Deinococcus_sonorensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 183,
+      "content": "Deinococcus_taeanensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 184,
+      "content": "Deinococcus_wulumuqiensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 185,
+      "content": "Deinococcus_yunweiensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 186,
+      "content": "Desemzia_incerta",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 187,
+      "content": "Dolichospermum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 188,
+      "content": "Edwardsiella_ictaluri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 189,
+      "content": "Edwardsiella_piscicida",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 190,
+      "content": "Edwardsiella_tarda",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 191,
+      "content": "Emticicia_oligotrophica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 192,
+      "content": "Enterobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 193,
+      "content": "Enterobacter_asburiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 194,
+      "content": "Enterobacter_bugandensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 195,
+      "content": "Enterobacter_cancerogenus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 196,
+      "content": "Enterobacter_cloacae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 197,
+      "content": "Enterobacter_hormaechei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 198,
+      "content": "Enterobacter_kobei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 199,
+      "content": "Enterobacter_roggenkampii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 200,
+      "content": "Enterobacter_soli",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 201,
+      "content": "Enterobacteriaceae_endosymbiont",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 202,
+      "content": "Enterococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 203,
+      "content": "Enterococcus_casseliflavus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 204,
+      "content": "Enterococcus_faecalis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 205,
+      "content": "Enterococcus_faecium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 206,
+      "content": "Enterococcus_hirae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 207,
+      "content": "Enterococcus_mundtii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 208,
+      "content": "Enterococcus_saigonensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 209,
+      "content": "Erwinia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 210,
+      "content": "Erwinia_persicina",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 211,
+      "content": "Erwinia_tasmaniensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 212,
+      "content": "Escherichia_albertii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 213,
+      "content": "Escherichia_coli",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 214,
+      "content": "Escherichia_fergusonii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 215,
+      "content": "Escherichia_marmotae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 216,
+      "content": "Ewingella_americana",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 217,
+      "content": "Faucicola_osloensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 218,
+      "content": "Franconibacter_helveticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 219,
+      "content": "Fructilactobacillus_sanfranciscensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 220,
+      "content": "Fulvitalea_axinellae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 221,
+      "content": "Furfurilactobacillus_rossiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 222,
+      "content": "Fusobacterium_animalis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 223,
+      "content": "Fusobacterium_polymorphum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 224,
+      "content": "Geobacillus_thermodenitrificans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 225,
+      "content": "Geobacillus_thermoleovorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 226,
+      "content": "Hafnia_alvei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 227,
+      "content": "Haliovirga_abyssi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 228,
+      "content": "Halomonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 229,
+      "content": "Halomonas_casei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 230,
+      "content": "Helicobacter_cetorum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 231,
+      "content": "Helicobacter_cinaedi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 232,
+      "content": "Helicobacter_felistomachi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 233,
+      "content": "Helicobacter_gastrofelis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 234,
+      "content": "Helicobacter_pylori",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 235,
+      "content": "Helicobacter_suis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 236,
+      "content": "Hydrogenophaga",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 237,
+      "content": "Hymenobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 238,
+      "content": "Hymenobacter_cellulosilyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 239,
+      "content": "Hymenobacter_monticola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 240,
+      "content": "Hymenobacter_volaticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 241,
+      "content": "Hymenobacter_yonginensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 242,
+      "content": "Klebsiella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 243,
+      "content": "Klebsiella_aerogenes",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 244,
+      "content": "Klebsiella_grimontii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 245,
+      "content": "Klebsiella_michiganensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 246,
+      "content": "Klebsiella_ornithinolytica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 247,
+      "content": "Klebsiella_oxytoca",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 248,
+      "content": "Klebsiella_pasteurii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 249,
+      "content": "Klebsiella_planticola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 250,
+      "content": "Klebsiella_pneumoniae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 251,
+      "content": "Klebsiella_quasipneumoniae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 252,
+      "content": "Klebsiella_variicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 253,
+      "content": "Komagataeibacter_medellinensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 254,
+      "content": "Komagataeibacter_nataicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 255,
+      "content": "Komagataeibacter_oboediens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 256,
+      "content": "Komagataeibacter_saccharivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 257,
+      "content": "Komagataeibacter_xylinus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 258,
+      "content": "Kosakonia_arachidis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 259,
+      "content": "Kosakonia_cowanii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 260,
+      "content": "Kozakia_baliensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 261,
+      "content": "Lacticaseibacillus_paracasei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 262,
+      "content": "Lacticaseibacillus_rhamnosus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 263,
+      "content": "Lactiplantibacillus_pentosus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 264,
+      "content": "Lactiplantibacillus_plantarum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 265,
+      "content": "Lactobacillus_amylovorus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 266,
+      "content": "Lactobacillus_crispatus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 267,
+      "content": "Lactobacillus_gasseri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 268,
+      "content": "Lactobacillus_johnsonii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 269,
+      "content": "Lactococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 270,
+      "content": "Lactococcus_cremoris",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 271,
+      "content": "Lactococcus_formosensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 272,
+      "content": "Lactococcus_garvieae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 273,
+      "content": "Lactococcus_lactis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 274,
+      "content": "Lactococcus_petauri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 275,
+      "content": "Latilactobacillus_curvatus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 276,
+      "content": "Latilactobacillus_sakei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 277,
+      "content": "Leclercia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 278,
+      "content": "Leclercia_adecarboxylata",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 279,
+      "content": "Legionella_antarctica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 280,
+      "content": "Lelliottia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 281,
+      "content": "Lelliottia_amnigena",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 282,
+      "content": "Lentilactobacillus_buchneri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 283,
+      "content": "Lentilactobacillus_kefiri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 284,
+      "content": "Leptotrichia_alba",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 285,
+      "content": "Leptotrichia_rugosa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 286,
+      "content": "Leptotrichia_shahii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 287,
+      "content": "Leptotrichia_wadei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 288,
+      "content": "Leuconostoc_citreum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 289,
+      "content": "Leuconostoc_mesenteroides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 290,
+      "content": "Levilactobacillus_brevis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 291,
+      "content": "Ligilactobacillus_acidipiscis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 292,
+      "content": "Ligilactobacillus_salivarius",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 293,
+      "content": "Limosilactobacillus_fermentum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 294,
+      "content": "Limosilactobacillus_reuteri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 295,
+      "content": "Listeria_monocytogenes",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 296,
+      "content": "Loigolactobacillus_backii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 297,
+      "content": "Lysinibacillus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 298,
+      "content": "Lysinibacillus_capsici",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 299,
+      "content": "Macrococcoides_caseolyticum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 300,
+      "content": "Macrococcus_psychrotolerans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 301,
+      "content": "Mammaliicoccus_lentus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 302,
+      "content": "Mammaliicoccus_sciuri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 303,
+      "content": "Marinobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 304,
+      "content": "Marinovum_algicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 305,
+      "content": "Mediterraneibacter_gnavus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 306,
+      "content": "Mesorhizobium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 307,
+      "content": "Metabacillus_halosaccharovorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 308,
+      "content": "Methylobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 309,
+      "content": "Methylobacterium_currus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 310,
+      "content": "Methylomagnum_ishizawai",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 311,
+      "content": "Methylomonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 312,
+      "content": "Methylotuvimicrobium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 313,
+      "content": "Methylotuvimicrobium_alcaliphilum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 314,
+      "content": "Microvirga",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 315,
+      "content": "Moellerella_wisconsensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 316,
+      "content": "Moraxella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 317,
+      "content": "Moraxella_bovis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 318,
+      "content": "Moraxella_nonliquefaciens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 319,
+      "content": "Morganella_morganii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 320,
+      "content": "Neisseria_gonorrhoeae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 321,
+      "content": "Niallia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 322,
+      "content": "Nissabacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 323,
+      "content": "Nitratiruptor",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 324,
+      "content": "Nostoc",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 325,
+      "content": "Nostoc_commune",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 326,
+      "content": "Nostoc_flagelliforme",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 327,
+      "content": "Nostoc_sphaeroides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 328,
+      "content": "Novacetimonas_hansenii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 329,
+      "content": "Novosphingobium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 330,
+      "content": "Novosphingobium_resinovorum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 331,
+      "content": "Octadecabacter_arcticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 332,
+      "content": "Pacificitalea_manganoxidans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 333,
+      "content": "Paenibacillus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 334,
+      "content": "Paenibacillus_lautus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 335,
+      "content": "Paenibacillus_polymyxa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 336,
+      "content": "Paenibacillus_urinalis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 337,
+      "content": "Pantoea",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 338,
+      "content": "Pantoea_agglomerans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 339,
+      "content": "Pantoea_ananatis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 340,
+      "content": "Pantoea_cypripedii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 341,
+      "content": "Pantoea_dispersa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 342,
+      "content": "Pantoea_piersonii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 343,
+      "content": "Pantoea_stewartii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 344,
+      "content": "Pantoea_vagans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 345,
+      "content": "Paraburkholderia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 346,
+      "content": "Paraburkholderia_aromaticivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 347,
+      "content": "Paraburkholderia_fungorum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 348,
+      "content": "Paraclostridium_bifermentans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 349,
+      "content": "Paraclostridium_ghonii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 350,
+      "content": "Paraclostridium_sordellii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 351,
+      "content": "Paracoccus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 352,
+      "content": "Paracoccus_denitrificans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 353,
+      "content": "Paracoccus_kondratievae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 354,
+      "content": "Paracoccus_liaowanqingii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 355,
+      "content": "Paracoccus_marcusii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 356,
+      "content": "Paracoccus_yeei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 357,
+      "content": "Parageobacillus_thermoglucosidasius",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 358,
+      "content": "Pasteurella_multocida",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 359,
+      "content": "Pediococcus_acidilactici",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 360,
+      "content": "Pediococcus_claussenii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 361,
+      "content": "Pediococcus_pentosaceus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 362,
+      "content": "Peribacillus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 363,
+      "content": "Peribacillus_asahii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 364,
+      "content": "Persicobacter_psychrovividus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 365,
+      "content": "Phaeobacter_inhibens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 366,
+      "content": "Photobacterium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 367,
+      "content": "Photobacterium_damselae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 368,
+      "content": "Photobacterium_ganghwense",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 369,
+      "content": "Photobacterium_leiognathi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 370,
+      "content": "Photobacterium_profundum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 371,
+      "content": "Photobacterium_toruni",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 372,
+      "content": "Phytobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 373,
+      "content": "Phytobacter_ursingii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 374,
+      "content": "Piscirickettsia_salmonis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 375,
+      "content": "Planktothrix_agardhii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 376,
+      "content": "Planococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 377,
+      "content": "Planococcus_glaciei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 378,
+      "content": "Planococcus_rifietoensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 379,
+      "content": "Plesiomonas_shigelloides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 380,
+      "content": "Polaromonas_hydrogenivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 381,
+      "content": "Polaromonas_naphthalenivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 382,
+      "content": "Prevotella_bivia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 383,
+      "content": "Prevotella_melaninogenica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 384,
+      "content": "Priestia_aryabhattai",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 385,
+      "content": "Priestia_flexa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 386,
+      "content": "Priestia_megaterium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 387,
+      "content": "Proteus_mirabilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 388,
+      "content": "Providencia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 389,
+      "content": "Providencia_alcalifaciens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 390,
+      "content": "Providencia_rettgeri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 391,
+      "content": "Providencia_stuartii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 392,
+      "content": "Pseudanabaena_galeata",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 393,
+      "content": "Pseudoalteromonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 394,
+      "content": "Pseudoalteromonas_ulvae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 395,
+      "content": "Pseudolactococcus_raffinolactis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 396,
+      "content": "Pseudomonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 397,
+      "content": "Pseudomonas_aeruginosa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 398,
+      "content": "Pseudomonas_amygdali",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 399,
+      "content": "Pseudomonas_fragi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 400,
+      "content": "Pseudomonas_luteola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 401,
+      "content": "Pseudomonas_putida",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 402,
+      "content": "Pseudomonas_rhodesiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 403,
+      "content": "Pseudomonas_syringae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 404,
+      "content": "Pseudosulfitobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 405,
+      "content": "Psychrobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 406,
+      "content": "Psychrobacter_sanguinis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 407,
+      "content": "Psychrobacter_urativorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 408,
+      "content": "Psychromonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 409,
+      "content": "Rahnella_aceris",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 410,
+      "content": "Rahnella_inusitata",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 411,
+      "content": "Ralstonia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 412,
+      "content": "Ralstonia_pseudosolanacearum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 413,
+      "content": "Ralstonia_solanacearum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 414,
+      "content": "Rhizobium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 415,
+      "content": "Rhizobium_etli",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 416,
+      "content": "Rhizobium_leguminosarum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 417,
+      "content": "Rhodococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 418,
+      "content": "Rhodococcus_opacus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 419,
+      "content": "Rhodococcus_pyridinivorans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 420,
+      "content": "Rhodovastum_atsumiense",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 421,
+      "content": "Riemerella_anatipestifer",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 422,
+      "content": "Robbsia_andropogonis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 423,
+      "content": "Roseibium_aggregatum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 424,
+      "content": "Roseomonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 425,
+      "content": "Roseomonas_marmotae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 426,
+      "content": "Roseomonas_mucosa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 427,
+      "content": "Salinibacter_ruber",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 428,
+      "content": "Salmonella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 429,
+      "content": "Salmonella_enterica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 430,
+      "content": "Selenomonas_ruminantium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 431,
+      "content": "Serratia",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 432,
+      "content": "Serratia_fonticola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 433,
+      "content": "Serratia_liquefaciens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 434,
+      "content": "Serratia_marcescens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 435,
+      "content": "Serratia_nevei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 436,
+      "content": "Shewanella",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 437,
+      "content": "Shigella_dysenteriae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 438,
+      "content": "Shigella_flexneri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 439,
+      "content": "Shinella_zoogloeoides",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 440,
+      "content": "Siccibacter_turicensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 441,
+      "content": "Sinorhizobium_fredii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 442,
+      "content": "Sinorhizobium_medicae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 443,
+      "content": "Sinorhizobium_meliloti",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 444,
+      "content": "Spartinivicinus_ruber",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 445,
+      "content": "Sphingobium",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 446,
+      "content": "Sphingobium_fuliginis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 447,
+      "content": "Sphingobium_indicum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 448,
+      "content": "Sphingobium_wenxiniae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 449,
+      "content": "Sphingobium_yanoikuyae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 450,
+      "content": "Sphingomonas",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 451,
+      "content": "Spiroplasma_ixodetis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 452,
+      "content": "Spirosoma_linguale",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 453,
+      "content": "Spirosoma_oryzicola",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 454,
+      "content": "Staphylococcus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 455,
+      "content": "Staphylococcus_arlettae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 456,
+      "content": "Staphylococcus_aureus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 457,
+      "content": "Staphylococcus_capitis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 458,
+      "content": "Staphylococcus_caprae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 459,
+      "content": "Staphylococcus_carnosus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 460,
+      "content": "Staphylococcus_casei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 461,
+      "content": "Staphylococcus_chromogenes",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 462,
+      "content": "Staphylococcus_epidermidis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 463,
+      "content": "Staphylococcus_equorum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 464,
+      "content": "Staphylococcus_haemolyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 465,
+      "content": "Staphylococcus_hominis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 466,
+      "content": "Staphylococcus_hyicus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 467,
+      "content": "Staphylococcus_lugdunensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 468,
+      "content": "Staphylococcus_nepalensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 469,
+      "content": "Staphylococcus_pasteuri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 470,
+      "content": "Staphylococcus_pseudintermedius",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 471,
+      "content": "Staphylococcus_saprophyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 472,
+      "content": "Staphylococcus_shinii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 473,
+      "content": "Staphylococcus_simulans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 474,
+      "content": "Staphylococcus_warneri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 475,
+      "content": "Staphylococcus_xylosus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 476,
+      "content": "Streptococcus_agalactiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 477,
+      "content": "Streptococcus_anginosus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 478,
+      "content": "Streptococcus_dysgalactiae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 479,
+      "content": "Streptococcus_gallolyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 480,
+      "content": "Streptococcus_mutans",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 481,
+      "content": "Streptococcus_pneumoniae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 482,
+      "content": "Streptococcus_suis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 483,
+      "content": "Streptococcus_thermophilus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 484,
+      "content": "Streptomyces",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 485,
+      "content": "Sulfitobacter",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 486,
+      "content": "Sulfitobacter_dubius",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 487,
+      "content": "Sulfitobacter_faviae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 488,
+      "content": "Sulfitobacter_pontiacus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 489,
+      "content": "Synechococcus_elongatus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 490,
+      "content": "Synechocystis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 491,
+      "content": "Thalassoporum_mexicanum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 492,
+      "content": "Thaumasiovibrio_subtropicus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 493,
+      "content": "Thioclava",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 494,
+      "content": "Thiomicrospira",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 495,
+      "content": "Thiothrix_subterranea",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 496,
+      "content": "Thiothrix_unzii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 497,
+      "content": "Tistrella_mobilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 498,
+      "content": "Tritonibacter_mobilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 499,
+      "content": "Tritonibacter_scottomollicae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 500,
+      "content": "Vagococcus_fluvialis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 501,
+      "content": "Vagococcus_lutrae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 502,
+      "content": "Variovorax",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 503,
+      "content": "Vescimonas_fastidiosa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 504,
+      "content": "Vibrio",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 505,
+      "content": "Vibrio_alfacsensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 506,
+      "content": "Vibrio_alginolyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 507,
+      "content": "Vibrio_anguillarum",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 508,
+      "content": "Vibrio_aphrogenes",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 509,
+      "content": "Vibrio_campbellii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 510,
+      "content": "Vibrio_casei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 511,
+      "content": "Vibrio_chagasii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 512,
+      "content": "Vibrio_cholerae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 513,
+      "content": "Vibrio_cincinnatiensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 514,
+      "content": "Vibrio_coralliilyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 515,
+      "content": "Vibrio_cyclitrophicus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 516,
+      "content": "Vibrio_fluvialis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 517,
+      "content": "Vibrio_fortis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 518,
+      "content": "Vibrio_furnissii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 519,
+      "content": "Vibrio_gigantis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 520,
+      "content": "Vibrio_harveyi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 521,
+      "content": "Vibrio_mangrovi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 522,
+      "content": "Vibrio_maritimus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 523,
+      "content": "Vibrio_mediterranei",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 524,
+      "content": "Vibrio_metschnikovii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 525,
+      "content": "Vibrio_mimicus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 526,
+      "content": "Vibrio_owensii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 527,
+      "content": "Vibrio_parahaemolyticus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 528,
+      "content": "Vibrio_plantisponsor",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 529,
+      "content": "Vibrio_quintilis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 530,
+      "content": "Vibrio_rotiferianus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 531,
+      "content": "Vibrio_scophthalmi",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 532,
+      "content": "Vibrio_tapetis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 533,
+      "content": "Vibrio_tubiashii",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 534,
+      "content": "Vibrio_vulnificus",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 535,
+      "content": "Wohlfahrtiimonas_chitiniclastica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 536,
+      "content": "Xanthomonas_citri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 537,
+      "content": "Xanthomonas_euvesicatoria",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 538,
+      "content": "Xanthomonas_translucens",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 539,
+      "content": "Xenorhabdus_bakwenae",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 540,
+      "content": "Xylella_fastidiosa",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 541,
+      "content": "Yersinia_enterocolitica",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 542,
+      "content": "Yersinia_massiliensis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 543,
+      "content": "Yersinia_pestis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 544,
       "content": "Yersinia_pseudotuberculosis",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 545,
+      "content": "Yersinia_ruckeri",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 546,
+      "content": "endosymbiont",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,

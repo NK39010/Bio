@@ -52,6 +52,10 @@ def main():
         "rep_dna_seq",
         "full_replicon_seq",
         "split",
+        "cdhit_cluster",
+        "cdhit_cluster_size",
+        "cdhit_cluster_representative_ori_id",
+        "cdhit_is_representative",
         "__index_level_0__",
         "replication_mechanism_call",
     ]

@@ -1,0 +1,11 @@
+Left file:  D:\dataprocess\数据示例\train-00000-of-00001.parquet
+Right file: C:\Users\MoSo\Desktop\Bio\final_data.parquet
+Left column:  plasmid_id
+Right column: plasmid_id
+Left rows: 17944
+Right rows: 16654
+Left unique plasmid IDs: 13900
+Right unique plasmid IDs: 9931
+Common unique plasmid IDs: 150
+Left rows with common IDs: 171
+Right rows with common IDs: 327

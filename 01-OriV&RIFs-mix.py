@@ -1,4 +1,4 @@
-import os
+﻿import os
 import pickle
 import re
 import time
@@ -261,6 +261,115 @@ def clean_species(name):
     return f"{genus} {species}"
 
 
+def pair_reps_to_nearest_oris(df_ori_small, df_rip_small):
+    """
+    Pair each rep with the nearest OriC within the same plasmid.
+
+    This avoids Cartesian expansion and keeps one paired row per rep.
+    """
+    paired_rows = []
+
+    ori_groups = {
+        acc: group.reset_index(drop=True)
+        for acc, group in df_ori_small.groupby("Accession_Number", sort=False)
+    }
+    rep_groups = {
+        acc: group.reset_index(drop=True)
+        for acc, group in df_rip_small.groupby("Accession_Number", sort=False)
+    }
+
+    for acc, rep_group in rep_groups.items():
+        ori_group = ori_groups.get(acc)
+        if ori_group is None or ori_group.empty or rep_group.empty:
+            continue
+
+        ori_mid = (
+            (ori_group["ori_start"].astype(float) + ori_group["ori_end"].astype(float)) / 2.0
+        ).to_numpy()
+        ori_order = np.argsort(ori_mid)
+        ori_mid_sorted = ori_mid[ori_order]
+        ori_sorted = ori_group.iloc[ori_order].reset_index(drop=True)
+
+        rep_mid = (
+            (rep_group["rep_start"].astype(float) + rep_group["rep_end"].astype(float)) / 2.0
+        ).to_numpy()
+
+        for rep_idx, rep_row in rep_group.iterrows():
+            rep_mid_value = float(rep_mid[rep_idx])
+            insert_pos = np.searchsorted(ori_mid_sorted, rep_mid_value)
+
+            candidate_positions = []
+            if insert_pos < len(ori_mid_sorted):
+                candidate_positions.append(insert_pos)
+            if insert_pos > 0:
+                candidate_positions.append(insert_pos - 1)
+
+            best_pos = min(
+                candidate_positions,
+                key=lambda pos: abs(float(ori_mid_sorted[pos]) - rep_mid_value),
+            )
+
+            ori_row = ori_sorted.iloc[best_pos]
+            distance = abs(float(ori_mid_sorted[best_pos]) - rep_mid_value)
+
+            paired_rows.append(
+                {
+                    "OriC sequence": ori_row["Intergenic_Sequence"],
+                    "ori_id": ori_row["ori_id"],
+                    "plasmid_id": acc,
+                    "species": ori_row["species_clean"],
+                    "taxid": ori_row["taxid"],
+                    "source": "PLSDB",
+                    "pfamid_fast": np.nan,
+                    "rep_id": rep_row["rep_id"],
+                    "Rep_type_fast": rep_row["product"],
+                    "rep_seq": rep_row["translation"],
+                    "rep_dna_seq": np.nan,
+                    "full_replicon_seq": np.nan,
+                    "split": np.nan,
+                    "__index_level_0__": np.nan,
+                    "ori_start": ori_row["ori_start"],
+                    "ori_end": ori_row["ori_end"],
+                    "rep_start": rep_row["rep_start"],
+                    "rep_end": rep_row["rep_end"],
+                    "distance": distance,
+                    "pairing_method": "nearest_ori_by_rep",
+                    "ori_midpoint": float(ori_mid_sorted[best_pos]),
+                    "rep_midpoint": rep_mid_value,
+                }
+            )
+
+    if not paired_rows:
+        return pd.DataFrame(
+            columns=[
+                "OriC sequence",
+                "ori_id",
+                "plasmid_id",
+                "species",
+                "taxid",
+                "source",
+                "pfamid_fast",
+                "rep_id",
+                "Rep_type_fast",
+                "rep_seq",
+                "rep_dna_seq",
+                "full_replicon_seq",
+                "split",
+                "__index_level_0__",
+                "ori_start",
+                "ori_end",
+                "rep_start",
+                "rep_end",
+                "distance",
+                "pairing_method",
+                "ori_midpoint",
+                "rep_midpoint",
+            ]
+        )
+
+    return pd.DataFrame(paired_rows)
+
+
 df_rip = pd.read_csv("data/RIPs.csv", low_memory=False)
 df_ori = pd.read_csv("data/selected_ori_regions.csv", usecols=range(5), low_memory=False)
 
@@ -376,48 +485,15 @@ df_rip_small = df_rip[
     ]
 ]
 
-print("Deduplicating Ori and Rep records by ori_id/rep_id before Cartesian merge...")
+print("Deduplicating Ori and Rep records by ori_id/rep_id before nearest-position pairing...")
 df_ori_small = df_ori_small.drop_duplicates(subset=["ori_id"])
 df_rip_small = df_rip_small.drop_duplicates(subset=["rep_id"])
 print(f"Unique OriC rows: {len(df_ori_small)}, Unique Rep rows: {len(df_rip_small)}")
 
-print("Merging Ori and Rep records...")
+print("Pairing each rep with its nearest OriC within the same plasmid...")
+df_final = pair_reps_to_nearest_oris(df_ori_small, df_rip_small)
 
-df_merged = pd.merge(df_ori_small, df_rip_small, on="Accession_Number", how="left")
-
-print(f"Merged rows: {len(df_merged)}")
-
-ori_mid = (df_merged["ori_start"] + df_merged["ori_end"]) / 2
-rep_mid = (df_merged["rep_start"] + df_merged["rep_end"]) / 2
-df_merged["distance"] = abs(ori_mid - rep_mid)
-
-# 保留每个 OriC 和每个 Rep 的所有组合，不再按最近距离去重
-print("Keeping all OriC-Rep pairings without rep_id deduplication.")
-
-df_final = pd.DataFrame(
-    {
-        "OriC sequence": df_merged["Intergenic_Sequence"],
-        "ori_id": df_merged["ori_id"],
-        "plasmid_id": df_merged["Accession_Number"],
-        "species": df_merged["species_clean"],
-        "taxid": df_merged["taxid"],
-        "source": "PLSDB",
-        "pfamid_fast": np.nan,
-        "rep_id": df_merged["rep_id"],
-        "Rep_type_fast": df_merged["product"],
-        "rep_seq": df_merged["translation"],
-        "rep_dna_seq": np.nan,
-        "full_replicon_seq": np.nan,
-        "split": np.nan,
-        "__index_level_0__": np.nan,
-        "ori_start": df_merged["ori_start"],
-        "ori_end": df_merged["ori_end"],
-        "rep_start": df_merged["rep_start"],
-        "rep_end": df_merged["rep_end"],
-        "distance": df_merged["distance"],
-    }
-)
-
+print(f"Paired rows: {len(df_final)}")
 output_file = Path("merged_final_optimized.csv")
 temp_file = output_file.with_suffix(output_file.suffix + ".tmp")
 try:
@@ -437,3 +513,4 @@ print(f"Output file: {output_file}")
 print("\nQuality checks:")
 print("Missing taxid ratio:", df_final["taxid"].isna().mean())
 print("Unknown species ratio:", (df_final["species"] == "unknown").mean())
+
