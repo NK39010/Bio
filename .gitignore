@@ -8,3 +8,6 @@ output/
 *.png
 *.parquet
 training_data/
+output-lab/
+Origen.pdf
+OriV-Finder/orivfinder-ready.tar.gz
